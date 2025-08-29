@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: nicer font for Arabic */
+:root { --app-font: "Noto Naskh Arabic", "Cairo", system-ui, -apple-system, Segoe UI, Roboto, Tahoma, Arial, sans-serif; }
+body { font-family: var(--app-font); }
