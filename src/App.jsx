@@ -47,7 +47,7 @@ function classNames(...c){ return c.filter(Boolean).join(' '); }
 
 export default function App(){
   const [q, setQ] = useState("");
-  const [photoUrl, setPhotoUrl] = useState("https://placehold.co/400x400/png?text=Ahmed+Talaat+Rabie");
+  const [photoUrl, setPhotoUrl] = useState("https://ahmed-yasser-el-sharkawy.github.io/Almajd-Schools/image.png");
 
   const filtered = useMemo(() => {
     if(!q.trim()) return TESTS;
