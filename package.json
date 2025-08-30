@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://Ahmed-Yasser-El-Sharkawy.github.io/ahmed-tests/",
+  "homepage": "https://Ahmed-Yasser-El-Sharkawy.github.io/Almajd-Schools/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

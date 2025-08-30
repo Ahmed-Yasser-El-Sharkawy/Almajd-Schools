@@ -64,17 +64,17 @@ export default function App(){
               <div className="relative w-40 h-40 md:w-44 md:h-44 rounded-3xl overflow-hidden shadow-xl ring-4 ring-white">
                 <img
                   src={photoUrl}
-                  alt="صورة أ. أحمد طلعت ربيع"
+                  alt="صورة مدارس المجد الأهلية"
                   className="w-full h-full object-cover"
                   onError={(e) => { e.target.src = "https://placehold.co/400x400/png?text=Ahmed+Talaat+Rabie"; }}
                 />
               </div>
-              <div className="mt-2 text-xs text-slate-500">يمكنك استبدال الصورة عبر لصق رابط الصورة بالأسفل</div>
+    
             </div>
 
             <div className="flex-1 text-center md:text-right">
               <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">
-                منصة اختبارات — <span className="text-blue-700">أ. أحمد طلعت ربيع</span>
+                مركز القدرات والتحصيلي— <span className="text-blue-700">مدارس المجد الأهلية</span>
               </h1>
               <p className="mt-3 text-slate-600 leading-relaxed">
                 جميع الاختبارات في مكان واحد. اختر الاختبار المطلوب واضغط لبدء الحل.
@@ -173,8 +173,8 @@ export default function App(){
 
       <footer className="border-t bg-white/70 backdrop-blur">
         <div className="mx-auto max-w-6xl px-4 py-6 text-sm text-slate-600 flex flex-col md:flex-row items-center justify-between gap-2">
-          <div>© {new Date().getFullYear()} منصة اختبارات أ. أحمد طلعت ربيع</div>
-          <div className="opacity-80">تم التصميم بواسطة فريقك — واجهة بسيطة وسريعة الاستجابة</div>
+          <div>© {new Date().getFullYear()} مركز القدرات والتحصيلي — مدارس المجد الأهلية</div>
+          <div className="opacity-80">تم التصميم بواسطة البشمهندس أحمد الشرقاوى</div>
         </div>
       </footer>
     </div>
