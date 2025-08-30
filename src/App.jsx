@@ -47,7 +47,9 @@ function classNames(...c){ return c.filter(Boolean).join(' '); }
 
 export default function App(){
   const [q, setQ] = useState("");
-  const [photoUrl, setPhotoUrl] = useState("image.png");
+  const defaultPhoto = import.meta.env.BASE_URL + "image.png";
+  const [photoUrl, setPhotoUrl] = useState(defaultPhoto);
+
   const filtered = useMemo(() => {
     if(!q.trim()) return TESTS;
     const t = q.trim().toLowerCase();
@@ -63,9 +65,9 @@ export default function App(){
               <div className="relative w-40 h-40 md:w-44 md:h-44 rounded-3xl overflow-hidden shadow-xl ring-4 ring-white">
                 <img
                   src={photoUrl}
-                  alt="صورة مدارس المجد الأهلية"
+                  alt="شعار مدارس المجد الأهلية"
                   className="w-full h-full object-cover"
-                  onError={(e) => { e.target.src = "https://placehold.co/400x400/png?text=Ahmed+Talaat+Rabie"; }}
+                  onError={(e) => { e.target.src = defaultPhoto; }}
                 />
               </div>
     
