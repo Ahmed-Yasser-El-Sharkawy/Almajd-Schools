@@ -1,4 +1,6 @@
 import React, { useMemo, useState } from "react";
+import image2 from "../Image-2.jpg"; 
+
 
 const TESTS = [
   { id: 1, title: "الاختبار الأول", url: "https://forms.gle/3TKQnvdtyZonghRMA" },
@@ -47,8 +49,9 @@ function classNames(...c){ return c.filter(Boolean).join(' '); }
 
 export default function App(){
   const [q, setQ] = useState("");
-  const defaultPhoto = import.meta.env.BASE_URL + "image.png";
-  const [photoUrl, setPhotoUrl] = useState("https://scontent.fcai21-4.fna.fbcdn.net/v/t39.30808-1/299326516_595747392254923_6760625410611194047_n.jpg?stp=c250.0.937.937a_dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=2LrCQhUt0noQ7kNvwE3dDl0&_nc_oc=AdnKDj47ANo86AJXXSjr24SFoMTeZKtWvOY-gOEzXA-3RU4ulgD6mDs3wFt73yPh8Lg&_nc_zt=24&_nc_ht=scontent.fcai21-4.fna&_nc_gid=8XGLeI1W1i-Kx-CXL8Mv1A&oh=00_AfWWuWPrUF_Ff8K_kz2pc7iwmEAiDnYKW7qvOTfcGgYq3g&oe=68B9486E");
+  // const defaultPhoto = import.meta.env.BASE_URL + "image-2.png";
+  const defaultPhoto = image2; // use the imported image
+  const [photoUrl, setPhotoUrl] = useState(defaultPhoto);
 
   const filtered = useMemo(() => {
     if(!q.trim()) return TESTS;
