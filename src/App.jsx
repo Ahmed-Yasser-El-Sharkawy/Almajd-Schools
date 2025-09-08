@@ -51,7 +51,7 @@ export default function App(){
   const [q, setQ] = useState("");
   // const defaultPhoto = import.meta.env.BASE_URL + "image-2.png";
   const defaultPhoto = image2; // use the imported image
-  const [photoUrl, setPhotoUrl] = useState(defaultPhoto);
+  const [photoUrl, setPhotoUrl] = useState("https://drive.google.com/file/d/1vWNNoz9hbLl7y3G5bDR3w0u-VVoa_D5Q/view?usp=sharing");
 
   const filtered = useMemo(() => {
     if(!q.trim()) return TESTS;
