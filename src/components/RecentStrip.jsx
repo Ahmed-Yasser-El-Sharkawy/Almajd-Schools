@@ -23,7 +23,7 @@ export default function RecentStrip({ exams, onOpen, onClear }) {
               onClick={() => onOpen(exam.id)}
               className="inline-flex min-h-11 max-w-56 items-center gap-2 rounded-xl border border-navy-100 bg-navy-50/60 px-3 py-2 text-xs font-bold text-navy-800 transition-colors hover:border-navy-200 hover:bg-navy-50 focus-ring"
             >
-              <span className="shrink-0 text-navy-400">#{exam.number}</span>
+              <span className="shrink-0 text-navy-500">#{exam.number}</span>
               <span className="truncate">{exam.title}</span>
               <ArrowIcon className="h-3.5 w-3.5 shrink-0 text-navy-400" />
             </a>

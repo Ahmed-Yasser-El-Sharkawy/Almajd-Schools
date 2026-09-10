@@ -163,7 +163,7 @@ export default function App() {
                       >
                         عرض المزيد
                       </button>
-                      <p className="text-xs text-navy-400">
+                      <p className="text-xs text-navy-500">
                         يُعرض {visible} من {results.length}
                       </p>
                     </div>

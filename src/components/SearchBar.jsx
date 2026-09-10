@@ -32,7 +32,7 @@ export default function SearchBar({ value, onChange, resultCount }) {
           onChange={(e) => onChange(e.target.value)}
           placeholder="ابحث باسم الاختبار أو رقمه…"
           aria-describedby="search-result-count"
-          className="h-14 w-full rounded-2xl border border-navy-200 bg-white pe-14 ps-12 text-base text-navy-900 shadow-panel outline-none transition placeholder:text-navy-400 focus:border-gold-500 focus:ring-4 focus:ring-gold-500/25"
+          className="h-14 w-full rounded-2xl border border-navy-200 bg-white pe-14 ps-12 text-base text-navy-900 shadow-panel outline-none transition placeholder:text-navy-500 focus:border-gold-500 focus:ring-4 focus:ring-gold-500/25"
         />
         {value && (
           <button

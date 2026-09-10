@@ -33,7 +33,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-navy-800">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-navy-400 sm:flex-row">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-navy-300 sm:flex-row">
           <p>© {new Date().getFullYear()} مدارس المجد الأهلية — جميع الحقوق محفوظة.</p>
           <p>تصميم وتطوير: م. أحمد الشرقاوي</p>
         </div>
