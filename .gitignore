@@ -1,2 +1,11 @@
-dist\
-node_modules\
+# Git uses forward slashes as path separators on every platform,
+# including Windows. Backslashes here would match nothing.
+node_modules/
+dist/
+
+# Local env and editor noise
+.env
+.env.local
+.DS_Store
+*.log
+npm-debug.log*
