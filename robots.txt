@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Ahmed-Yasser-El-Sharkawy.github.io/Almajd-Schools/sitemap.xml
