@@ -1,7 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Optional: nicer font for Arabic */
-:root { --app-font: "Noto Naskh Arabic", "Cairo", system-ui, -apple-system, Segoe UI, Roboto, Tahoma, Arial, sans-serif; }
-body { font-family: var(--app-font); }
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy-50/40 text-navy-800 antialiased;
+    font-family: "IBM Plex Sans Arabic", system-ui, "Segoe UI", Tahoma, sans-serif;
+    /* Arabic sits low in the em box; a slightly looser default reads better. */
+    line-height: 1.7;
+  }
+
+  /* The RTL layout must never produce a sideways scrollbar. */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-gold-500 ring-offset-2 ring-offset-white;
+  }
+
+  /* Remove the browser's own clear button so ours is the only one. */
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+  }
+}
