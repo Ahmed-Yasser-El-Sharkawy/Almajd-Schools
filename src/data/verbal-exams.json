@@ -1,0 +1,2415 @@
+{
+  "collection": "verbal",
+  "questionsPerForm": 13,
+  "generated": "2026-09-10",
+  "items": [
+    {
+      "id": "v-1",
+      "collection": "verbal",
+      "number": 1,
+      "title": "الزلازل والسكري",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSd8BZBheUpuA0rQxQNzEN_FB-LzdXYpbNj9Kf-g8FczxP0_0Q/viewform",
+      "shortUrl": "https://forms.gle/976uUcEhjtU85opH8"
+    },
+    {
+      "id": "v-2",
+      "collection": "verbal",
+      "number": 2,
+      "title": "الاحتكاك والنجاح",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdve7M1uWksMsA-S18UQTvFyIQOQI67Ys5xx1MbVvHXdbJhsA/viewform",
+      "shortUrl": "https://forms.gle/oCP2X8n8TWjsc4er8"
+    },
+    {
+      "id": "v-3",
+      "collection": "verbal",
+      "number": 3,
+      "title": "الجمل والطحالب",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScJk8HcDM8DEZ85uxNtw7ft1lixRAbiR3Dz00EySFEgiy9QzQ/viewform",
+      "shortUrl": "https://forms.gle/xerHaUoC9EpjqVpBA"
+    },
+    {
+      "id": "v-4",
+      "collection": "verbal",
+      "number": 4,
+      "title": "فقراء بريطانيا وخطر داهم",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSd9H7Ty7Py-7ngcSzQiGdblqAM-oxjx6tXFZczsDdXVwoDXtQ/viewform",
+      "shortUrl": "https://forms.gle/iCBXRVUma7z5VWFx9"
+    },
+    {
+      "id": "v-5",
+      "collection": "verbal",
+      "number": 5,
+      "title": "البصمة والحواس",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeyYqPWPdbH5gqJutDYZPk4NovJgMg5BAbDMutuu3ORAYMPlg/viewform",
+      "shortUrl": "https://forms.gle/SxNMvWXuT4c7DN228"
+    },
+    {
+      "id": "v-6",
+      "collection": "verbal",
+      "number": 6,
+      "title": "ثقافة اليابان والفراغ",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdbV02T2f0yorCDo5yElWH0KwYh6Da2t-AStDdAEPh4US1RSQ/viewform",
+      "shortUrl": "https://forms.gle/DeoyHxsePo4sFF8H9"
+    },
+    {
+      "id": "v-7",
+      "collection": "verbal",
+      "number": 7,
+      "title": "النمل واحتضان الآباء",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfg9NPknwsTCPyy4QWkuB6bsfi-cwT3myV0QoKCk_nmt7uUrA/viewform",
+      "shortUrl": "https://forms.gle/mpUGeSFB1S29KGeY9"
+    },
+    {
+      "id": "v-8",
+      "collection": "verbal",
+      "number": 8,
+      "title": "الحب الأرعن والبكتيريا",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdLKn1OyEDARndQ1pFGmfYLifJQG2Rd_Ha8YxaXOHd7H9buiw/viewform",
+      "shortUrl": "https://forms.gle/uYMkYbWffF7htGpDA"
+    },
+    {
+      "id": "v-9",
+      "collection": "verbal",
+      "number": 9,
+      "title": "القمر والطحالب",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSexYOnzMz-XBRyeL5mg4cPzzSlH--F68GzUhvWm6RYGh_MjPg/viewform",
+      "shortUrl": "https://forms.gle/FiqYzKLaA7HbEgQj8"
+    },
+    {
+      "id": "v-10",
+      "collection": "verbal",
+      "number": 10,
+      "title": "التدرج والتغيير في خصائص المجتمعات",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSebnfT9RxrLDKLJzv3nfrqotnwbI82b_zUhULGVszbd1vuKHg/viewform",
+      "shortUrl": "https://forms.gle/bPA4Rwun6hJbBstz8"
+    },
+    {
+      "id": "v-11",
+      "collection": "verbal",
+      "number": 11,
+      "title": "الحج والمواليد",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScix5JY6l0ojkC0LwsO068hqHcXLrVnImSV8gEzGwMkx0Tu8w/viewform",
+      "shortUrl": "https://forms.gle/A2WqGKFfJBjFa8v48"
+    },
+    {
+      "id": "v-12",
+      "collection": "verbal",
+      "number": 12,
+      "title": "إنعدام الفقر والورق",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf5_IbIr4vb_h28L6vV51t-vmTlFpx_R0IPOymq6z-L_KQO5g/viewform",
+      "shortUrl": "https://forms.gle/jLSvo9fRWCtR5n2u8"
+    },
+    {
+      "id": "v-13",
+      "collection": "verbal",
+      "number": 13,
+      "title": "الصابون وابن المقفع",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSflI5EGVdFdKXti4eRW1mCaOQnNI1Un1d-pGzX4MlDWIA-N3g/viewform",
+      "shortUrl": "https://forms.gle/oi6UzADfFu7a2VG37"
+    },
+    {
+      "id": "v-14",
+      "collection": "verbal",
+      "number": 14,
+      "title": "الأديب والماء المشبع",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScTL0FQyzrZcKl7SoIDIQfmG-_e7hkqZvPFMsAg7aS-Nr0J6Q/viewform",
+      "shortUrl": "https://forms.gle/iMDrzE2PzhQTmds58"
+    },
+    {
+      "id": "v-15",
+      "collection": "verbal",
+      "number": 15,
+      "title": "الإنزيمات والمماليك",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfNaHFle99qhwSizsQK1qGPWMahQ4aY16QzxUqXgR4Fqx3jww/viewform",
+      "shortUrl": "https://forms.gle/BKxxapa9EUyo3vGt7"
+    },
+    {
+      "id": "v-16",
+      "collection": "verbal",
+      "number": 16,
+      "title": "لبن الشجر",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdygi7KjUR48ebyjL7hCZxgU0BO_JMCcRDcFKWMH5GMYo_nqw/viewform",
+      "shortUrl": "https://forms.gle/1cc97CuZjJuSN7Uu7"
+    },
+    {
+      "id": "v-17",
+      "collection": "verbal",
+      "number": 17,
+      "title": "الغلاف الجوي والتنمية والنمو",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdT7qaOc6QkGBqCApf8BtwjyQbQB4Guq-LGMnAl6d-V-7-piA/viewform",
+      "shortUrl": "https://forms.gle/eGgnppev8Dk8jV9D6"
+    },
+    {
+      "id": "v-18",
+      "collection": "verbal",
+      "number": 18,
+      "title": "الأعراف المجتمعية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf5RslxK7sG5GmG4nbMHjFfvIGNK3p0utTKdzQ5gimZLqHW9g/viewform",
+      "shortUrl": "https://forms.gle/6pMpXPoa4WBPF6Et6"
+    },
+    {
+      "id": "v-19",
+      "collection": "verbal",
+      "number": 19,
+      "title": "آثار العفو ولحم الخنزير",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdfAIwY2YQP9LMHEDQfVQDWwc5P_biU_kaQCez8nEVgaPNIUg/viewform",
+      "shortUrl": "https://forms.gle/jxScYTcUFWJT9MrKA"
+    },
+    {
+      "id": "v-20",
+      "collection": "verbal",
+      "number": 20,
+      "title": "التكرار والجمود",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfBm8uBhxb_u3ri9BpejakMr51pP7kLpktQesyC6b7eMiSOkA/viewform",
+      "shortUrl": "https://forms.gle/v9sDX7bnHY7SpHTC6"
+    },
+    {
+      "id": "v-21",
+      "collection": "verbal",
+      "number": 21,
+      "title": "المماليك وعبدالله الأندلسي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfr8wfqLzpYPIDPz0oNWogu-ggQJcxUxqljGM7fnLcyeq7jLg/viewform",
+      "shortUrl": "https://forms.gle/dYtwHSED89vnwPSh9"
+    },
+    {
+      "id": "v-22",
+      "collection": "verbal",
+      "number": 22,
+      "title": "الهلال والبحر الميت",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeidZNLndr7HvxB8NXP75la5meqDHwzaj2QArPxQxtrznWoUg/viewform",
+      "shortUrl": "https://forms.gle/ifwTX5gguXyCak718"
+    },
+    {
+      "id": "v-23",
+      "collection": "verbal",
+      "number": 23,
+      "title": "سفيان الثوري",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSczEwkBXMl2Eo9OgCGU4ZgUwIEnpmuO9vyfeMiluAM4CysWRQ/viewform",
+      "shortUrl": "https://forms.gle/Pyo3RG2dMekPL8Sq6"
+    },
+    {
+      "id": "v-24",
+      "collection": "verbal",
+      "number": 24,
+      "title": "النفط وفيتامين (د)",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfdNJ6yPZfYQH4dwJMCHgElfU_9TzQOh7FNrg93DBiZmNHEQg/viewform",
+      "shortUrl": "https://forms.gle/vp4SdDr7ZhYaGpLq8"
+    },
+    {
+      "id": "v-25",
+      "collection": "verbal",
+      "number": 25,
+      "title": "المدينة المنورة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdOLAt03ls0wMge30RH5dI5pQqwlF69eOTekbN37o2wnzvnjQ/viewform",
+      "shortUrl": "https://forms.gle/D1Z3iXfYKQtXywAG7"
+    },
+    {
+      "id": "v-26",
+      "collection": "verbal",
+      "number": 26,
+      "title": "المواد الدراسية والتنمية والنمو",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScQdni7d8B5alhruafUzl2JrgfP1gVzD6WAI4DoafiG1envqw/viewform",
+      "shortUrl": "https://forms.gle/BKGrPVUmPoBSvfxB7"
+    },
+    {
+      "id": "v-27",
+      "collection": "verbal",
+      "number": 27,
+      "title": "ربيع الحياة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeEmH4e0yHWYcQ730K4EyRqPFemfjHXPHmB-ChprhTYTII0Vg/viewform",
+      "shortUrl": "https://forms.gle/ZjNee1HUfeCAbe91A"
+    },
+    {
+      "id": "v-28",
+      "collection": "verbal",
+      "number": 28,
+      "title": "النمل ومعركة اليرموك",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdB6pvoPT3TL9KshNCkU9o4hR82BxIm93kj-UKPxLlNljcLRA/viewform",
+      "shortUrl": "https://forms.gle/TREJWS1vnkyRRGer9"
+    },
+    {
+      "id": "v-29",
+      "collection": "verbal",
+      "number": 29,
+      "title": "قضم الأظافر والفشل",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScsJABDPwxJXu9ooJep5U0qpzt-l-yxLZOh2qQT76r-DDNY5A/viewform",
+      "shortUrl": "https://forms.gle/JdDywuc6c3UfGxx4A"
+    },
+    {
+      "id": "v-30",
+      "collection": "verbal",
+      "number": 30,
+      "title": "نهر الطفل والورق",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScCQrgM0pimu26Vo7EkO8-_AESpvOiJBUkiTg3Yw999FBa3wg/viewform",
+      "shortUrl": "https://forms.gle/Y3jatGMkTjLRt7JC7"
+    },
+    {
+      "id": "v-31",
+      "collection": "verbal",
+      "number": 31,
+      "title": "التنمية والنمو والرضاعة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe5kRstjhSb4jL2cWz_HarTLi1MvhwOrE-p4Yhw716xAIzuPw/viewform",
+      "shortUrl": "https://forms.gle/GgKmHrKG2wnTdYeE6"
+    },
+    {
+      "id": "v-32",
+      "collection": "verbal",
+      "number": 32,
+      "title": "كدر العيش",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc_e4YrlVderwT548N91f0wunj6B2vy94vSCppUZPwhHgP4Cg/viewform",
+      "shortUrl": "https://forms.gle/spbfQN5Sv9pD9dxcA"
+    },
+    {
+      "id": "v-33",
+      "collection": "verbal",
+      "number": 33,
+      "title": "الجغرافيا الطبيعية والسمنة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScYl5yD3vxJXsA9WGmq3ikPrAI3zzP8kK0DOxN0VZXwNEJUxg/viewform",
+      "shortUrl": "https://forms.gle/XKLdkFbc1JLiZK2X6"
+    },
+    {
+      "id": "v-34",
+      "collection": "verbal",
+      "number": 34,
+      "title": "النفط والشيخوخة في بريطانيا",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf5hpz3q33REy10ml1sF9bfnMxR_ApVsG2vX90QunhFABwOrQ/viewform",
+      "shortUrl": "https://forms.gle/3w6adnYFJLYEoZWS9"
+    },
+    {
+      "id": "v-35",
+      "collection": "verbal",
+      "number": 35,
+      "title": "المدير والموظف",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeCfkmNMjGWFQ59uQfXt9p9bxJH1clpDGMeZpht1I6rpDMHMA/viewform",
+      "shortUrl": "https://forms.gle/Y4MTizwJVRHv8m4J8"
+    },
+    {
+      "id": "v-36",
+      "collection": "verbal",
+      "number": 36,
+      "title": "المسك والزلازل",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc8jLYVfMFpUGQioVPHQ8AA63rd0g_J96RAlJBRNaWyVeFzAQ/viewform",
+      "shortUrl": "https://forms.gle/X6hLTF6SW3baDUix5"
+    },
+    {
+      "id": "v-37",
+      "collection": "verbal",
+      "number": 37,
+      "title": "الحجامة والوقت",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScaecIyp0rMQJ1-9C7emTXkhFlHP8rhgAtuMat_z3Suj0GWwg/viewform",
+      "shortUrl": "https://forms.gle/jWPM1D68c9qKbWMaA"
+    },
+    {
+      "id": "v-38",
+      "collection": "verbal",
+      "number": 38,
+      "title": "الصفدي والتقاويم",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSff7o8N9cTT4MWLLE_mAb4ZBOSGiI4hVlV1X7xsJ1qre4XNLw/viewform",
+      "shortUrl": "https://forms.gle/ofuU1ZmqUGQS7JKY6"
+    },
+    {
+      "id": "v-39",
+      "collection": "verbal",
+      "number": 39,
+      "title": "البطاطس",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSedNJwdmidb77F7flEPlN0KSl5T4FelQz_DNC7f45H-8Y-gow/viewform",
+      "shortUrl": "https://forms.gle/vyrbd9tG6C92w2rp8"
+    },
+    {
+      "id": "v-40",
+      "collection": "verbal",
+      "number": 40,
+      "title": "الابتسامة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSd8HffajPbAdUb0j_TyFEe8_oWHJm8xf45QehIyF2jtjc3lCA/viewform",
+      "shortUrl": "https://forms.gle/7sNMGuFZmxbvSL6A9"
+    },
+    {
+      "id": "v-41",
+      "collection": "verbal",
+      "number": 41,
+      "title": "تنويع المحادثات ومحبة الناس",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf2gJxYuWhtE_5zTZTrKBu1UVeQk4cdDjJ6SL6vLeljHB--qA/viewform",
+      "shortUrl": "https://forms.gle/CdmhiNgevJsSyU5D9"
+    },
+    {
+      "id": "v-42",
+      "collection": "verbal",
+      "number": 42,
+      "title": "الجدري وقياس الرأي العام",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScEnxd0tKJRpAF_3GSDcqul4YMBs9tO0ma4djM5-HLV4s40hw/viewform",
+      "shortUrl": "https://forms.gle/8M5zf5qPrteKeZWA6"
+    },
+    {
+      "id": "v-43",
+      "collection": "verbal",
+      "number": 43,
+      "title": "المزارع",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdu8CLvMor65YlCMgUH0O37dkDqlOAp9asB1YkEFP60mayxew/viewform",
+      "shortUrl": "https://forms.gle/onacvmMYQCuSd8M56"
+    },
+    {
+      "id": "v-44",
+      "collection": "verbal",
+      "number": 44,
+      "title": "الهدية والتقاويم",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe6d47Bx3uaY-19L4tcLhBwKTtGZq58BwcA9DBIaTOIgYVb2A/viewform",
+      "shortUrl": "https://forms.gle/3hsJ2azTH3NosDa28"
+    },
+    {
+      "id": "v-45",
+      "collection": "verbal",
+      "number": 45,
+      "title": "ثوب الصديق ودروس الحياة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfNtMOyGp_-r0rfi7vWJAVWKdpt2FqniYNCE_uwyY3Y3lUoPA/viewform",
+      "shortUrl": "https://forms.gle/MWoj1mSduzHa28GZ6"
+    },
+    {
+      "id": "v-46",
+      "collection": "verbal",
+      "number": 46,
+      "title": "الغواصة الروسية والمنتديات",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeGbugNAq5EbRpb1ffftwASDYZKFoqtW21EbjJArfoVVHJUDQ/viewform",
+      "shortUrl": "https://forms.gle/3mLm7Fakst6UFQc98"
+    },
+    {
+      "id": "v-47",
+      "collection": "verbal",
+      "number": 47,
+      "title": "سلم النجاح",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe23-H69_7a-D84UkKQ07oUsprRzzZ9f5-Dz691Q2Gq1tuDqg/viewform",
+      "shortUrl": "https://forms.gle/A1yb5uF48tZGkrmN7"
+    },
+    {
+      "id": "v-48",
+      "collection": "verbal",
+      "number": 48,
+      "title": "الأكسجين والواقع الافتراضي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFqHSTEZd3hyewQwVeokZhFB7B6bt-YNJVZwusxG-tARoXGg/viewform",
+      "shortUrl": "https://forms.gle/QHbMGE5GGkz9rkNs6"
+    },
+    {
+      "id": "v-49",
+      "collection": "verbal",
+      "number": 49,
+      "title": "حق الجار",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfsqeBsWWc3sPVre-Kf-fyhzvoHhUBikUrJ9jxaANGyND2XQg/viewform",
+      "shortUrl": "https://forms.gle/EkUNoeW1vKSx7RQa7"
+    },
+    {
+      "id": "v-50",
+      "collection": "verbal",
+      "number": 50,
+      "title": "القراءة وطريق الخير",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScGCQzAjWsjnN37BAEZiXOE7ih0IoFfE_5fvQ2GmSmJm36vPg/viewform",
+      "shortUrl": "https://forms.gle/1HGCeGWt5XsgwhjPA"
+    },
+    {
+      "id": "v-51",
+      "collection": "verbal",
+      "number": 51,
+      "title": "الكريم واللئيم ولذة العبادة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf46JmAUgpdzdT0T6sCVEP_fKvipq2yvXd5jbEbFjo1sBOTNw/viewform",
+      "shortUrl": "https://forms.gle/Wf46Q1HPkKBEK7DK8"
+    },
+    {
+      "id": "v-52",
+      "collection": "verbal",
+      "number": 52,
+      "title": "مالك والقناعة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc4T7tRryhzzqE0LFrhFQRZp2RxOnaIAbDKxwiZOySUk_t_NA/viewform",
+      "shortUrl": "https://forms.gle/1tvMn7pZFxTBnqhs5"
+    },
+    {
+      "id": "v-53",
+      "collection": "verbal",
+      "number": 53,
+      "title": "الإمام مالك والحياة الفطرية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSct9jxh6HK8TJvrbQrLvdxyeGibdCJ75fOPGKZt_dTwSDQ6ng/viewform",
+      "shortUrl": "https://forms.gle/8yqHi6Q9hFHa9XS98"
+    },
+    {
+      "id": "v-54",
+      "collection": "verbal",
+      "number": 54,
+      "title": "الحضارة وإيطاليا واليابان",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSenHcvJtIysbNsLLA-Vq7ZRnr_NZkNEO9HRHZ8Vrdxa9Cgr8Q/viewform",
+      "shortUrl": "https://forms.gle/SEgK1DJ3X1ZPja5g7"
+    },
+    {
+      "id": "v-55",
+      "collection": "verbal",
+      "number": 55,
+      "title": "التهاون بالمواعيد",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf7D0HVu7fqHh8J327D0HzRov5GiSq-YnneLq0T0510Z5xVCA/viewform",
+      "shortUrl": "https://forms.gle/okvkSMv5o7opgYteA"
+    },
+    {
+      "id": "v-56",
+      "collection": "verbal",
+      "number": 56,
+      "title": "الحذر والفطنة والمكاتبة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSevXz62oTaYHcrK2w9ki0q7wuXx9VyO9UbCZAxRADAYcYvZow/viewform",
+      "shortUrl": "https://forms.gle/J84UfPyP1AUq7wTb8"
+    },
+    {
+      "id": "v-57",
+      "collection": "verbal",
+      "number": 57,
+      "title": "الاستسلام واليأس والشجاع",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdTumpizzMoTrvsie7RRsj-D6XGz43VcQILqeCxfDZT-jgPvg/viewform",
+      "shortUrl": "https://forms.gle/SfpcdSmczK5x3PPb8"
+    },
+    {
+      "id": "v-58",
+      "collection": "verbal",
+      "number": 58,
+      "title": "المركبات العضوية والمقابلات التلفزيونية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf9tB3jgFNAPMwMT5r4KHSShSg641JA_iAQnI57MsviSt7cbQ/viewform",
+      "shortUrl": "https://forms.gle/owwKt2tAgEYmC2s47"
+    },
+    {
+      "id": "v-59",
+      "collection": "verbal",
+      "number": 59,
+      "title": "التعامل مع المبغضين",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfDMQ5jnSRooj9lfYOkbPKsQd_bSRAkybPffJ5cZT0qmN9aAw/viewform",
+      "shortUrl": "https://forms.gle/h59bykqGgQvePKsKA"
+    },
+    {
+      "id": "v-60",
+      "collection": "verbal",
+      "number": 60,
+      "title": "البرق وفوائد الشجر",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFY7--JpzUKTVjhFcKinheMqnfyXSHZyMs0PTyC6Eq3X5piw/viewform",
+      "shortUrl": "https://forms.gle/PWYbxo1AoP9bRBUy6"
+    },
+    {
+      "id": "v-61",
+      "collection": "verbal",
+      "number": 61,
+      "title": "الحرف اليدوية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdm620ZDf9nR3FTDG1V8dXgfAYzeKtTexP6RkplaU--q4Yx7Q/viewform",
+      "shortUrl": "https://forms.gle/r4TWM1xfPtcBsvYc9"
+    },
+    {
+      "id": "v-62",
+      "collection": "verbal",
+      "number": 62,
+      "title": "الأديب وفصول السنة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdqdwnSpsR9VpEEppoO3taRV9SlVrtCSiJiBUfCbHEBzf0svA/viewform",
+      "shortUrl": "https://forms.gle/CbNivzub1xBWc9CNA"
+    },
+    {
+      "id": "v-63",
+      "collection": "verbal",
+      "number": 63,
+      "title": "الطموح",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSewDxq7gojPLD3ySUUps093GKG6F4uUaag7tQmp2JHchud00w/viewform",
+      "shortUrl": "https://forms.gle/h87DhjxnwNZhnug16"
+    },
+    {
+      "id": "v-64",
+      "collection": "verbal",
+      "number": 64,
+      "title": "يوت تاركينجتون",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSesjrKDdoD_FNF19doqP_qLnRtmrHZvuWF84aiT77CZqOYzkQ/viewform",
+      "shortUrl": "https://forms.gle/tyucEtSF9bbPvMT77"
+    },
+    {
+      "id": "v-65",
+      "collection": "verbal",
+      "number": 65,
+      "title": "ماضيك الحسن",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScehY7ItJV4i62RlfCeKQciTCx53IcBSJ0xwhNMCeAL3RH7FA/viewform",
+      "shortUrl": "https://forms.gle/JkGBoPC5gQJ9kh7z6"
+    },
+    {
+      "id": "v-66",
+      "collection": "verbal",
+      "number": 66,
+      "title": "الوطواط والمسك",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfd3siZFR70P471djpiEuLhx_Jl980tm6dXEhT5rbhUdQu3rg/viewform",
+      "shortUrl": "https://forms.gle/kJFQU9JWUD8CDSfGA"
+    },
+    {
+      "id": "v-67",
+      "collection": "verbal",
+      "number": 67,
+      "title": "الصدق في المسميات والفراسة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe0AEOhesrUlTwxOYCdATQvnyWrQ3KcoO5efFDplNXcQirtRQ/viewform",
+      "shortUrl": "https://forms.gle/7F8qzachwWDTHda29"
+    },
+    {
+      "id": "v-68",
+      "collection": "verbal",
+      "number": 68,
+      "title": "التنقيب عن النفط والأشعة السينية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdxhK1MXz_shxFhdF9JRvZ_0cL1sJRczxRS22J8ON3lilrf4Q/viewform",
+      "shortUrl": "https://forms.gle/JP8w2Vrc3sH9umcbA"
+    },
+    {
+      "id": "v-69",
+      "collection": "verbal",
+      "number": 69,
+      "title": "الرجولة في الإسلام",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScWgfWuLAn0nvaFj8nuQvarCW3QJ7dTtxnErkPhowgVVbfebA/viewform",
+      "shortUrl": "https://forms.gle/szbSdF7nbHE2BdvaA"
+    },
+    {
+      "id": "v-70",
+      "collection": "verbal",
+      "number": 70,
+      "title": "واقع التعليم والرحمة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSd84jVRmPNUQRy4RaThjdzf13ci6C8yiioix7ejdPRwp6l6hw/viewform",
+      "shortUrl": "https://forms.gle/BbQBQkmxptWSvcqSA"
+    },
+    {
+      "id": "v-71",
+      "collection": "verbal",
+      "number": 71,
+      "title": "حشرة السمك والتهاب اللوزتين",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeMOnaZ3fafpewgdynMMSQFMFBCKk07YdOsptS5B8GsNYqTDA/viewform",
+      "shortUrl": "https://forms.gle/YKSj4KtaebCbvnMw5"
+    },
+    {
+      "id": "v-72",
+      "collection": "verbal",
+      "number": 72,
+      "title": "التوحد والتنقيب عن النفط",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeHLxxdfVQfIlFBcth1_CSqI7g82pcfuu5QocDwo6n3trduVA/viewform",
+      "shortUrl": "https://forms.gle/RNU22Dg5bsGKe3cf8"
+    },
+    {
+      "id": "v-73",
+      "collection": "verbal",
+      "number": 73,
+      "title": "المنظمات والفضاء",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSezvX5IGXMxyb1GzGgYfDD8EVn1fwioetBSe6wxs3Bk6N89rQ/viewform",
+      "shortUrl": "https://forms.gle/mgPW6b5jNQVP552KA"
+    },
+    {
+      "id": "v-74",
+      "collection": "verbal",
+      "number": 74,
+      "title": "التواضع وحلم الطفل",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSebNFiwTNu5RgSAJDp3RG19JYk90B0t4OXAIzz8vv5-bO0udA/viewform",
+      "shortUrl": "https://forms.gle/3hfioEWfatJ8i39G8"
+    },
+    {
+      "id": "v-75",
+      "collection": "verbal",
+      "number": 75,
+      "title": "الحج وطين البحر الميت",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe3K-m4rB2oP_SUei8qbIe01fKUrLxrZgIU6IL0sW2fqfAYAg/viewform",
+      "shortUrl": "https://forms.gle/8jFG8MQDhqzZXziH7"
+    },
+    {
+      "id": "v-76",
+      "collection": "verbal",
+      "number": 76,
+      "title": "التوحيدي والعالم الافتراضي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScx2LDOomg3H8KjLDz63OkLr4Bu_ICL6GkjtZRVoyrVEI1IJw/viewform",
+      "shortUrl": "https://forms.gle/NwsfzrvhpuoDeLji9"
+    },
+    {
+      "id": "v-77",
+      "collection": "verbal",
+      "number": 77,
+      "title": "الالتفات في الصلاة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfhnpSnU0MX5PtUUg3lP4p9nZnaixfcepAI2KSjvJsBw6BYCw/viewform",
+      "shortUrl": "https://forms.gle/oHdWsyc6pdqpufHM7"
+    },
+    {
+      "id": "v-78",
+      "collection": "verbal",
+      "number": 78,
+      "title": "الراغب بالنجاح والمنظمات",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdZTGJ6S8PUE-yok864LNPNHb_Zk688vRLDSh9rgwMxGCOZjg/viewform",
+      "shortUrl": "https://forms.gle/zCtE5tCP4iNqHs7T8"
+    },
+    {
+      "id": "v-79",
+      "collection": "verbal",
+      "number": 79,
+      "title": "البيئة وحب الهيمنة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSezP3TBvtJTVc08w1poSRqvvwUv-u1mfLUriiEzxEBm6TCfhw/viewform",
+      "shortUrl": "https://forms.gle/5ErH4M7twtNorm5QA"
+    },
+    {
+      "id": "v-80",
+      "collection": "verbal",
+      "number": 80,
+      "title": "العقل والعاطفة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfQyqYFEH9A3RxDKc-V35qgrdDp6W2xa6wv2GlUTHIMz8ZEiQ/viewform",
+      "shortUrl": "https://forms.gle/4b5AcBTYWU3mkmmcA"
+    },
+    {
+      "id": "v-81",
+      "collection": "verbal",
+      "number": 81,
+      "title": "زحل والتآلف",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdqyWZgJaOhuiQ-FRPK9qNCo-W7ztiuVs-eRvWp5-lXvHa-jg/viewform",
+      "shortUrl": "https://forms.gle/nxVSSKweqoBvufiH9"
+    },
+    {
+      "id": "v-82",
+      "collection": "verbal",
+      "number": 82,
+      "title": "القلق والورق",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSelpRZRHazNKFO8YOJaDe3ouTmJk-gPU674jIoOHWy2WFbi_Q/viewform",
+      "shortUrl": "https://forms.gle/73Bdm495NEy6eXQ58"
+    },
+    {
+      "id": "v-83",
+      "collection": "verbal",
+      "number": 83,
+      "title": "العطش وتحمل المتاعب",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScVSKaOcNbDMdSjdklH0Kl4fFHz4Itf8QqSBG1SLvyTlqK4_g/viewform",
+      "shortUrl": "https://forms.gle/V5vPn14M2JH1p5N8A"
+    },
+    {
+      "id": "v-84",
+      "collection": "verbal",
+      "number": 84,
+      "title": "الطاعة العمياء",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScKhhWGCe_Hre_PacOl8ch05Lhbwt3ie23sR3cOY_9qeTRD-g/viewform",
+      "shortUrl": "https://forms.gle/nULnmYbr7YtdNqP7A"
+    },
+    {
+      "id": "v-85",
+      "collection": "verbal",
+      "number": 85,
+      "title": "المدرسة المونتيسيرية والموضوعية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdu2N41mGy74Wkks788SmR_Ax374jo-2MamAYf8zKZEkiqdKQ/viewform",
+      "shortUrl": "https://forms.gle/xvx3hFDpmfXDFUHJA"
+    },
+    {
+      "id": "v-86",
+      "collection": "verbal",
+      "number": 86,
+      "title": "العمل التطوعي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScSrZewUn6H1-RWZDml_vUxw2Q8eN_D0uHW6TUe-DpWq7tlgA/viewform",
+      "shortUrl": "https://forms.gle/WDkGDHDK8kWpNYAn8"
+    },
+    {
+      "id": "v-87",
+      "collection": "verbal",
+      "number": 87,
+      "title": "أحلام اليقظة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScDCzdvblsiDxoJgYcioUvNo8DMBL0E4HygeKglqRH3_MfRsw/viewform",
+      "shortUrl": "https://forms.gle/Q2bXebuDWdtmFdTYA"
+    },
+    {
+      "id": "v-88",
+      "collection": "verbal",
+      "number": 88,
+      "title": "العقل البشري",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdIGnCVMk7VR30zdur9CD8TNagaCdG8szwfYx2yAplvQBKcqg/viewform",
+      "shortUrl": "https://forms.gle/e1nZfpCsAaNph61r7"
+    },
+    {
+      "id": "v-89",
+      "collection": "verbal",
+      "number": 89,
+      "title": "الإنسان السعيد والفراسة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfZysV2MKNsW8TlZMVXfvQtjzMieOss7FMUff0PdINssaVLbQ/viewform",
+      "shortUrl": "https://forms.gle/kwKTUkrK63DS8ZpRA"
+    },
+    {
+      "id": "v-90",
+      "collection": "verbal",
+      "number": 90,
+      "title": "السعي نحو المعرفة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSd4nrULvAQqxle5jDb1l-jW2K2FTs6fJBPrA8kh3DA5CU0nvQ/viewform",
+      "shortUrl": "https://forms.gle/C5BuNF9AsAHw9Jjf8"
+    },
+    {
+      "id": "v-91",
+      "collection": "verbal",
+      "number": 91,
+      "title": "تلمسان وكسوة الكعبة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdRbJfMWWI-RwVfCJ77fC60X_m-bQD7niGGfgsjnXm0A55qEg/viewform",
+      "shortUrl": "https://forms.gle/gPcoTXJf1NxsrsEE6"
+    },
+    {
+      "id": "v-92",
+      "collection": "verbal",
+      "number": 92,
+      "title": "التضاد اللغوي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdT8U4cSQ9L988vlcqgWbOzs1_xWjGcIN-FcnraSMj2B6R4SA/viewform",
+      "shortUrl": "https://forms.gle/E1R5pA3EPJTk4EkK8"
+    },
+    {
+      "id": "v-93",
+      "collection": "verbal",
+      "number": 93,
+      "title": "البيئة والأزياء",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf2IF4oIX7uvpQgdJzBR8koHafcjw_M7eSI34_Ph3zOZnigjA/viewform",
+      "shortUrl": "https://forms.gle/s1n5oZ9ZonaXJSeq5"
+    },
+    {
+      "id": "v-94",
+      "collection": "verbal",
+      "number": 94,
+      "title": "المشاورة والاستخارة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfLdLgXXVKc3GSqv2_qblG7RWvQLGioBgEjFOqq6mIhLrtbkA/viewform",
+      "shortUrl": "https://forms.gle/U1mcvndgqH2Kuqy28"
+    },
+    {
+      "id": "v-95",
+      "collection": "verbal",
+      "number": 95,
+      "title": "تلمسان والمجرم",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc_j8F9X6B944nGHlBurPL7i_wYjJWc32TV6VTAY5akHTHpxA/viewform",
+      "shortUrl": "https://forms.gle/5zZFXTBs8dd2xKfD8"
+    },
+    {
+      "id": "v-96",
+      "collection": "verbal",
+      "number": 96,
+      "title": "القطارات",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScYMls5YW01DwvoJ-hTsQdaK2fE24oTE09wzyykRAGE0kh-Iw/viewform",
+      "shortUrl": "https://forms.gle/GnygqpxQtUxAngs87"
+    },
+    {
+      "id": "v-97",
+      "collection": "verbal",
+      "number": 97,
+      "title": "تنظيم الوقت والموهبة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeBncLKpQfXLDfPMPq1gU30zF7MZtNhVN4r72WKTRQQjexq1A/viewform",
+      "shortUrl": "https://forms.gle/cZ5fruE5hG1hGoHD6"
+    },
+    {
+      "id": "v-98",
+      "collection": "verbal",
+      "number": 98,
+      "title": "الإنزيمات وأيام الحزن الكثيرة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdIMEG60VIYY425LWGaoYGyI5eH5PyKZnSvfdavfiJ7unFI9Q/viewform",
+      "shortUrl": "https://forms.gle/n4CiC13rwyghHpj2A"
+    },
+    {
+      "id": "v-99",
+      "collection": "verbal",
+      "number": 99,
+      "title": "فوائد الشجر والمنظمات",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfqu9eEeS_EN6lG6a3pYWHFdZx2KC5szIiWpEbUMuK4n6xbpA/viewform",
+      "shortUrl": "https://forms.gle/MXeBqHBetnxx7jS17"
+    },
+    {
+      "id": "v-100",
+      "collection": "verbal",
+      "number": 100,
+      "title": "الاضطراب والتعليم",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScB-vKoJH1Xm65hyZkd6KN0a1ux-GIsaGsUyVkVtBk7yQSQ4g/viewform",
+      "shortUrl": "https://forms.gle/RKABZAZd2fwYf4BHA"
+    },
+    {
+      "id": "v-101",
+      "collection": "verbal",
+      "number": 101,
+      "title": "ذوبان الجليد وكينيا",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfQewJOvuMcf4Nl0ma2DzmZnwKrbvBF4ur0p5BLrpmUZjUVIg/viewform",
+      "shortUrl": "https://forms.gle/1VM4gW2unoVeLNoEA"
+    },
+    {
+      "id": "v-102",
+      "collection": "verbal",
+      "number": 102,
+      "title": "القهوة والفطريات",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfs8DcxkSj7Vgc4syf_zBZpdGIpKgxyISN09XdWZ76I4-h0Uw/viewform",
+      "shortUrl": "https://forms.gle/HHmccRYCzf2esTtp7"
+    },
+    {
+      "id": "v-103",
+      "collection": "verbal",
+      "number": 103,
+      "title": "الصفدي ووصف الجندي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc-QvG9BzbSuJixe_-kRtP3VdxVSUh7jbnudoUP6aYH9x7KSQ/viewform",
+      "shortUrl": "https://forms.gle/2M3pjbExEZWjtfUh9"
+    },
+    {
+      "id": "v-104",
+      "collection": "verbal",
+      "number": 104,
+      "title": "المافيا واللغة العربية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfRVEIEMsKqz_JKc2VbOBcpwYAa6EJlRaTd3cFwCM7Ve3rOTQ/viewform",
+      "shortUrl": "https://forms.gle/3X6WtKsBGhM1ptTz6"
+    },
+    {
+      "id": "v-105",
+      "collection": "verbal",
+      "number": 105,
+      "title": "جاما والمكتشفات البحرية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf6SNXxTndYkK4MGVk-1cCO7wopjVh9OWZNZ1nuHOdpTFutfg/viewform",
+      "shortUrl": "https://forms.gle/Jfkzt7ka7rsxgvhF7"
+    },
+    {
+      "id": "v-106",
+      "collection": "verbal",
+      "number": 106,
+      "title": "التفاؤل والشجاعة والتعليم عن بعد والتغافل",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfnVYCrey8J0yGiT_WlmXjR8lNdJ08AHAuaUgsLDPQvSH7f6g/viewform",
+      "shortUrl": "https://forms.gle/S954fWj21EePgjRJ7"
+    },
+    {
+      "id": "v-107",
+      "collection": "verbal",
+      "number": 107,
+      "title": "التواضع والتكبر والعقل والمعادلة الظالمة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfuLaHFPuognN7IRT9QwykKtfk8keVi_L8fWky0EiCSrxzOEA/viewform",
+      "shortUrl": "https://forms.gle/ok9S8EDvYjZTpoxz7"
+    },
+    {
+      "id": "v-108",
+      "collection": "verbal",
+      "number": 108,
+      "title": "الرياح والفوليك والتمركز والتنمية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSd-uFp4QOfWwmfwpVMOan6HQtieL3QKn2qcEQoXcD6icIsqyw/viewform",
+      "shortUrl": "https://forms.gle/DthBxba2eEd2PHDq9"
+    },
+    {
+      "id": "v-109",
+      "collection": "verbal",
+      "number": 109,
+      "title": "ركل الكرة والسعرات الحرارية والمافيا والتشخيص والبحر الميت",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSd6gLSEoX034fugGDZz2Zi0zRZwUPfxBHw7xhgW4a_8nU4Jkg/viewform",
+      "shortUrl": "https://forms.gle/kAgRHmzkcoWD8mD8A"
+    },
+    {
+      "id": "v-110",
+      "collection": "verbal",
+      "number": 110,
+      "title": "الزيت",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdWSs4zAIp_Ens0R7IMGFLyU45-FOLdF1aK6s0xETgBW6ocrA/viewform",
+      "shortUrl": "https://forms.gle/PY3EBovamXV21sNm8"
+    },
+    {
+      "id": "v-111",
+      "collection": "verbal",
+      "number": 111,
+      "title": "الرأي الفردي وصناعة الهاتف وبصمة الفرشاة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf0ADCM80QnUJtp8L0VJzyU6mMITvdQkKophziZaxbTCNJopQ/viewform",
+      "shortUrl": "https://forms.gle/mqQuKnyfqU7RJcQZ7"
+    },
+    {
+      "id": "v-112",
+      "collection": "verbal",
+      "number": 112,
+      "title": "الرازي والسفينة والبخاري والرضاعة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe0UCpj9Aq0jrcvlPmecGSMsLuu0R8PdRPddhr68Ajl8eDw_A/viewform",
+      "shortUrl": "https://forms.gle/5UdidQnh9nEN91ES8"
+    },
+    {
+      "id": "v-113",
+      "collection": "verbal",
+      "number": 113,
+      "title": "الزعفران والقصة القصيرة والنجاح",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfrwkApEy-i2p6uaNeI0ky281p11lfiIbRlNWGOyKLNimVd1A/viewform",
+      "shortUrl": "https://forms.gle/fN9Nj9Knx9GttEpK6"
+    },
+    {
+      "id": "v-114",
+      "collection": "verbal",
+      "number": 114,
+      "title": "الإمام مالك والملح الصخري والعالم الافتراضي وتكرير النفط",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSewAv6_QV3mh52QDsyzl666Gu6vT0NGw0VbPGmw1B3WUvLoHg/viewform",
+      "shortUrl": "https://forms.gle/Ei3h1KCruCmNCZTr5"
+    },
+    {
+      "id": "v-115",
+      "collection": "verbal",
+      "number": 115,
+      "title": "الأشجار والماضي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeJqhoaswQovkf6k0Xq6wYowm9L_vsc2xHilisCEDNOB-tF4w/viewform",
+      "shortUrl": "https://forms.gle/ANDY8CmUD8HiuoMp7"
+    },
+    {
+      "id": "v-116",
+      "collection": "verbal",
+      "number": 116,
+      "title": "مسك الغزال والنادي الرياضي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScEGlnUJloYz5lB5bCwNV9QNKJuWpJDhA4w1feq1ztnks1suA/viewform",
+      "shortUrl": "https://forms.gle/bwoVeREBiRDMKAbGA"
+    },
+    {
+      "id": "v-117",
+      "collection": "verbal",
+      "number": 117,
+      "title": "ميول الأطفال والوهم والتوكل",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSd64vUIxqHlMnhK-Xot3uTszPVFXcpU_CgrfeNTVysuj-uM3w/viewform",
+      "shortUrl": "https://forms.gle/SWEM9Em9WZkVbrh68"
+    },
+    {
+      "id": "v-118",
+      "collection": "verbal",
+      "number": 118,
+      "title": "المستشرق واللجوء إلى الله",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeqstSt6HHIQIhOc3DuX2aWjUEe_mDroNY618F4bc-Q41ilAQ/viewform",
+      "shortUrl": "https://forms.gle/nGuU3WqVPwBLUUQ39"
+    },
+    {
+      "id": "v-119",
+      "collection": "verbal",
+      "number": 119,
+      "title": "دروس الحياة والإنزيمات وفيتامين د والشيخوخة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfbn6h7ZSW2t_tb95Vx_hVg2-VPCHwWnip0iOIWm2CkVuoi1w/viewform",
+      "shortUrl": "https://forms.gle/jBPGe6DoNFNyrwqGA"
+    },
+    {
+      "id": "v-120",
+      "collection": "verbal",
+      "number": 120,
+      "title": "المغناطيس",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc62z_RR5nSEE8PCVR8-OEan46VF49jE-z_0TeuTwUMcXvMrw/viewform",
+      "shortUrl": "https://forms.gle/V6FkjnT2VsqMuppH7"
+    },
+    {
+      "id": "v-121",
+      "collection": "verbal",
+      "number": 121,
+      "title": "الترجمة والرياضة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc1HWt9ZOjTA2Moua-WQVXeufQ2JEI2VnkC7eBACz9jQKX5AA/viewform",
+      "shortUrl": "https://forms.gle/AgNmgL6626hBmBSJ8"
+    },
+    {
+      "id": "v-122",
+      "collection": "verbal",
+      "number": 122,
+      "title": "المتلقي وتقدير الذات وأحمد ديدات ووسائل الإعلام",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfXPT8bv7N0tvcwdYl6XzEOpjjHnl1An648dCcwJ9y7wTzx4A/viewform",
+      "shortUrl": "https://forms.gle/ABNCAWFHXbtJQ58U6"
+    },
+    {
+      "id": "v-123",
+      "collection": "verbal",
+      "number": 123,
+      "title": "أهل النظر والمروءة والشجاعة والسخاء",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScpj0P-E-t00-ALJjdcgGs8O8eC0eaOu61kTV44TISwwVymaQ/viewform",
+      "shortUrl": "https://forms.gle/muTSq9trif1ZZ9qA9"
+    },
+    {
+      "id": "v-124",
+      "collection": "verbal",
+      "number": 124,
+      "title": "القاضي العادل والليمون",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf7QYGVYww3W-7FdTzsVt6CkOncTDvyoiWQfe-cyHpuHdFsnw/viewform",
+      "shortUrl": "https://forms.gle/5KTWpDb33TdYoowi8"
+    },
+    {
+      "id": "v-125",
+      "collection": "verbal",
+      "number": 125,
+      "title": "الصديق المزيف والأعمى",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScFOgOsHChd2r_2oM88_vwaonXbaiWUXVDYzvHz-hJWTq0Lrw/viewform",
+      "shortUrl": "https://forms.gle/KqQiL7rK77yXYmuh6"
+    },
+    {
+      "id": "v-126",
+      "collection": "verbal",
+      "number": 126,
+      "title": "عمر بن عبد العزيز",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSebBYv-viTqPsRfK0b0zla-fb64xfrgZ4bbvm07rcM6cPfdXA/viewform",
+      "shortUrl": "https://forms.gle/e1pQ93jctupDopdc7"
+    },
+    {
+      "id": "v-127",
+      "collection": "verbal",
+      "number": 127,
+      "title": "النيكوتين وتعدد المهام",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSebczD6c4-9IV7XHw7KkB9J4L9_h-tP2D-I2YQp4wKejP4WFg/viewform",
+      "shortUrl": "https://forms.gle/Tu8vsufqgShynF5P6"
+    },
+    {
+      "id": "v-128",
+      "collection": "verbal",
+      "number": 128,
+      "title": "أبو بكر الصديق",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfwCEOlWiE5r6_0iCsYXnlQpNIk0XOyPya1Zsnh4z6udT7j0g/viewform",
+      "shortUrl": "https://forms.gle/2LpvYBnEayZ7a3MQA"
+    },
+    {
+      "id": "v-129",
+      "collection": "verbal",
+      "number": 129,
+      "title": "البكاء والاستماع",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfeRLBsG0HWzEbl7Vall28pmCR_d8Jf06cH3VkF1dwU3V3frw/viewform",
+      "shortUrl": "https://forms.gle/mWfSQh6TdzcpqRvo7"
+    },
+    {
+      "id": "v-130",
+      "collection": "verbal",
+      "number": 130,
+      "title": "السفينة واللغة العربية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfrt7Oa7G_1Usc75FboutoOd3eldH0x1wDs_RlC2uuG2ufdzw/viewform",
+      "shortUrl": "https://forms.gle/j1UnhsQbFf37nCSD9"
+    },
+    {
+      "id": "v-131",
+      "collection": "verbal",
+      "number": 131,
+      "title": "مالك الحزين",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSePxl8eW27dMYUTaiY0R9HQ1SRM-8uqANWU4j99OlvbYuA4PA/viewform",
+      "shortUrl": "https://forms.gle/PqSg8MAoe8KNQHd67"
+    },
+    {
+      "id": "v-132",
+      "collection": "verbal",
+      "number": 132,
+      "title": "الدعاء",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScf-HN7_ki4hUuFBd3bQBtCQjsB2amhCjOlldZjT4J1pgAzyQ/viewform",
+      "shortUrl": "https://forms.gle/taHR9rXktrX88suVA"
+    },
+    {
+      "id": "v-133",
+      "collection": "verbal",
+      "number": 133,
+      "title": "الملك المعطي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeL713qYuzwf1Wq3Py3XiGQd4s4ryZX4Uq5Ft2RI8dvS6wDwA/viewform",
+      "shortUrl": "https://forms.gle/mHsM3cJjMN8hfNXw9"
+    },
+    {
+      "id": "v-134",
+      "collection": "verbal",
+      "number": 134,
+      "title": "الاحتراز",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdagRdBt1pFth2jo2DXxtGTiKJAEfJOnkxREcseU8b3bH2zQA/viewform",
+      "shortUrl": "https://forms.gle/ScNwZBxDLkiPt7or6"
+    },
+    {
+      "id": "v-135",
+      "collection": "verbal",
+      "number": 135,
+      "title": "الحوار والجدل",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfIOtDpgOWg64W3lmNTwXGPZjcyCpng2hRty-Cqc14YgzlSPA/viewform",
+      "shortUrl": "https://forms.gle/wzJThwdqfW9DZouA6"
+    },
+    {
+      "id": "v-136",
+      "collection": "verbal",
+      "number": 136,
+      "title": "أرامكو",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScT1LCkHM41OqJgMbqkNt4wz90y8xc_yuwtpGAihMcElhbr5g/viewform",
+      "shortUrl": "https://forms.gle/E5ex5rDQAnGBJm6g8"
+    },
+    {
+      "id": "v-137",
+      "collection": "verbal",
+      "number": 137,
+      "title": "السفينة والسكري",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfGWOFIE4bvg57tj4hUDVqylJKU005Io0TYJVDqOmx2kE0D2w/viewform",
+      "shortUrl": "https://forms.gle/o9G8bZrzh5SX1BfV7"
+    },
+    {
+      "id": "v-138",
+      "collection": "verbal",
+      "number": 138,
+      "title": "التاريخ",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfmSuPwPBZum8W3xckaOm8G9npTqh78jyfmaN6gNClS-Ti6Xg/viewform",
+      "shortUrl": "https://forms.gle/7mHCkJASgSMTdWzJ9"
+    },
+    {
+      "id": "v-139",
+      "collection": "verbal",
+      "number": 139,
+      "title": "تطوير الذات",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSd2ZaqCsvXpyjK4Od9L6nMKguv_FSPvzyLLIN6xcGKnqX3TiQ/viewform",
+      "shortUrl": "https://forms.gle/n8ci8cJxP5o1kBaK6"
+    },
+    {
+      "id": "v-140",
+      "collection": "verbal",
+      "number": 140,
+      "title": "جوامع الكلم",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSd179hS_6IxrbJaASZql7m0PDgzIghGeZPzlKtNvj5DJwlsSQ/viewform",
+      "shortUrl": "https://forms.gle/G59HHi4iXLZPVHXC8"
+    },
+    {
+      "id": "v-141",
+      "collection": "verbal",
+      "number": 141,
+      "title": "علو الهمة وفيتامين د",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdUXIB9s6yZY83d0up7KiC7gEKyr26nlJdOcEAEggRSzFoF1Q/viewform",
+      "shortUrl": "https://forms.gle/YEgsdBFHrgGs7Fym7"
+    },
+    {
+      "id": "v-142",
+      "collection": "verbal",
+      "number": 142,
+      "title": "الأعمى والمعدة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSctARlY-0VjJDduURjVsrea4N12JL8uwozXZm7YOz3dUu3_yQ/viewform",
+      "shortUrl": "https://forms.gle/1UAvPEfwnT8Js7379"
+    },
+    {
+      "id": "v-143",
+      "collection": "verbal",
+      "number": 143,
+      "title": "دروس الحياة وانحراف الأفراد",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdIvVDGUF8E5xJFmFLaMsucpfIzdBbhhaIW1eZcunmEcqNccQ/viewform",
+      "shortUrl": "https://forms.gle/HDmXsbhTvidNJvau7"
+    },
+    {
+      "id": "v-144",
+      "collection": "verbal",
+      "number": 144,
+      "title": "العمل عن بعد والاحتباس الحراري",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfuwS-Rtcxxj8Q9Qr5g8kAJveYJSOJBVoG3xzSMHG2yeYldmQ/viewform",
+      "shortUrl": "https://forms.gle/52DCwfePQJvHRhy17"
+    },
+    {
+      "id": "v-145",
+      "collection": "verbal",
+      "number": 145,
+      "title": "الإنفلونزا وسوء الاستعداد",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSccTkRZLHtLAt-c7gMFWmo8MJpXFKdpbEGX7odHqyBZbPC-xA/viewform",
+      "shortUrl": "https://forms.gle/8YuiwzQ3hwUNufA2A"
+    },
+    {
+      "id": "v-146",
+      "collection": "verbal",
+      "number": 146,
+      "title": "حرب بكر والطاقة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfDYHMu44AJhqH2hCZENYa_ozIxG9fjAbr8icD3NSaof_UrSw/viewform",
+      "shortUrl": "https://forms.gle/gLjzBhnRnS1jMNAT9"
+    },
+    {
+      "id": "v-147",
+      "collection": "verbal",
+      "number": 147,
+      "title": "معركة ذات الصواري",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfFSr3AqeNVvZE1_7wOju36SjQpVFeyyj-bDYpo7X1apN4FsQ/viewform",
+      "shortUrl": "https://forms.gle/U7zt9VQiKbHMMU3V8"
+    },
+    {
+      "id": "v-148",
+      "collection": "verbal",
+      "number": 148,
+      "title": "الأمثال وصناعة الأدوية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSesm_8q7Zl7dAIoocO7oZDMk6seUgwwa3x_PsP5jVAN7E0xqw/viewform",
+      "shortUrl": "https://forms.gle/DoJq74MtnNQAu5ZC7"
+    },
+    {
+      "id": "v-149",
+      "collection": "verbal",
+      "number": 149,
+      "title": "العقل أعمى من البصر",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdTMpxGvfXQOTLuDSdCeJkgvapl-4iySM8xkKc5d9Ke9UEB4g/viewform",
+      "shortUrl": "https://forms.gle/32QCtc9qcMB1ua1M6"
+    },
+    {
+      "id": "v-150",
+      "collection": "verbal",
+      "number": 150,
+      "title": "الأيام دول",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScs-tLscgwGzDLRfHKgKFguib08lOn8FwmPRxBKYjOhTEvWWw/viewform",
+      "shortUrl": "https://forms.gle/G5Z1y95F98p85TuW6"
+    },
+    {
+      "id": "v-151",
+      "collection": "verbal",
+      "number": 151,
+      "title": "النفط والغاز والمعادن في المملكة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeQArYn-5qbtDWmwfDnxsoWCtN2tFPFXiSKK-8FpQpkZwC1Dw/viewform",
+      "shortUrl": "https://forms.gle/XF28gLWcMwmK8fKY7"
+    },
+    {
+      "id": "v-152",
+      "collection": "verbal",
+      "number": 152,
+      "title": "الفطريات والتحفيز",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdq8hEvQtJv5lyylGefT9voVmTjhfrkZNH4d1PBBk1S220OZQ/viewform",
+      "shortUrl": "https://forms.gle/jZYDE2TDGWrLyAeu5"
+    },
+    {
+      "id": "v-153",
+      "collection": "verbal",
+      "number": 153,
+      "title": "الأمن والعصامية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeugKiofD_xKlTQlJKO6olgWE1LjYOQbdRvHHIbrGnDojJEcg/viewform",
+      "shortUrl": "https://forms.gle/evrnXXL52B8JMiVi9"
+    },
+    {
+      "id": "v-154",
+      "collection": "verbal",
+      "number": 154,
+      "title": "الألياف البصرية والاضطراب",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdivLCNj-APsa5BxpTwYeWB6GkieWt-paMbTJS4_mo1PXtqWg/viewform",
+      "shortUrl": "https://forms.gle/k27hTy3RQqrrwLSS8"
+    },
+    {
+      "id": "v-155",
+      "collection": "verbal",
+      "number": 155,
+      "title": "الاهتمام بالمظاهر",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe_vYY5dPyJY2vUoQ4AtZqSoXdVvUJwX0thaPwK92jvLyePuA/viewform",
+      "shortUrl": "https://forms.gle/xHQAnMHF8SC7oF838"
+    },
+    {
+      "id": "v-156",
+      "collection": "verbal",
+      "number": 156,
+      "title": "الصحبة وأهمية القدوة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfwuY0OPTp1WlbqQwn-RKWjhdy2EHLeeHuqOxLml_mD6LuztQ/viewform",
+      "shortUrl": "https://forms.gle/1x7MiXjbNEhaBUou6"
+    },
+    {
+      "id": "v-157",
+      "collection": "verbal",
+      "number": 157,
+      "title": "الصبر والقناعة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScVcEmHhqTzmY2heNjuqdC_U8laWF_ffG89ZacEz6sJ3iXQDQ/viewform",
+      "shortUrl": "https://forms.gle/Gyt8ha8oSN4Aez417"
+    },
+    {
+      "id": "v-158",
+      "collection": "verbal",
+      "number": 158,
+      "title": "الشاي والزعفران",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfrL9VvUAiGKiE6PsXSirYedEy8my02ohmueIpyIQ5ChKjqhA/viewform",
+      "shortUrl": "https://forms.gle/7s28LFmsENdbs97L9"
+    },
+    {
+      "id": "v-159",
+      "collection": "verbal",
+      "number": 159,
+      "title": "البعوض",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeZb_ZxWYxJtp4xQ7Wm4t8QguTzK2Hpjm_8fesxJYk-OcPjgg/viewform",
+      "shortUrl": "https://forms.gle/mCv7fTBFVZw1mUjX6"
+    },
+    {
+      "id": "v-160",
+      "collection": "verbal",
+      "number": 160,
+      "title": "نوبة الهلع",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfFW5_3IzEAlWFCEnxcbzYhQ1ekOdPd7pi5Az55GkoXKNrNcg/viewform",
+      "shortUrl": "https://forms.gle/FRWnCJFNN3gBaZT69"
+    },
+    {
+      "id": "v-161",
+      "collection": "verbal",
+      "number": 161,
+      "title": "الغلطة ولسان الفتى",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeOxUPxI5O30lchD2nqBJLWR1EjiYO0Agi4FTAoL4SnVK0HPw/viewform",
+      "shortUrl": "https://forms.gle/TGLAWhppbY1CWRSWA"
+    },
+    {
+      "id": "v-162",
+      "collection": "verbal",
+      "number": 162,
+      "title": "قصة الصحراء",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfXhwcspOth-LA3a2NBLqU4hYxVjFjmy7Y1fCAn2t1-OAARJg/viewform",
+      "shortUrl": "https://forms.gle/MdJa4NNgS5VCNJsK6"
+    },
+    {
+      "id": "v-163",
+      "collection": "verbal",
+      "number": 163,
+      "title": "شكر النعمة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeJVgJ5sKDfgZr5f_ZAHj46MZJc7K4bEicjVpTlfo2BcZWUKg/viewform",
+      "shortUrl": "https://forms.gle/8fLe1dLLVNv4goWy9"
+    },
+    {
+      "id": "v-164",
+      "collection": "verbal",
+      "number": 164,
+      "title": "الاحتطاب والإنسان السعيد",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScMaIHilpdYYSVf0uIAqcUEIjGV00aW1n7PhoGc2mDUj9J6Uw/viewform",
+      "shortUrl": "https://forms.gle/MskcidE6DHpHayBDA"
+    },
+    {
+      "id": "v-165",
+      "collection": "verbal",
+      "number": 165,
+      "title": "الإنفلونزا ونعمة البصر",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScKZ6R-EuxSix94eTfJ4OG8uEN-_fHOSncEJ0HOQ1Tsy5yFag/viewform",
+      "shortUrl": "https://forms.gle/3enutFdGH7NSATqq5"
+    },
+    {
+      "id": "v-166",
+      "collection": "verbal",
+      "number": 166,
+      "title": "السحب وموزمبيق",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdXwXTASRVJgHcxAp2kO1BX0l32fdtWKVUy04ReO5WbZzwq_w/viewform",
+      "shortUrl": "https://forms.gle/3UqcfrEakqmntEh16"
+    },
+    {
+      "id": "v-167",
+      "collection": "verbal",
+      "number": 167,
+      "title": "الحوادث المرورية والتصحر",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeLovjjOWyjY_W3zOja8WfTGreEIKcpA4UQQcjARqtcCpNNgw/viewform",
+      "shortUrl": "https://forms.gle/gdhN5LcPSmRoKNdHA"
+    },
+    {
+      "id": "v-168",
+      "collection": "verbal",
+      "number": 168,
+      "title": "تقليم أشجار الشوارع",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeE5WOrD-t3QzoTQ351e9dNC3yGi7e8VbuAAKymg939VBnThw/viewform",
+      "shortUrl": "https://forms.gle/nW9PspzVEBDXrDSj8"
+    },
+    {
+      "id": "v-169",
+      "collection": "verbal",
+      "number": 169,
+      "title": "القمر الصناعي والبوتوكس",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeiapGq5MhfK5ZS6tZlYtt101-p8gImhWGjDT4dpsX4XkEHYw/viewform",
+      "shortUrl": "https://forms.gle/8KdiRmo3dbRtyU3j9"
+    },
+    {
+      "id": "v-170",
+      "collection": "verbal",
+      "number": 170,
+      "title": "غاز الهيليوم وصناعة الورق",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeggebNYl8-mZjZA0MkAw2wLYI6TGJ12TaUoKU9DtiEiU8UMQ/viewform",
+      "shortUrl": "https://forms.gle/SwrJS7EztSHQ4qoV6"
+    },
+    {
+      "id": "v-171",
+      "collection": "verbal",
+      "number": 171,
+      "title": "السل الرئوي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe0xg2Ms4r916bBjUBSkpu8nzzYVZpCtMFz9S5WPpc9s7kp9g/viewform",
+      "shortUrl": "https://forms.gle/otuLEtdxSMiEGCgV7"
+    },
+    {
+      "id": "v-172",
+      "collection": "verbal",
+      "number": 172,
+      "title": "حلي النساء",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdtSevvuQ8mW2VdXbzU-F1SIOikk1NoZ4uy3f8yEDASWkRbkA/viewform",
+      "shortUrl": "https://forms.gle/4M2itQrz9XRn6CkD8"
+    },
+    {
+      "id": "v-173",
+      "collection": "verbal",
+      "number": 173,
+      "title": "المكنسة الكهربائية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeKoUQ_6-DVeSlEzz09q1_5_YkEqYuI1G7DGcAla4Wofa68MQ/viewform",
+      "shortUrl": "https://forms.gle/9MJ4FqsMoFio49eK7"
+    },
+    {
+      "id": "v-174",
+      "collection": "verbal",
+      "number": 174,
+      "title": "الملول",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScMVSRlS6X6K8tcpqOpE2g-Bc8cSVgLdSJZx-Ffgyom0EevoQ/viewform",
+      "shortUrl": "https://forms.gle/8moX4BBLZJbfVDJV8"
+    },
+    {
+      "id": "v-175",
+      "collection": "verbal",
+      "number": 175,
+      "title": "الضغوطات النفسية والتصحر",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdXBr3xatCEFOqpTfLkpM2J2shIbq_sYhr2AultFmvPj9-AvQ/viewform",
+      "shortUrl": "https://forms.gle/8wercZ9FyqkDTk6dA"
+    },
+    {
+      "id": "v-176",
+      "collection": "verbal",
+      "number": 176,
+      "title": "جاليليو والمتعجل",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSduHH0tgtUrXb0-lLJrXQ789m7aV-EuOH6CloSdY8BpPegQQQ/viewform",
+      "shortUrl": "https://forms.gle/tpjyZ7RSBRzDKtoA6"
+    },
+    {
+      "id": "v-177",
+      "collection": "verbal",
+      "number": 177,
+      "title": "وصايا المتحدث",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdsTi-PdN4sdXT7Ekxnt0AB_THSxz8AeKLlMLbh3vFOFnjgBQ/viewform",
+      "shortUrl": "https://forms.gle/xU9DzdqhEuSG46x89"
+    },
+    {
+      "id": "v-178",
+      "collection": "verbal",
+      "number": 178,
+      "title": "سعة رحمة الله",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScGfEXWJgf74Qnj2ZKSrc72UITP4QuBMKbqAwbOllPSMCA83Q/viewform",
+      "shortUrl": "https://forms.gle/sNuSnHCiXfDRU7sW9"
+    },
+    {
+      "id": "v-179",
+      "collection": "verbal",
+      "number": 179,
+      "title": "صناعة الأحذية ومجامع اللغة العربية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdGem5EkDHRinesO1iFHg0WaymS7MEl27WeTdkSVlueS5opSQ/viewform",
+      "shortUrl": "https://forms.gle/H67jTUJQHjSpX9cH9"
+    },
+    {
+      "id": "v-180",
+      "collection": "verbal",
+      "number": 180,
+      "title": "الإسكندرية والزراعة الواسعة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSd9iTsb-xECYhpXQDEBY7Oz7htsxbLo1PnLUVNzXlqJIDmwTg/viewform",
+      "shortUrl": "https://forms.gle/pVSSYZkxoXFsgSXo9"
+    },
+    {
+      "id": "v-181",
+      "collection": "verbal",
+      "number": 181,
+      "title": "المنعزلين والإصلاح",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeQUret_k0aJUUTnksDzLjCL9nwbh1OAf5FwLa0H0u2j77Nmw/viewform",
+      "shortUrl": "https://forms.gle/mzhpWKCbcoj87o448"
+    },
+    {
+      "id": "v-182",
+      "collection": "verbal",
+      "number": 182,
+      "title": "سرعة البديهة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFP55-TmBdYLzptUZNI90O-edFpPxaiZCwQWvOjYozX2oIRQ/viewform",
+      "shortUrl": "https://forms.gle/jYEhXJVdZJ4LXvQJA"
+    },
+    {
+      "id": "v-183",
+      "collection": "verbal",
+      "number": 183,
+      "title": "إعادة المجتمع",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdJUDRay6_j5HsYu3ONylqaEceo3ffPJjXK4HEaOafuBw8XyQ/viewform",
+      "shortUrl": "https://forms.gle/WnbUrrdh1xokKeVE7"
+    },
+    {
+      "id": "v-184",
+      "collection": "verbal",
+      "number": 184,
+      "title": "تلوث المياه",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSet0rcufgYtQkpIaOp_r3R9gYTPusQH0cF2dJR7DBngcJK-lQ/viewform",
+      "shortUrl": "https://forms.gle/VMRCVxPaKm57qg9p8"
+    },
+    {
+      "id": "v-185",
+      "collection": "verbal",
+      "number": 185,
+      "title": "أخطاء الآباء",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScfbmSFnP5q7O6UQ8-yRdPnuiTdnHpusjWh-IOgebBaksGeJg/viewform",
+      "shortUrl": "https://forms.gle/7NMgYSGFUynNVGue9"
+    },
+    {
+      "id": "v-186",
+      "collection": "verbal",
+      "number": 186,
+      "title": "نتائج الإهمال",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSezBc86MgPXjzhIjDFFKNeFGso2DG1hVKw1Ix22oZeFMzgV-Q/viewform",
+      "shortUrl": "https://forms.gle/L4vt3B3EM9eGcgv18"
+    },
+    {
+      "id": "v-187",
+      "collection": "verbal",
+      "number": 187,
+      "title": "المبيدات وجمع القرآن الكريم",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeg9gqC0lB3fyrKifLmBg_vorYSQz4g0eiQsdf-k62mdXZPXw/viewform",
+      "shortUrl": "https://forms.gle/Ck96SdDec1kKvJ7v7"
+    },
+    {
+      "id": "v-188",
+      "collection": "verbal",
+      "number": 188,
+      "title": "المتفيطنون والبخلاء",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSevODVUHsa0-9rGQUO9HE4cd6gL5ZJ6S6346hLoXub0dmWQwQ/viewform",
+      "shortUrl": "https://forms.gle/Y4jQUE6YFMAfiFUN7"
+    },
+    {
+      "id": "v-189",
+      "collection": "verbal",
+      "number": 189,
+      "title": "التغافل والتمني",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSd7HBTwd3z8l-ueIdj0HQansnkegJ2d6Rms5LL0UjdURdFOog/viewform",
+      "shortUrl": "https://forms.gle/h9YSanvv7mFUQ5iM8"
+    },
+    {
+      "id": "v-190",
+      "collection": "verbal",
+      "number": 190,
+      "title": "علو الهمة والغواص",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdC4aDsyNLCZNbXF0y_bpI7mxtyFCzvJvHzaUdOpeh28pQvnA/viewform",
+      "shortUrl": "https://forms.gle/Aj3Bopw37kmU4rhc6"
+    },
+    {
+      "id": "v-191",
+      "collection": "verbal",
+      "number": 191,
+      "title": "مصاحبة الأخيار",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe6sr0U3r5xoiLaavNauJZA8cqzs9ZmcJ2IKXC7YX1VKj254Q/viewform",
+      "shortUrl": "https://forms.gle/hBhgJ8DeabfgneFR6"
+    },
+    {
+      "id": "v-192",
+      "collection": "verbal",
+      "number": 192,
+      "title": "رؤية المملكة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSd-WjkKdSJ0in04ukfRh_iwBsWo8v3iC_ca5sxJPHo7IQgAQg/viewform",
+      "shortUrl": "https://forms.gle/gcJXQgW8D6UsbRuAA"
+    },
+    {
+      "id": "v-193",
+      "collection": "verbal",
+      "number": 193,
+      "title": "التواضع وصغر النفس",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfc2lQnAXykE5t0qA6Hr7x7JQ8WRCodaD4n6W4rFsCEwu_Mmg/viewform",
+      "shortUrl": "https://forms.gle/mAmGxRPkPGxgFtD67"
+    },
+    {
+      "id": "v-194",
+      "collection": "verbal",
+      "number": 194,
+      "title": "إرضاء الناس",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeRN-jxx5lgGKkcisFjZgFCncMfW__IQvNawzi8_l1TK42Ovw/viewform",
+      "shortUrl": "https://forms.gle/Ttpwxum52j8ixKWa7"
+    },
+    {
+      "id": "v-195",
+      "collection": "verbal",
+      "number": 195,
+      "title": "خلق الحلم والتصحيح",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdfUlP6TeuS1Pju-2FkjZ6YQFPbL8r7ovNNcAI9EhRVsCSr8g/viewform",
+      "shortUrl": "https://forms.gle/hqmtdjuHDdiVF2818"
+    },
+    {
+      "id": "v-196",
+      "collection": "verbal",
+      "number": 196,
+      "title": "وراثة العلم",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeJKIMdDufnaXLarjSvL2wRsStv28ysEPCxfvCVAzUxV2TMIA/viewform",
+      "shortUrl": "https://forms.gle/zWZVqqyvccQtgXEP6"
+    },
+    {
+      "id": "v-197",
+      "collection": "verbal",
+      "number": 197,
+      "title": "فشل الشباب",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdMFrlJfbRHR8E-0P6au9CPn_hnkKLYEC0ihY8fv2EVAyJxLQ/viewform",
+      "shortUrl": "https://forms.gle/oBr4dXZ5FJKDQ9io9"
+    },
+    {
+      "id": "v-198",
+      "collection": "verbal",
+      "number": 198,
+      "title": "تدوير النفايات",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdquqLFs021wceRul2VCWQqyFUqP5qxFv-vqiGzWny3gutkxg/viewform",
+      "shortUrl": "https://forms.gle/NcrQTGvWFuFk9q1f6"
+    },
+    {
+      "id": "v-199",
+      "collection": "verbal",
+      "number": 199,
+      "title": "التغابي وراحة البال",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdIBmUfTb4-N-mLcp42XVxHPeBYrAf5x_ExjW5mw5auqjskIQ/viewform",
+      "shortUrl": "https://forms.gle/phsxiBhFhKZBFig19"
+    },
+    {
+      "id": "v-200",
+      "collection": "verbal",
+      "number": 200,
+      "title": "الإنسان الفوضوي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfIRgMNDM0lFmPeUYmuRpKVy1L6gnsPowr0Poi7l3Q4VaWoaQ/viewform",
+      "shortUrl": "https://forms.gle/tQ9M1if3RQm2G9WP6"
+    },
+    {
+      "id": "v-201",
+      "collection": "verbal",
+      "number": 201,
+      "title": "أنواع الهمم",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfFyFye2v1zUxywOU62yPBwqHNMFDdzpGtFd-BHk0uc7yyx6Q/viewform",
+      "shortUrl": "https://forms.gle/Vx7hFkp1qy9oU4jS9"
+    },
+    {
+      "id": "v-202",
+      "collection": "verbal",
+      "number": 202,
+      "title": "منهج العلم",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSft6IuM0fonHpr72yS9ZIfxbfwLDb1amnso_CPeKM-pg8t14g/viewform",
+      "shortUrl": "https://forms.gle/z7GtUkmKNtgMMiiz6"
+    },
+    {
+      "id": "v-203",
+      "collection": "verbal",
+      "number": 203,
+      "title": "الإسفنجة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc-2i1dW_bXmlJJVPJ_YQTqPUeo_kEPYgjHWfWzK1ogJCF6sg/viewform",
+      "shortUrl": "https://forms.gle/G3yzy6DHfT9JAPCdA"
+    },
+    {
+      "id": "v-204",
+      "collection": "verbal",
+      "number": 204,
+      "title": "مقولة علي بن أبي طالب",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScvINcs6Snk7iKxNulLwC0Pn5bElEOahQTj-mo7ck1BV_yTWQ/viewform",
+      "shortUrl": "https://forms.gle/JTG5isETbGvMj5wA9"
+    },
+    {
+      "id": "v-205",
+      "collection": "verbal",
+      "number": 205,
+      "title": "فن الإلقاء",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfgHmUBdab8xoKC1hZNq6lI9qMnz404nAwBKut_ZEUlMTj2Ag/viewform",
+      "shortUrl": "https://forms.gle/wVL4hwZvvpwu7UZP8"
+    },
+    {
+      "id": "v-206",
+      "collection": "verbal",
+      "number": 206,
+      "title": "تصحيح مفهوم",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfvnc4jK4mt5z7IpTp9J-qF464ZIWbz_7Ngi_tpuB8fmPhbLA/viewform",
+      "shortUrl": "https://forms.gle/T2ebpGMYxtovj2Ai9"
+    },
+    {
+      "id": "v-207",
+      "collection": "verbal",
+      "number": 207,
+      "title": "هذيل الكلابي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScqzpwVQW_HBmrOQNltWJIAUIyZ3bw5CEXMb90xtAaqpc7BWQ/viewform",
+      "shortUrl": "https://forms.gle/MtL9nqtDm5WaJThc6"
+    },
+    {
+      "id": "v-208",
+      "collection": "verbal",
+      "number": 208,
+      "title": "المسيء",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfEtoNftKSA2BBrVAd7r2mxTfI2bKfC9xlB_bHDCUErEoSNcw/viewform",
+      "shortUrl": "https://forms.gle/RefNdcsh1BJTbWKv5"
+    },
+    {
+      "id": "v-209",
+      "collection": "verbal",
+      "number": 209,
+      "title": "تعليم النفس",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeQYI-Oc1K9bwfEszyvbO5dxCOh1kiT_UKpXj-F8HGBerJgoQ/viewform",
+      "shortUrl": "https://forms.gle/P2fXpEJnjwAL7p9M7"
+    },
+    {
+      "id": "v-210",
+      "collection": "verbal",
+      "number": 210,
+      "title": "كظم الغيظ",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScqu3yxM5K0T2F-sxKPgPG--y0xuzTfn_QH1QYyEvgDQPCBIw/viewform",
+      "shortUrl": "https://forms.gle/hqei1xB8mihjw28a8"
+    },
+    {
+      "id": "v-211",
+      "collection": "verbal",
+      "number": 211,
+      "title": "الزهد في الدنيا",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfehbUONZ4Hmm24cpRJcG_vU8exgeBayHq70aO2wPsK0o81-Q/viewform",
+      "shortUrl": "https://forms.gle/MFj4d66rnFuS1z5K9"
+    },
+    {
+      "id": "v-212",
+      "collection": "verbal",
+      "number": 212,
+      "title": "ضربة الشمس",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfhYiXNZcbWH9ILqPkOdsXVcQ7d_5V7-TlAWhxZQboB7KrKEg/viewform",
+      "shortUrl": "https://forms.gle/ZfqxYYz8qiaUmYxX8"
+    },
+    {
+      "id": "v-213",
+      "collection": "verbal",
+      "number": 213,
+      "title": "فهم النفس البشرية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScFMUHxWDHc5c0aSNRJdwVG9tkQI2fyyPXMPOXT8TVgKOJkVQ/viewform",
+      "shortUrl": "https://forms.gle/knq8nJrPkmcPqyGK6"
+    },
+    {
+      "id": "v-214",
+      "collection": "verbal",
+      "number": 214,
+      "title": "أنظمة المملكة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeVKLbLilB-lK-lGhUSvRHY8Vb7fCNnYHL9z5gxFloMlxR1Iw/viewform",
+      "shortUrl": "https://forms.gle/xfzna1Lk27CFnkfm9"
+    },
+    {
+      "id": "v-215",
+      "collection": "verbal",
+      "number": 215,
+      "title": "الثقة بالنفس واللغة العربية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdbBOBobN91-9RnjULm29gEUpZoKFt6FL-lYGVuObmYl4BBzw/viewform",
+      "shortUrl": "https://forms.gle/jNm14YzDKdPH5FsWA"
+    },
+    {
+      "id": "v-216",
+      "collection": "verbal",
+      "number": 216,
+      "title": "صفحات التواصل الاجتماعي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScV-fwrE0r69LBaQz3n9DJ2x6PQHWJACWVkTYVLa-Q3NavisA/viewform",
+      "shortUrl": "https://forms.gle/DR1DcfT6qiQTV4Yw7"
+    },
+    {
+      "id": "v-217",
+      "collection": "verbal",
+      "number": 217,
+      "title": "نصائح المهاب",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSehiLKVApzRUrocs4tPspLmTJwZQMn147sNEyfoL0NhOOmgHw/viewform",
+      "shortUrl": "https://forms.gle/5pFjy96yqV7pHivz9"
+    },
+    {
+      "id": "v-218",
+      "collection": "verbal",
+      "number": 218,
+      "title": "الجمال الطبيعي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfeUdBTlrHQcAg_-Bq1rRIhEffWxy1DQa9BETlLd4n-ly_mRQ/viewform",
+      "shortUrl": "https://forms.gle/4rzK8CARKGs8uxDt6"
+    },
+    {
+      "id": "v-219",
+      "collection": "verbal",
+      "number": 219,
+      "title": "السكري",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfOkzo99iID4hGoJe1UL515a-JKQ1hGNmxYWbeQ3twLH1GrTA/viewform",
+      "shortUrl": "https://forms.gle/ZJUeBpYVAVUhhj3e6"
+    },
+    {
+      "id": "v-220",
+      "collection": "verbal",
+      "number": 220,
+      "title": "الشهامة عند العرب",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdUhg4xfrOioYmBWHfaUj1dIKRMEJa53VozMduEmXDZksjR_w/viewform",
+      "shortUrl": "https://forms.gle/QZtYrcmPfxfKb6U88"
+    },
+    {
+      "id": "v-221",
+      "collection": "verbal",
+      "number": 221,
+      "title": "الحرارة والضغط",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeSLzHch0eYJvrq-kBB8l58cZb3hy8pKfaK3NCPU7QIXYxm-A/viewform",
+      "shortUrl": "https://forms.gle/dmGqjYEA47ZA21AD7"
+    },
+    {
+      "id": "v-222",
+      "collection": "verbal",
+      "number": 222,
+      "title": "تبني الآراء",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfZ5CxWb0PMcRB4--hgNzRw_87peg5FKHLIwiKUXRYc-o6KtQ/viewform",
+      "shortUrl": "https://forms.gle/XUdzcj3i9L5qzfHD7"
+    },
+    {
+      "id": "v-223",
+      "collection": "verbal",
+      "number": 223,
+      "title": "مقاربة الفتن",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdjzrhKkXiTVsVD1OpOrkLhf4IwfYzHgE8MDgArf0IZegfOKg/viewform",
+      "shortUrl": "https://forms.gle/opPUwgVDmcNBg3EPA"
+    },
+    {
+      "id": "v-224",
+      "collection": "verbal",
+      "number": 224,
+      "title": "حسن الظن",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc0fu6NDb39JGJR2uyuh60fBBM4lZ8ZsXZzq3ND3f8ov0B0cg/viewform",
+      "shortUrl": "https://forms.gle/j9dMyrAR4kqnZAg48"
+    },
+    {
+      "id": "v-225",
+      "collection": "verbal",
+      "number": 225,
+      "title": "فقر العواطف",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfWJn-EKoAWoCfg6b2fJsKr0VHH7OFDkBYHYDoR3CmmIAhERw/viewform",
+      "shortUrl": "https://forms.gle/ueqrfnjgSytpbjUbA"
+    },
+    {
+      "id": "v-226",
+      "collection": "verbal",
+      "number": 226,
+      "title": "المدح والذم وأبنية المبالغة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScfGB86OP--y_uZ9hKZrK-cOKCPXo8uWV6MuCKJEOu7j9hAzw/viewform",
+      "shortUrl": "https://forms.gle/1GfHyNPTHfEvZ9E26"
+    },
+    {
+      "id": "v-227",
+      "collection": "verbal",
+      "number": 227,
+      "title": "الملك المعطي (2)",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeqeuuFYrZ75WZkihfJIuSKjHVJx5VRfPvfDQTnR8IAyZDe2Q/viewform",
+      "shortUrl": "https://forms.gle/FktBVDgpqbmkMmU76"
+    },
+    {
+      "id": "v-228",
+      "collection": "verbal",
+      "number": 228,
+      "title": "احتياجات الإنسان",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeICeGGOXJsIHrzEIZLyk5LQ8-JAKeFPE_5Q6_XSGyL5RrefQ/viewform",
+      "shortUrl": "https://forms.gle/peTZQAZMpMqyRMsu9"
+    },
+    {
+      "id": "v-229",
+      "collection": "verbal",
+      "number": 229,
+      "title": "الإمعة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSesinRKXvRZD7TG2idZYkFreIbmIQf5g7ODPOy15Jkl4rGLLw/viewform",
+      "shortUrl": "https://forms.gle/QNc41SAmYG93ctHc7"
+    },
+    {
+      "id": "v-230",
+      "collection": "verbal",
+      "number": 230,
+      "title": "الاستعداد بالقوة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeteXCuktQFs7TZvIXa_-8OYNjxwlvc9Bwn21vytoCAyUqTdQ/viewform",
+      "shortUrl": "https://forms.gle/NgEU4H1pcguWEgdKA"
+    },
+    {
+      "id": "v-231",
+      "collection": "verbal",
+      "number": 231,
+      "title": "غش التجار",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeWMtTLG-Qb9zwJPyl43rEmQO1laTOjWRSoB6AzXPOLzIjNrA/viewform",
+      "shortUrl": "https://forms.gle/jWrSW1nMEFpXA2rE7"
+    },
+    {
+      "id": "v-232",
+      "collection": "verbal",
+      "number": 232,
+      "title": "الأخلاق سمو وطمأنينة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeSJe89FvGrdI4-uqamqJ_WE-ZXSSChIW9yAHfKncWMeMfL6A/viewform",
+      "shortUrl": "https://forms.gle/uiUKxVv8LCoc9SGw5"
+    },
+    {
+      "id": "v-233",
+      "collection": "verbal",
+      "number": 233,
+      "title": "العقل والمنطق",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfQ6bTjax0QfBZ8fcBeDdnW3G8AZM3-vtK_78zQh6Iqjgvz6g/viewform",
+      "shortUrl": "https://forms.gle/FrTWZ7ZaRFJ14uen7"
+    },
+    {
+      "id": "v-234",
+      "collection": "verbal",
+      "number": 234,
+      "title": "حجم المشكلة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfLIHtW8MRsWN0oFpgw9PLhMrkSsQxJBXzBaT7wg5_ovDsqqA/viewform",
+      "shortUrl": "https://forms.gle/w23S8QTMpbbZ6CL47"
+    },
+    {
+      "id": "v-235",
+      "collection": "verbal",
+      "number": 235,
+      "title": "الحث على التغيير",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFn9a3w2il_IP6ApEaEAlCHxT2eHfl-iCBRcWsmBnh2OAEJQ/viewform",
+      "shortUrl": "https://forms.gle/oGTFJKQbxHpueCT36"
+    },
+    {
+      "id": "v-236",
+      "collection": "verbal",
+      "number": 236,
+      "title": "المودة والعداوة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScEKKVJn7PQ_88g46_QUWz6sN89sQ0qHfpPy1XIpk583mlnyQ/viewform",
+      "shortUrl": "https://forms.gle/C3yeTt5q88rbjwAr9"
+    },
+    {
+      "id": "v-237",
+      "collection": "verbal",
+      "number": 237,
+      "title": "إثراء الحوار",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScuxEzVz_VpUmweBQ4OVRjZmNZQOdUZtTfB03wUMLZ8LbIENg/viewform",
+      "shortUrl": "https://forms.gle/gvkHm1hFmWJxisUL6"
+    },
+    {
+      "id": "v-238",
+      "collection": "verbal",
+      "number": 238,
+      "title": "العالم المنهتك والجاهل المتنسك",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfc-r-rXkmqaeX7_OlUikOtZP6jHM8WVka3bpPnX8yziaApRA/viewform",
+      "shortUrl": "https://forms.gle/Ly9duG99saubYi2E9"
+    },
+    {
+      "id": "v-239",
+      "collection": "verbal",
+      "number": 239,
+      "title": "النابغة الذبياني",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScYAyE57xSAehhCrCiMtaA5alR50Uh4AEm86OoJRZv64vDYZw/viewform",
+      "shortUrl": "https://forms.gle/iLkzAZwnBNzKStVEA"
+    },
+    {
+      "id": "v-240",
+      "collection": "verbal",
+      "number": 240,
+      "title": "أخطاء مجتمعية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSduR0toDrrxYzvAJTLTTHFP_JlXzlZVjZamzE_oZb5aDZ2byQ/viewform",
+      "shortUrl": "https://forms.gle/NcNZHF9kJ4XJV2Fr7"
+    },
+    {
+      "id": "v-241",
+      "collection": "verbal",
+      "number": 241,
+      "title": "النباتات المستشعرة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe4i9f635W2CYbKYzwOiP17XktudscWIpBgfB2u9KQWXlQ2Ow/viewform",
+      "shortUrl": "https://forms.gle/31hoitxw4fGCBZRK9"
+    },
+    {
+      "id": "v-242",
+      "collection": "verbal",
+      "number": 242,
+      "title": "سنن العرب",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeuXRnmPV9HmmoB1WA09XgGwJe-MWDjERjdazppp4UAilck2A/viewform",
+      "shortUrl": "https://forms.gle/Rbt439WG1t3q2gG19"
+    },
+    {
+      "id": "v-243",
+      "collection": "verbal",
+      "number": 243,
+      "title": "خلق المؤمن والحقد",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSesmIK2zvfFZmjmfATS0hXGpIPwReF7HvhF68fezaxXR2nLRQ/viewform",
+      "shortUrl": "https://forms.gle/71G13xxPniNYJfrE6"
+    },
+    {
+      "id": "v-244",
+      "collection": "verbal",
+      "number": 244,
+      "title": "الروبوتات",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFADFJbQkGkGWeaDOTZf_DXJC6nTQ69fWQz1t0tyukCiTIbQ/viewform",
+      "shortUrl": "https://forms.gle/SZ9MndSRRiuLWKcR6"
+    },
+    {
+      "id": "v-245",
+      "collection": "verbal",
+      "number": 245,
+      "title": "احتساب الأجر",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScA7STX4AS_fL3wFYkuTca5oUNJKaVG7RicAcYuMfAiKiJMmQ/viewform",
+      "shortUrl": "https://forms.gle/BTAa9Giuvho5xa6NA"
+    },
+    {
+      "id": "v-246",
+      "collection": "verbal",
+      "number": 246,
+      "title": "الحياة لا تقوم على المحبة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSd1dp22_rD59caVWqOq8Nysi9LoztoewRIgNNUxpdCZ3G5QDQ/viewform",
+      "shortUrl": "https://forms.gle/oHmQ4CyuudoGmNVs7"
+    },
+    {
+      "id": "v-247",
+      "collection": "verbal",
+      "number": 247,
+      "title": "الإنسان المدني",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSemEgs9hoD8qvZwiaRXXL7pIuG3EM_Zix3Eoy7vTRgix5IHmA/viewform",
+      "shortUrl": "https://forms.gle/A7XQCuQYNAk3i8Vv7"
+    },
+    {
+      "id": "v-248",
+      "collection": "verbal",
+      "number": 248,
+      "title": "جهاز الإنذار",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSef4EK18Jaj6DGZ975eH0RdQCn0sMr6H6GcqAVXRDbXtL9w0Q/viewform",
+      "shortUrl": "https://forms.gle/HF5eFY3t47wuF9aR9"
+    },
+    {
+      "id": "v-249",
+      "collection": "verbal",
+      "number": 249,
+      "title": "الرفق",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdUoOZgY13ICmVcV7__AgCS-tCDKnqeFCy1DsihtTDOvLvLHg/viewform",
+      "shortUrl": "https://forms.gle/SkKvXcho9nxHY6bp8"
+    },
+    {
+      "id": "v-250",
+      "collection": "verbal",
+      "number": 250,
+      "title": "قليل الإرادة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe1S0nOIku-KnvPOeuSE1yxrTMPpT4G9byCi5lGki1hqM3-aw/viewform",
+      "shortUrl": "https://forms.gle/5vbJ9mK9uvHmTJUK7"
+    },
+    {
+      "id": "v-251",
+      "collection": "verbal",
+      "number": 251,
+      "title": "قنديل البحر",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeBHrs06ks7NVgVDBB5FfH8tMhZWl7y9aCH6m-GIlydZstJCQ/viewform",
+      "shortUrl": "https://forms.gle/ge5JgBMvkkom1bUx6"
+    },
+    {
+      "id": "v-252",
+      "collection": "verbal",
+      "number": 252,
+      "title": "إدارة الوقت",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdtcwP93qwqTwRB5xPvnFtth8scH7yeZyfOBrJ4DdUWE49xJg/viewform",
+      "shortUrl": "https://forms.gle/iXUB7FXTA3JtAd5A8"
+    },
+    {
+      "id": "v-253",
+      "collection": "verbal",
+      "number": 253,
+      "title": "الألم والوحدة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSflK94cxFgjcYOZ6D9N3LYUQ36YKcZWR-oCczNFfluZWXAMqg/viewform",
+      "shortUrl": "https://forms.gle/Rwjg4bofYBP1RjPf9"
+    },
+    {
+      "id": "v-254",
+      "collection": "verbal",
+      "number": 254,
+      "title": "آداب الحوار والاعتذار",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfgCvZCxsfCwss8d0dzHhW2ZeOQVTjYHLdiNxwRlH4TD8D2PA/viewform",
+      "shortUrl": "https://forms.gle/qXXXw3LzLgVWtTdg6"
+    },
+    {
+      "id": "v-255",
+      "collection": "verbal",
+      "number": 255,
+      "title": "الشوكولاتة والرياح",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfzmbshdvSyYxi39Oqi6aa-5JyA71mqfb77ZTUzSFPT9iGigA/viewform",
+      "shortUrl": "https://forms.gle/6BpQRe9mUjK6sqXm6"
+    },
+    {
+      "id": "v-256",
+      "collection": "verbal",
+      "number": 256,
+      "title": "الشغر",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfGKiXzlkdsdXeVlicepgpWERORlpu7tM0APGxE9IXfeq8jAg/viewform",
+      "shortUrl": "https://forms.gle/8qriEZyF1gnHXjx58"
+    },
+    {
+      "id": "v-257",
+      "collection": "verbal",
+      "number": 257,
+      "title": "العوائق والعقبات",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfu-OLozt8p4Y8KuVdHiHTBqSF63ayW36sCbz_vFHTJuyl2xA/viewform",
+      "shortUrl": "https://forms.gle/oP8dXHHa8ASCCjFF9"
+    },
+    {
+      "id": "v-258",
+      "collection": "verbal",
+      "number": 258,
+      "title": "كثرة اليائسين",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSemwx2e7mdjZzZzqu4pJN9Hm911TP8hyDlDu0zjxgTMw_1ZQQ/viewform",
+      "shortUrl": "https://forms.gle/oNSLeN2YxJk62jey7"
+    },
+    {
+      "id": "v-259",
+      "collection": "verbal",
+      "number": 259,
+      "title": "السخان الشمسي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSchI1oykGl67wSwKUq_D20-b-VTXv--7YQa7khVMGxTYtrLrA/viewform",
+      "shortUrl": "https://forms.gle/7EFAEzdpjnmYKJjs6"
+    },
+    {
+      "id": "v-260",
+      "collection": "verbal",
+      "number": 260,
+      "title": "قيس وابنه",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeOfUgwNVMSK7zGxnjqgsg1dYwBU7oNZ_Gldrf6Gux8VgZ5CA/viewform",
+      "shortUrl": "https://forms.gle/ySgZshQnmbZianHn6"
+    },
+    {
+      "id": "v-261",
+      "collection": "verbal",
+      "number": 261,
+      "title": "القراءة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSccZC_FLPmcT4kfDqXhZp5rDn0En2C-4C9YUBJ3tbFB_ja5eA/viewform",
+      "shortUrl": "https://forms.gle/3GaWKnu14xJsYPKK6"
+    },
+    {
+      "id": "v-262",
+      "collection": "verbal",
+      "number": 262,
+      "title": "أبو الأسود الدؤلي والتقليد",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdVay30mxR-EMfvOTuv7r2vQe0mKuhq97FIN66dyKiPB2t1CA/viewform",
+      "shortUrl": "https://forms.gle/Jd9jP5QDBbVqg2DcA"
+    },
+    {
+      "id": "v-263",
+      "collection": "verbal",
+      "number": 263,
+      "title": "الصقور والخسائر الاقتصادية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdL7Rw-thd6Pe-a0os8WVR6CL3TVnxTu-LmxOCSLrVsJBEPqA/viewform",
+      "shortUrl": "https://forms.gle/9VrJEWeAo3Rmp4JE7"
+    },
+    {
+      "id": "v-264",
+      "collection": "verbal",
+      "number": 264,
+      "title": "حضارة أمريكا واليابان",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc3y5F-FEc3OIcmZ4BijQULu_YHkdV4tFnIdKjGzOIl_xoOoA/viewform",
+      "shortUrl": "https://forms.gle/LT7JTrjcaakv9BXS6"
+    },
+    {
+      "id": "v-265",
+      "collection": "verbal",
+      "number": 265,
+      "title": "جامعة الملك سعود",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSekof67HtmDJ_rw2n0ShTS4VXjNWDwxV49uNKvCWvDojh1WWA/viewform",
+      "shortUrl": "https://forms.gle/VzAc9tEuSb5NWu3P9"
+    },
+    {
+      "id": "v-266",
+      "collection": "verbal",
+      "number": 266,
+      "title": "الثقة بالله",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc9vnIj1nwX_j2kdeLEetLu_VkosEltHIdlBEj2vjYQ42lMZQ/viewform",
+      "shortUrl": "https://forms.gle/ZMpuaXQDseCVt4re7"
+    },
+    {
+      "id": "v-267",
+      "collection": "verbal",
+      "number": 267,
+      "title": "الهدية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf6VoXhChKWyd0cXlRVr3Wh_Pe5AZZTDSMpHngEM4YT60tekw/viewform",
+      "shortUrl": "https://forms.gle/oKdeFX6Z3PsWqxzE9"
+    },
+    {
+      "id": "v-268",
+      "collection": "verbal",
+      "number": 268,
+      "title": "نظام الويندوز",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScolS0n4eyq-9tZyKMK4b8AWf3IjNW8EZcx3oCzOUBDzca0qA/viewform",
+      "shortUrl": "https://forms.gle/nHehUhM78gv3dvjk8"
+    },
+    {
+      "id": "v-269",
+      "collection": "verbal",
+      "number": 269,
+      "title": "السيوف",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScy0FX0LMjOQw6CLMv6MRDsdhQ6Fkr07IOYKgLNUDcNnT9MmQ/viewform",
+      "shortUrl": "https://forms.gle/gPoGD3Vk7R3DBMqk9"
+    },
+    {
+      "id": "v-270",
+      "collection": "verbal",
+      "number": 270,
+      "title": "المرداوي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfNzX5WH0KbXtgYNfiOmxkDj0kqwVvy8hcd7Lbw4It8MsN2KQ/viewform",
+      "shortUrl": "https://forms.gle/mDB9hZx2U5aeB3D67"
+    },
+    {
+      "id": "v-271",
+      "collection": "verbal",
+      "number": 271,
+      "title": "عبدالله بن عباس",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe3G0JXApweZP51OSVaWGAsUfNScU2kQu8eYUrsFk4PtG6QVw/viewform",
+      "shortUrl": "https://forms.gle/kw2MnK1pyYWruYN8A"
+    },
+    {
+      "id": "v-272",
+      "collection": "verbal",
+      "number": 272,
+      "title": "شجرة الزيتون",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSclj50ugazockMPZaed6VBLzTjHXGNpWsbLLi3WHUubAXrIqA/viewform",
+      "shortUrl": "https://forms.gle/vdUL89PbPmsPKHFn9"
+    },
+    {
+      "id": "v-273",
+      "collection": "verbal",
+      "number": 273,
+      "title": "أينشتاين",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdwuBM8NgzXISFV_NwLZuJHD-wJFdnKwQeQPwXHl-Y47hzvjQ/viewform",
+      "shortUrl": "https://forms.gle/GFciA8WLZEHvgpTE8"
+    },
+    {
+      "id": "v-274",
+      "collection": "verbal",
+      "number": 274,
+      "title": "التخطيط",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeQM-Nrv2WmuQJeZ2u2aEdchXvzexk8Tt3TqOFX4T5XlbpmCg/viewform",
+      "shortUrl": "https://forms.gle/JiiUdJurnYgnJeEV6"
+    },
+    {
+      "id": "v-275",
+      "collection": "verbal",
+      "number": 275,
+      "title": "سيء الظن",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfQyq7CVipe8EcgnN51RBUny0hqyP8BpxZd1O9B2a6cK6e3Zg/viewform",
+      "shortUrl": "https://forms.gle/Tf1GfZwP18YHQ6RZ7"
+    },
+    {
+      "id": "v-276",
+      "collection": "verbal",
+      "number": 276,
+      "title": "تشستر كارلسون",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfLXRilmqOJfJrnwCCU8lWLsywjDyvjyOAkevXrRl4H7Vf1PQ/viewform",
+      "shortUrl": "https://forms.gle/vY75hdNJHY949fq86"
+    },
+    {
+      "id": "v-277",
+      "collection": "verbal",
+      "number": 277,
+      "title": "التعدين",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdigOJLwI_7PYe35Uci23UQF3tKHkKKdrxmqmRGETKMMbNA_A/viewform",
+      "shortUrl": "https://forms.gle/pyKfzaefazFyJZ136"
+    },
+    {
+      "id": "v-278",
+      "collection": "verbal",
+      "number": 278,
+      "title": "اللؤلؤ وأنظمة الري",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc5XAmvm7G50OOK7jjcOEGPwX1P1cR0n0WwnbbvVgP5X1wSQg/viewform",
+      "shortUrl": "https://forms.gle/TBe3KyWspXioDPSX6"
+    },
+    {
+      "id": "v-279",
+      "collection": "verbal",
+      "number": 279,
+      "title": "عدم انتظار الجزاء",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeXr5VVS0oVWOOcy-aDdqhmWf7pNvM4vCys0C5Me1Plai0r5Q/viewform",
+      "shortUrl": "https://forms.gle/M2YBpNDdyVeryNhP9"
+    },
+    {
+      "id": "v-280",
+      "collection": "verbal",
+      "number": 280,
+      "title": "الاحتراق الوظيفي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeupJbuGdtjjUK-cHF5mQYGrkbOrtq3dYPHP_p1_9AXuQQsVA/viewform",
+      "shortUrl": "https://forms.gle/F8fL74oqkquTELYEA"
+    },
+    {
+      "id": "v-281",
+      "collection": "verbal",
+      "number": 281,
+      "title": "الرياح الموسمية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeFUoP32g-7bnKdylp_YcvcSDvbmJ9AKc9ejaa5RVfEA2ie2A/viewform",
+      "shortUrl": "https://forms.gle/5tiTh24eWTLrcHwn8"
+    },
+    {
+      "id": "v-282",
+      "collection": "verbal",
+      "number": 282,
+      "title": "التقلبات الاقتصادية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSewHBVVqiCCENRovmFJMmFWswbkGLjgtykOPMWjePHsTe0DIw/viewform",
+      "shortUrl": "https://forms.gle/XeG75VYvzpa9rxew9"
+    },
+    {
+      "id": "v-283",
+      "collection": "verbal",
+      "number": 283,
+      "title": "السمنة واتِّباع الهوى",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf1eL05e5XR3qY6YNwwRgmNXibpZM4VNSDOpOKyNrhGtQp9aw/viewform",
+      "shortUrl": "https://forms.gle/rg2qTTypi4huWbNE6"
+    },
+    {
+      "id": "v-284",
+      "collection": "verbal",
+      "number": 284,
+      "title": "الألوان والوعي البيئي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdoiY3ek6yJapCJLS9q9ouE5Esa4LFIiHJUmk-Wkr8BJYnZzg/viewform",
+      "shortUrl": "https://forms.gle/r3QTw2YG6Y3a6Efd9"
+    },
+    {
+      "id": "v-285",
+      "collection": "verbal",
+      "number": 285,
+      "title": "القطب الجنوبي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSedkSZIjV3hLv15WjZ8VwIIW9i5LBB_CBF-1AN-9btkB-pkNA/viewform",
+      "shortUrl": "https://forms.gle/yPFtFkQCnnayEDcY9"
+    },
+    {
+      "id": "v-286",
+      "collection": "verbal",
+      "number": 286,
+      "title": "دودة القز",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScLr9G6qn_pw95tMYDkFiilEZCktg5cMcbcastNVX3kOD6eWg/viewform",
+      "shortUrl": "https://forms.gle/PgoBHkXTderhd8sz9"
+    },
+    {
+      "id": "v-287",
+      "collection": "verbal",
+      "number": 287,
+      "title": "الجاحظ",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdVR_7Fu2bT-0M_xgV-C2f1JcOAUDPi8hIpZN1OhmQiNDBPzw/viewform",
+      "shortUrl": "https://forms.gle/2vWocnNzpKyyWiD48"
+    },
+    {
+      "id": "v-288",
+      "collection": "verbal",
+      "number": 288,
+      "title": "الشعر عند العرب",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScjnjbXfI_V07OXbleRBdsz_E_qNvFk1b1_zUrmtdFsUyX6gw/viewform",
+      "shortUrl": "https://forms.gle/SmCWen3y7isAW8Jg8"
+    },
+    {
+      "id": "v-289",
+      "collection": "verbal",
+      "number": 289,
+      "title": "التمر",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfQq-12aVmHhv3wFax5uD0DHThuOKWU1ziOwxhSqS8-FMTyxg/viewform",
+      "shortUrl": "https://forms.gle/bWCkj8wWvuJ7hYYD6"
+    },
+    {
+      "id": "v-290",
+      "collection": "verbal",
+      "number": 290,
+      "title": "الحزم",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe88FIDcACl0epzF4tPeV1d4xtmtEwYQxPhr0mFGornYHYN0Q/viewform",
+      "shortUrl": "https://forms.gle/a4KU3Bx2H7L3ymph9"
+    },
+    {
+      "id": "v-291",
+      "collection": "verbal",
+      "number": 291,
+      "title": "الشجاعة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdbI5AbMT-Dm87HNi23Cr6OLxoNekeb_Ob5ZYRYZuy9CATbiQ/viewform",
+      "shortUrl": "https://forms.gle/YcwC5sEmeQvoh2DSA"
+    },
+    {
+      "id": "v-292",
+      "collection": "verbal",
+      "number": 292,
+      "title": "السجن والدعوة إلى الله",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdBEsekpBYfz-pTQTL0Gh2LlJFKswvscl4Bb8UcNF-J6DutKg/viewform",
+      "shortUrl": "https://forms.gle/2StRm8VbcnszkdkV7"
+    },
+    {
+      "id": "v-293",
+      "collection": "verbal",
+      "number": 293,
+      "title": "الرواية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSftuCkywIRiXxSj7fnuIM_n7Cy8wwpZiSgsqnz7XBA5V-BKGg/viewform",
+      "shortUrl": "https://forms.gle/8r2MYNJEWahNqHZu5"
+    },
+    {
+      "id": "v-294",
+      "collection": "verbal",
+      "number": 294,
+      "title": "ابن فارس",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe8J3vEXVjaHcuyesfbzVH5x0of5uv7PfwTnlbt8mu4Hs20HQ/viewform",
+      "shortUrl": "https://forms.gle/wYyuuFCxgVfpMtfe6"
+    },
+    {
+      "id": "v-295",
+      "collection": "verbal",
+      "number": 295,
+      "title": "الاعتقاد السليم والأمر بالمعروف",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSd7IFv2lcTB-Qeg_57OVYRbN6hLwm33XINT3EFdRIsXusV0zg/viewform",
+      "shortUrl": "https://forms.gle/EpbqUpVbQjf9TUq26"
+    },
+    {
+      "id": "v-296",
+      "collection": "verbal",
+      "number": 296,
+      "title": "شروط الدعوة والذكاء العاطفي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeG0dgCq_RQnJAnKIHE9gGfwrr_zPLSeiw-1hZJShAck8V6kg/viewform",
+      "shortUrl": "https://forms.gle/hbSTpxYzqLzhZBeRA"
+    },
+    {
+      "id": "v-297",
+      "collection": "verbal",
+      "number": 297,
+      "title": "النفط والسمنة",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSetHafkX-2nq-4pUp7jmwpwGa_b_tzN6faKsBG_77fBT3jFaw/viewform",
+      "shortUrl": "https://forms.gle/9kGttLRgPWLg6wcs9"
+    },
+    {
+      "id": "v-298",
+      "collection": "verbal",
+      "number": 298,
+      "title": "تعويد النفس",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfdOCjkVnDmet9FDXoz-79C_-GOhFJHdBjq8o8ZqjT7rWs_uw/viewform",
+      "shortUrl": "https://forms.gle/fCYk3LfkKiz23Qty7"
+    },
+    {
+      "id": "v-299",
+      "collection": "verbal",
+      "number": 299,
+      "title": "الأخطار الاقتصادية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScaH2ygNBFhGy-gSZMBN8e9NSydE25pniYYFx8_T7Vo2tw70w/viewform",
+      "shortUrl": "https://forms.gle/8YaQfkqDc1zjMBAE6"
+    },
+    {
+      "id": "v-300",
+      "collection": "verbal",
+      "number": 300,
+      "title": "البيولوجيا الاصطناعية",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf1h5ldGR-vnPkOP-LYLMXCjBuRk4SeRgtKEz7xd8qseTWIOg/viewform",
+      "shortUrl": "https://forms.gle/xzXaXT5158NLDYi69"
+    },
+    {
+      "id": "v-301",
+      "collection": "verbal",
+      "number": 301,
+      "title": "التعصب الرياضي",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfOE6uO-3bND9UwcPBfYgux0IjQCTV350vKe7APTcb1Vq380w/viewform",
+      "shortUrl": "https://forms.gle/W5wKEREtgUt91tyK9"
+    }
+  ]
+}
