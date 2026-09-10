@@ -76,10 +76,10 @@ const collator = new Intl.Collator("ar", { numeric: true, sensitivity: "base" })
  * Apply query + filters to one collection.
  * @returns {Exam[]}
  */
-export function selectExams(items, { query, tokens, range, favoritesOnly, status, favorites, opened, sort }) {
+export function selectExams(items, { tokens, range, fav, status, favorites, opened, sort }) {
   let out = items
 
-  if (favoritesOnly) out = out.filter((x) => favorites.has(x.id))
+  if (fav) out = out.filter((x) => favorites.has(x.id))
   if (status === "opened") out = out.filter((x) => opened.has(x.id))
   else if (status === "unopened") out = out.filter((x) => !opened.has(x.id))
 
