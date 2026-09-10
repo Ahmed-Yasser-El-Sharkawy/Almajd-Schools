@@ -23,11 +23,11 @@ export default function Footer() {
 
         <nav aria-label="روابط الموقع">
           <h2 className="text-sm font-bold text-white">روابط سريعة</h2>
-          <ul className="mt-3 space-y-2 text-sm">
-            <li><a href="#top" className="rounded text-navy-200 transition-colors hover:text-gold-300 focus-ring">الرئيسية</a></li>
-            <li><a href="#exams" className="rounded text-navy-200 transition-colors hover:text-gold-300 focus-ring">جميع الاختبارات</a></li>
-            <li><a href="?tab=verbal" className="rounded text-navy-200 transition-colors hover:text-gold-300 focus-ring">تجميعات اللفظي</a></li>
-            <li><a href="?tab=general" className="rounded text-navy-200 transition-colors hover:text-gold-300 focus-ring">الاختبارات العامة</a></li>
+          <ul className="mt-2 text-sm">
+            <li><a href="#top" className="inline-flex min-h-11 items-center rounded text-navy-200 transition-colors hover:text-gold-300 focus-ring">الرئيسية</a></li>
+            <li><a href="#exams" className="inline-flex min-h-11 items-center rounded text-navy-200 transition-colors hover:text-gold-300 focus-ring">جميع الاختبارات</a></li>
+            <li><a href="?tab=verbal" className="inline-flex min-h-11 items-center rounded text-navy-200 transition-colors hover:text-gold-300 focus-ring">تجميعات اللفظي</a></li>
+            <li><a href="?tab=general" className="inline-flex min-h-11 items-center rounded text-navy-200 transition-colors hover:text-gold-300 focus-ring">الاختبارات العامة</a></li>
           </ul>
         </nav>
       </div>

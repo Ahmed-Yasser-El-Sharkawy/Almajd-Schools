@@ -9,7 +9,7 @@ export default function RecentStrip({ exams, onOpen, onClear }) {
           <ClockIcon className="h-4 w-4 text-navy-400" />
           آخر ما فتحت
         </h2>
-        <button type="button" onClick={onClear} className="rounded text-xs font-bold text-navy-500 underline-offset-2 transition-colors hover:text-navy-800 hover:underline focus-ring">
+        <button type="button" onClick={onClear} className="-me-2 rounded px-2 py-2 text-xs font-bold text-navy-500 underline-offset-2 transition-colors hover:text-navy-800 hover:underline focus-ring">
           مسح السجل
         </button>
       </div>
@@ -21,7 +21,7 @@ export default function RecentStrip({ exams, onOpen, onClear }) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => onOpen(exam.id)}
-              className="inline-flex max-w-56 items-center gap-2 rounded-xl border border-navy-100 bg-navy-50/60 px-3 py-2 text-xs font-bold text-navy-800 transition-colors hover:border-navy-200 hover:bg-navy-50 focus-ring"
+              className="inline-flex min-h-11 max-w-56 items-center gap-2 rounded-xl border border-navy-100 bg-navy-50/60 px-3 py-2 text-xs font-bold text-navy-800 transition-colors hover:border-navy-200 hover:bg-navy-50 focus-ring"
             >
               <span className="shrink-0 text-navy-400">#{exam.number}</span>
               <span className="truncate">{exam.title}</span>

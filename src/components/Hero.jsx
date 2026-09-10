@@ -10,10 +10,10 @@ export default function Hero({ query, onQueryChange, stats, resultCount }) {
         <div className="absolute -bottom-32 right-0 h-72 w-72 rounded-full bg-gold-500/10 blur-3xl" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-4 pb-10 pt-10 sm:pb-14 sm:pt-14">
-        <div className="flex flex-col items-center gap-6 text-center">
-          <span className="rounded-2xl bg-white p-3 shadow-panel">
-            <img src={logo} alt="شعار مركز المجد للقدرات والتحصيلي" width="696" height="457" className="h-16 w-auto sm:h-20" />
+      <div className="relative mx-auto max-w-6xl px-4 pb-8 pt-7 sm:pb-14 sm:pt-14">
+        <div className="flex flex-col items-center gap-5 text-center sm:gap-6">
+          <span className="rounded-2xl bg-white p-2.5 shadow-panel sm:p-3">
+            <img src={logo} alt="شعار مركز المجد للقدرات والتحصيلي" width="696" height="457" className="h-12 w-auto sm:h-20" />
           </span>
 
           <div className="max-w-2xl">
