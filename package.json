@@ -11,7 +11,7 @@
     "validate-data": "node scripts/validate-data.mjs",
     "build-data": "node scripts/build-data.mjs",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist --dotfiles"
   },
   "dependencies": {
     "react": "^18.2.0",
