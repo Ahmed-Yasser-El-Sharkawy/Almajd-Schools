@@ -19,7 +19,7 @@ export default function ExamCard({ exam, badge, isFavorite, isOpened, onToggleFa
   return (
     <article
       aria-labelledby={headingId}
-      className="group flex flex-col rounded-2xl border border-navy-100 bg-white p-4 shadow-card transition duration-200 hover:-translate-y-0.5 hover:border-navy-200 hover:shadow-card-hover motion-reduce:transform-none motion-reduce:transition-none"
+      className="group flex h-full flex-col rounded-2xl border border-navy-100 bg-white p-4 shadow-card transition duration-200 hover:-translate-y-0.5 hover:border-navy-200 hover:shadow-card-hover motion-reduce:transform-none motion-reduce:transition-none"
     >
       <div className="flex items-start justify-between gap-2">
         <div className="flex flex-wrap items-center gap-1.5">

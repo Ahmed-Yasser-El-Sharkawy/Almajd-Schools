@@ -141,7 +141,7 @@ export default function App() {
                 <>
                   <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
                     {results.slice(0, visible).map((exam) => (
-                      <li key={exam.id} className="animate-fade-up motion-reduce:animate-none">
+                      <li key={exam.id} className="h-full animate-fade-up motion-reduce:animate-none">
                         <ExamCard
                           exam={exam}
                           badge={collection.short}
