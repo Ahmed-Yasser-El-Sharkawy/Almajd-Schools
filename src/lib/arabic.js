@@ -41,15 +41,18 @@ export function tokenize(query) {
 /** Arabic ordinal words, so "الاختبار الخامس" is findable by typing "5". */
 const ORDINALS = [
   "", "الاول", "الثاني", "الثالث", "الرابع", "الخامس", "السادس", "السابع",
-  "الثامن", "التاسع", "العاشر",
+  "الثامن", "التاسع", "العاشر", "الحادي عشر", "الثاني عشر", "الثالث عشر",
+  "الرابع عشر", "الخامس عشر", "السادس عشر", "السابع عشر", "الثامن عشر",
+  "التاسع عشر", "العشرون",
 ]
 
 /**
  * Extra searchable text for a record: the leading "ال" of each word is also
- * indexed without it, so "زلازل" finds "الزلازل".
+ * indexed without it, so "زلازل" finds "الزلازل". The foundation models carry a
+ * topic too, which is what a student actually searches for ("الكسور").
  */
 export function buildSearchKey(record) {
-  const base = normalizeArabic(`${record.title} ${record.number}`)
+  const base = normalizeArabic(`${record.title} ${record.topic ?? ""} ${record.number}`)
   const stripped = base
     .split(" ")
     .map((w) => (w.length > 3 && w.startsWith("ال") ? w.slice(2) : ""))

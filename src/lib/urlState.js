@@ -1,6 +1,7 @@
 // Search + filter state is mirrored into the query string so a student can
 // share exactly what they are looking at. Uses history.replaceState, which is
 // safe on GitHub Pages because the path itself never changes.
+import { COLLECTION_KEYS } from "./exams.js"
 
 const DEFAULTS = {
   tab: "verbal",
@@ -18,7 +19,7 @@ export function readState() {
   const status = p.get("status")
   const sort = p.get("sort")
   return {
-    tab: tab === "general" || tab === "verbal" ? tab : DEFAULTS.tab,
+    tab: COLLECTION_KEYS.includes(tab) ? tab : DEFAULTS.tab,
     q: p.get("q") ?? DEFAULTS.q,
     range: /^\d+-\d+$/.test(p.get("range") ?? "") ? p.get("range") : DEFAULTS.range,
     fav: p.get("fav") === "1",

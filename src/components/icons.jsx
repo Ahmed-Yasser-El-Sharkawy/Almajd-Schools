@@ -35,3 +35,22 @@ export const ClockIcon = (p) => (
 export const MenuIcon = (p) => (
   <svg viewBox="0 0 24 24" {...base} {...p}><path d="M4 7h16M4 12h16M4 17h16" /></svg>
 )
+export const LockIcon = (p) => (
+  <svg viewBox="0 0 24 24" {...base} {...p}><rect x="4" y="10.5" width="16" height="10.5" rx="2.5" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" /><path d="M12 14.75v2" /></svg>
+)
+export const TagIcon = (p) => (
+  <svg viewBox="0 0 24 24" {...base} {...p}><path d="M20 12.6V5a1 1 0 0 0-1-1h-7.6a2 2 0 0 0-1.42.59l-5.4 5.4a2 2 0 0 0 0 2.83l5.6 5.6a2 2 0 0 0 2.83 0l5.4-5.4A2 2 0 0 0 20 12.6Z" /><circle cx="15.5" cy="8.5" r="1.25" /></svg>
+)
+// Tab glyphs: one per collection, so the four groups stay distinguishable at a glance.
+export const TextIcon = (p) => (
+  <svg viewBox="0 0 24 24" {...base} {...p}><path d="M4 5.5h16M4 12h16M4 18.5h9" /></svg>
+)
+export const SigmaIcon = (p) => (
+  <svg viewBox="0 0 24 24" {...base} {...p}><path d="M17.5 5H7l6 7-6 7h10.5" /></svg>
+)
+export const BlocksIcon = (p) => (
+  <svg viewBox="0 0 24 24" {...base} {...p}><rect x="3.5" y="13.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="13.5" width="7" height="7" rx="1.5" /><rect x="8.5" y="3.5" width="7" height="7" rx="1.5" /></svg>
+)
+export const GridIcon = (p) => (
+  <svg viewBox="0 0 24 24" {...base} {...p}><rect x="3.5" y="3.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="3.5" width="7" height="7" rx="1.5" /><rect x="3.5" y="13.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="13.5" width="7" height="7" rx="1.5" /></svg>
+)

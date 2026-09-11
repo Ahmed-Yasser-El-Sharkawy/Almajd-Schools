@@ -45,3 +45,41 @@ writeFileSync(
   JSON.stringify({ collection: 'general', items: general }, null, 2) + '\n',
 )
 console.log(`verbal: ${verbal.length}  general: ${general.length}`)
+
+// --- القدرات الكمي -----------------------------------------------------
+// Two sibling datasets sourced from the Drive export JSONs. These forms are
+// password-gated, but the password is NEVER written out: anything in the JSON
+// ships inside the public JS bundle and is one devtools panel away from being
+// read. Only the fact that a password is required travels to the UI; the code
+// itself is handed out in class.
+function buildQuant({ source, collection, prefix, outFile }) {
+  const src = JSON.parse(readFileSync(resolve(root, '..', source), 'utf8'))
+  const items = src.forms.map((f) => ({
+    id: `${prefix}-${f.model}`,
+    collection,
+    number: f.model,
+    title: stripTatweel(f.title),
+    ...(f.topic ? { topic: stripTatweel(f.topic) } : {}),
+    url: f.url,
+    shortUrl: f.short ?? null,
+  }))
+  writeFileSync(
+    resolve(root, outFile),
+    JSON.stringify({ collection, requiresPassword: Boolean(src.password), generated: src.generated, items }, null, 2) + '\n',
+  )
+  return items.length
+}
+
+const quantFoundation = buildQuant({
+  source: 'روابط نماذج تأسيس القدرات الكمي — مدارس المجد 1-20.json',
+  collection: 'quant-foundation',
+  prefix: 'qf',
+  outFile: 'src/data/quant-foundation-exams.json',
+})
+const quant = buildQuant({
+  source: 'روابط نماذج القدرات الكمي — مدارس المجد 1-20.json',
+  collection: 'quant',
+  prefix: 'q',
+  outFile: 'src/data/quant-exams.json',
+})
+console.log(`quant-foundation: ${quantFoundation}  quant: ${quant}`)
