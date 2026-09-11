@@ -84,6 +84,18 @@ export const getCollection = (key) =>
 
 export const ALL_EXAMS = [...verbal, ...quantFoundation, ...quant, ...general]
 
+/**
+ * Count usable records per collection. The tabs and the hero must quote the
+ * same figure the results grid actually renders, so both read this rather than
+ * the raw `items.length`, which still counts records dropped by `isUsable`.
+ * @returns {Map<string, number>}
+ */
+export function countByCollection(items) {
+  const counts = new Map(COLLECTIONS.map((c) => [c.key, 0]))
+  for (const x of items) counts.set(x.collection, (counts.get(x.collection) ?? 0) + 1)
+  return counts
+}
+
 /** Buckets of 50 by exam number, used as the "نطاق الأرقام" filter. */
 export function buildRanges(items, size = 50) {
   if (!items.length) return []

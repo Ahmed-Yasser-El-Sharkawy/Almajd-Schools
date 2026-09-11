@@ -9,7 +9,7 @@ import RecentStrip from "./components/RecentStrip.jsx"
 import AccessNotice from "./components/AccessNotice.jsx"
 import ShareButton from "./components/ShareButton.jsx"
 import Footer from "./components/Footer.jsx"
-import { ALL_EXAMS, COLLECTIONS, buildRanges, getCollection, isUsable, selectExams } from "./lib/exams.js"
+import { ALL_EXAMS, buildRanges, countByCollection, getCollection, isUsable, selectExams } from "./lib/exams.js"
 import { tokenize } from "./lib/arabic.js"
 import { loadFavorites, saveFavorites, loadOpened, pushOpened, clearOpened } from "./lib/storage.js"
 import { readState, writeState, DEFAULT_STATE } from "./lib/urlState.js"
@@ -22,6 +22,7 @@ const PAGE_SIZE = 48
 const USABLE = ALL_EXAMS.filter(isUsable)
 const UNUSABLE_COUNT = ALL_EXAMS.length - USABLE.length
 const BY_ID = new Map(USABLE.map((x) => [x.id, x]))
+const COUNTS = countByCollection(USABLE)
 
 export default function App() {
   const [state, setState] = useState(readState)
@@ -75,18 +76,13 @@ export default function App() {
     setSheetOpen(false)
   }, [])
 
-  // The third tile is the only collection-specific one; it shows whatever that
-  // collection actually has to say rather than a blank slot.
-  const stats = useMemo(() => {
-    const detail = collection.questionsPerForm
-      ? { label: "سؤالًا لكل نموذج", value: collection.questionsPerForm }
-      : { label: "مجموعات متاحة", value: COLLECTIONS.length }
-    return [
-      { label: "إجمالي الاختبارات", value: USABLE.length },
-      { label: collection.label, value: collection.items.length },
-      detail,
-    ]
-  }, [collection])
+  // Switching collection always drops the number range: it belongs to the
+  // collection it was chosen in, and a 251-300 range would silently empty a
+  // 20-item collection whose range filter is hidden.
+  const pickCollection = useCallback((tab) => {
+    patch({ tab, range: "" })
+    document.getElementById("exams")?.scrollIntoView({ block: "start" })
+  }, [patch])
 
   return (
     <div className="min-h-screen bg-navy-50/40">
@@ -98,7 +94,10 @@ export default function App() {
       <Hero
         query={state.q}
         onQueryChange={(q) => patch({ q })}
-        stats={stats}
+        total={USABLE.length}
+        counts={COUNTS}
+        active={state.tab}
+        onPickCollection={pickCollection}
         resultCount={results.length}
       />
 
