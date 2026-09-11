@@ -1,10 +1,12 @@
 import { useState } from "react"
-import { StarIcon, CopyIcon, CheckIcon, ArrowIcon } from "./icons.jsx"
+import { StarIcon, CopyIcon, CheckIcon, ArrowIcon, TagIcon, LockIcon } from "./icons.jsx"
+import { getTheme } from "../lib/collectionTheme.jsx"
 
-export default function ExamCard({ exam, badge, isFavorite, isOpened, onToggleFavorite, onOpen }) {
+export default function ExamCard({ exam, badge, locked, isFavorite, isOpened, onToggleFavorite, onOpen }) {
   const [copied, setCopied] = useState(false)
   const shareUrl = exam.shortUrl ?? exam.url
   const headingId = `exam-${exam.id}-title`
+  const theme = getTheme(exam.collection)
 
   async function copyLink() {
     try {
@@ -23,8 +25,16 @@ export default function ExamCard({ exam, badge, isFavorite, isOpened, onToggleFa
     >
       <div className="flex items-start justify-between gap-2">
         <div className="flex flex-wrap items-center gap-1.5">
-          <span className="rounded-lg bg-navy-50 px-2 py-1 text-xs font-bold text-navy-700">#{exam.number}</span>
-          <span className="rounded-lg bg-gold-50 px-2 py-1 text-xs font-semibold text-gold-800">{badge}</span>
+          <span className="rounded-lg bg-navy-50 px-2 py-1 text-xs font-bold text-navy-700 tabular-nums">#{exam.number}</span>
+          <span className={`inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold ${theme.badge}`}>
+            {locked && (
+              <>
+                <LockIcon aria-hidden="true" className="h-3.5 w-3.5 opacity-70" />
+                <span className="sr-only">محمي بكلمة مرور — </span>
+              </>
+            )}
+            {badge}
+          </span>
           {isOpened && (
             <span className="inline-flex items-center gap-1 rounded-lg bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-800">
               <CheckIcon className="h-3.5 w-3.5" />
@@ -44,9 +54,17 @@ export default function ExamCard({ exam, badge, isFavorite, isOpened, onToggleFa
         </button>
       </div>
 
-      <h3 id={headingId} className="mt-3 flex-1 text-base font-bold leading-snug text-navy-900">
-        {exam.title}
-      </h3>
+      <div className="mt-3 flex-1">
+        <h3 id={headingId} className="text-base font-bold leading-snug text-navy-900">
+          {exam.title}
+        </h3>
+        {exam.topic && (
+          <p className="mt-1.5 flex items-start gap-1.5 text-sm leading-snug text-navy-500">
+            <TagIcon className="mt-0.5 h-4 w-4 shrink-0 text-navy-300" />
+            <span>{exam.topic}</span>
+          </p>
+        )}
+      </div>
 
       <div className="mt-4 flex items-center gap-2">
         <a

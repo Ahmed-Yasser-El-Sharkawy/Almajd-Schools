@@ -12,18 +12,22 @@ const STATUSES = [
 function Controls({ ranges, state, onChange, idPrefix }) {
   return (
     <div className="flex flex-col gap-5">
-      <fieldset>
-        <legend className="mb-2 text-xs font-bold text-navy-600">نطاق الأرقام</legend>
-        <div className="flex flex-wrap gap-2">
-          <Chip active={!state.range} onClick={() => onChange({ range: "" })}>الكل</Chip>
-          {ranges.map((r) => (
-            <Chip key={r.key} active={state.range === r.key} onClick={() => onChange({ range: state.range === r.key ? "" : r.key })}>
-              <bdi dir="ltr">{r.start}–{r.end}</bdi>
-              <span className="ms-1 text-[10px] opacity-70">({r.count})</span>
-            </Chip>
-          ))}
-        </div>
-      </fieldset>
+      {/* Small collections yield a single bucket, which buildRanges drops; the
+          whole fieldset goes with it rather than showing a dead control. */}
+      {ranges.length > 0 && (
+        <fieldset>
+          <legend className="mb-2 text-xs font-bold text-navy-600">نطاق الأرقام</legend>
+          <div className="flex flex-wrap gap-2">
+            <Chip active={!state.range} onClick={() => onChange({ range: "" })}>الكل</Chip>
+            {ranges.map((r) => (
+              <Chip key={r.key} active={state.range === r.key} onClick={() => onChange({ range: state.range === r.key ? "" : r.key })}>
+                <bdi dir="ltr">{r.start}–{r.end}</bdi>
+                <span className="ms-1 text-[10px] opacity-70">({r.count})</span>
+              </Chip>
+            ))}
+          </div>
+        </fieldset>
+      )}
 
       <fieldset>
         <legend className="mb-2 text-xs font-bold text-navy-600">الحالة</legend>

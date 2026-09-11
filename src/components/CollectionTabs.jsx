@@ -1,10 +1,23 @@
 import { COLLECTIONS } from "../lib/exams.js"
+import { getTheme } from "../lib/collectionTheme.jsx"
+import { LockIcon } from "./icons.jsx"
 
+/**
+ * Four collections do not fit one phone-width row, so the strip is a 2x2 grid
+ * on small screens and a single row from `sm` up. Nothing scrolls sideways and
+ * every tab keeps a 44px touch target.
+ */
 export default function CollectionTabs({ active, onChange }) {
   return (
-    <div role="tablist" aria-label="مجموعات الاختبارات" className="flex gap-2 rounded-2xl border border-navy-100 bg-white p-1.5 shadow-card">
+    <div
+      role="tablist"
+      aria-label="مجموعات الاختبارات"
+      className="grid grid-cols-2 gap-1.5 rounded-2xl border border-navy-100 bg-white p-1.5 shadow-card sm:grid-cols-4"
+    >
       {COLLECTIONS.map((c) => {
         const selected = c.key === active
+        const theme = getTheme(c.key)
+        const { Icon } = theme
         return (
           <button
             key={c.key}
@@ -24,12 +37,25 @@ export default function CollectionTabs({ active, onChange }) {
               onChange(next.key)
               document.getElementById(`tab-${next.key}`)?.focus()
             }}
-            className={`flex flex-1 flex-col items-center gap-0.5 rounded-xl px-3 py-2.5 text-sm font-bold transition-colors focus-ring sm:flex-row sm:justify-center sm:gap-2 ${
-              selected ? "bg-navy-700 text-white" : "text-navy-700 hover:bg-navy-50"
+            className={`group flex min-h-11 flex-col items-center justify-center gap-1 rounded-xl px-2 py-2.5 text-center transition-all duration-200 focus-ring motion-reduce:transition-none ${
+              selected ? "bg-navy-700 text-white shadow-card" : "text-navy-700 hover:bg-navy-50"
             }`}
           >
-            <span>{c.label}</span>
-            <span className={`rounded-full px-2 py-0.5 text-[11px] ${selected ? "bg-white/15 text-white" : "bg-navy-50 text-navy-600"}`}>
+            <span className="flex items-center gap-1.5">
+              <Icon className={`h-4 w-4 shrink-0 ${selected ? "text-white/80" : theme.tabIcon}`} />
+              <span className="text-[13px] font-bold leading-tight sm:text-sm">{c.label}</span>
+              {c.requiresPassword && (
+                <LockIcon
+                  aria-hidden="true"
+                  className={`h-3.5 w-3.5 shrink-0 ${selected ? "text-white/70" : "text-navy-300"}`}
+                />
+              )}
+            </span>
+            <span
+              className={`rounded-full px-2 py-0.5 text-[11px] font-bold tabular-nums ${
+                selected ? "bg-white/15 text-white" : "bg-navy-50 text-navy-600"
+              }`}
+            >
               {c.items.length}
             </span>
           </button>

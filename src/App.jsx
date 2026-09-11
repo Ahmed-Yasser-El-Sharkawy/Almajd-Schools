@@ -6,6 +6,7 @@ import Filters from "./components/Filters.jsx"
 import ExamCard from "./components/ExamCard.jsx"
 import EmptyState from "./components/EmptyState.jsx"
 import RecentStrip from "./components/RecentStrip.jsx"
+import AccessNotice from "./components/AccessNotice.jsx"
 import ShareButton from "./components/ShareButton.jsx"
 import Footer from "./components/Footer.jsx"
 import { ALL_EXAMS, COLLECTIONS, buildRanges, getCollection, isUsable, selectExams } from "./lib/exams.js"
@@ -74,14 +75,18 @@ export default function App() {
     setSheetOpen(false)
   }, [])
 
+  // The third tile is the only collection-specific one; it shows whatever that
+  // collection actually has to say rather than a blank slot.
   const stats = useMemo(() => {
-    const verbal = COLLECTIONS[0]
+    const detail = collection.questionsPerForm
+      ? { label: "سؤالًا لكل نموذج", value: collection.questionsPerForm }
+      : { label: "مجموعات متاحة", value: COLLECTIONS.length }
     return [
       { label: "إجمالي الاختبارات", value: USABLE.length },
-      { label: "تجميعات اللفظي", value: verbal.items.length },
-      { label: "سؤالًا لكل تجميعة", value: verbal.questionsPerForm ?? "—" },
+      { label: collection.label, value: collection.items.length },
+      detail,
     ]
-  }, [])
+  }, [collection])
 
   return (
     <div className="min-h-screen bg-navy-50/40">
@@ -104,8 +109,10 @@ export default function App() {
           onClear={() => setOpened(clearOpened())}
         />
 
-        <CollectionTabs active={state.tab} onChange={(tab) => patch({ tab })} />
+        <CollectionTabs active={state.tab} onChange={(tab) => patch({ tab, range: "" })} />
         <p className="mt-3 text-sm leading-relaxed text-navy-500">{collection.description}</p>
+
+        {collection.requiresPassword && <AccessNotice />}
 
         <div className="mt-6 grid gap-6 lg:grid-cols-[280px_minmax(0,1fr)]">
           <Filters
@@ -145,6 +152,7 @@ export default function App() {
                         <ExamCard
                           exam={exam}
                           badge={collection.short}
+                          locked={collection.requiresPassword}
                           isFavorite={favorites.has(exam.id)}
                           isOpened={openedSet.has(exam.id)}
                           onToggleFavorite={toggleFavorite}

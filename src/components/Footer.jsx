@@ -15,8 +15,9 @@ export default function Footer() {
             </span>
           </div>
           <p className="mt-4 max-w-lg text-sm leading-relaxed text-navy-300">
-            منصة الوصول السريع إلى تجميعات واختبارات مركز المجد. جميع الاختبارات
-            على هيئة نماذج Google، تُفتح مباشرة من المتصفح بلا تسجيل دخول.
+            منصة الوصول السريع إلى تجميعات واختبارات مركز المجد: القدرات اللفظية،
+            وتأسيس ونماذج القدرات الكمي، والاختبارات العامة. جميع الاختبارات على
+            هيئة نماذج Google، تُفتح مباشرة من المتصفح بلا تسجيل دخول.
           </p>
           <p className="mt-4 text-sm text-gold-300">إعداد وإشراف: مركز المجد للقدرات والتحصيلي — مدارس المجد الأهلية</p>
         </div>
@@ -27,6 +28,8 @@ export default function Footer() {
             <li><a href="#top" className="inline-flex min-h-11 items-center rounded text-navy-200 transition-colors hover:text-gold-300 focus-ring">الرئيسية</a></li>
             <li><a href="#exams" className="inline-flex min-h-11 items-center rounded text-navy-200 transition-colors hover:text-gold-300 focus-ring">جميع الاختبارات</a></li>
             <li><a href="?tab=verbal" className="inline-flex min-h-11 items-center rounded text-navy-200 transition-colors hover:text-gold-300 focus-ring">تجميعات اللفظي</a></li>
+            <li><a href="?tab=quant-foundation" className="inline-flex min-h-11 items-center rounded text-navy-200 transition-colors hover:text-gold-300 focus-ring">تأسيس القدرات الكمي</a></li>
+            <li><a href="?tab=quant" className="inline-flex min-h-11 items-center rounded text-navy-200 transition-colors hover:text-gold-300 focus-ring">نماذج القدرات الكمي</a></li>
             <li><a href="?tab=general" className="inline-flex min-h-11 items-center rounded text-navy-200 transition-colors hover:text-gold-300 focus-ring">الاختبارات العامة</a></li>
           </ul>
         </nav>

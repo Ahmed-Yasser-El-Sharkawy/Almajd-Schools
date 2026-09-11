@@ -14,6 +14,8 @@ const isValidUrl = (u) => SHORT_URL.test(u) || LONG_URL.test(u)
 
 const DATASETS = [
   { name: "تجميعات اللفظي", file: "src/data/verbal-exams.json", expected: 301 },
+  { name: "تأسيس الكمي", file: "src/data/quant-foundation-exams.json", expected: 20, gated: true, topics: true },
+  { name: "نماذج الكمي", file: "src/data/quant-exams.json", expected: 20, gated: true },
   { name: "الاختبارات العامة", file: "src/data/general-exams.json", expected: 100 },
 ]
 
@@ -22,7 +24,8 @@ const allUrls = new Map()
 const report = []
 
 for (const ds of DATASETS) {
-  const { items } = load(ds.file)
+  const data = load(ds.file)
+  const { items } = data
   const ids = new Map()
   const urls = new Map()
   const problems = []
@@ -36,6 +39,7 @@ for (const ds of DATASETS) {
     else if (!isValidUrl(item.url)) problems.push(`رابط غير صالح في ${item.id}: ${item.url}`)
     if (item.shortUrl && !SHORT_URL.test(item.shortUrl)) problems.push(`رابط مختصر غير صالح في ${item.id}`)
     if (!Number.isInteger(item.number) || item.number < 1) problems.push(`رقم غير صالح في ${item.id}`)
+    if (ds.topics && !String(item.topic ?? "").trim()) problems.push(`موضوع مفقود في ${item.id}`)
 
     for (const u of [item.url, item.shortUrl].filter(Boolean)) {
       if (urls.has(u)) problems.push(`رابط مكرر داخل المجموعة: ${u}`)
@@ -44,6 +48,15 @@ for (const ds of DATASETS) {
       allUrls.set(u, item.id)
     }
   }
+
+  // Gated collections must advertise the gate so the UI can warn students...
+  if (ds.gated && data.requiresPassword !== true) {
+    problems.push("العلامة requiresPassword مفقودة في ملف البيانات")
+  }
+  // ...but must never carry the code itself: everything in these files is
+  // bundled into the public JS and readable by anyone.
+  const leaked = JSON.stringify(data).match(/"(password|كلمة المرور|code|pin)"\s*:/i)
+  if (leaked) problems.push(`كلمة المرور مسرَّبة في ملف البيانات (${leaked[1]}) — يجب حذفها`)
 
   const numbers = items.map((x) => x.number).sort((a, b) => a - b)
   const contiguous = numbers.every((n, i) => n === i + 1)
@@ -61,6 +74,7 @@ for (const ds of DATASETS) {
     "روابط غير صالحة": items.length - validUrls,
     "معرّفات فريدة": ids.size,
     "أرقام متسلسلة": contiguous ? "نعم" : "لا",
+    "محمي بكلمة مرور": data.requiresPassword ? "نعم" : "—",
   })
 
   if (problems.length) {
