@@ -16,6 +16,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://Ahmed-Yasser-El-Sharkawy.github.io/Almajd-Schools/?tab=quant-releases</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://Ahmed-Yasser-El-Sharkawy.github.io/Almajd-Schools/?tab=quant</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

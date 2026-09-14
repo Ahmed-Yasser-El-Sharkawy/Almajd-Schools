@@ -6,7 +6,7 @@
 // between them never repaints the page's main control.
 // Tailwind's JIT only sees literal strings, so every class is written out in
 // full here rather than composed from a colour name at runtime.
-import { TextIcon, BlocksIcon, SigmaIcon, GridIcon } from "../components/icons.jsx"
+import { TextIcon, BlocksIcon, LayersIcon, SigmaIcon, GridIcon } from "../components/icons.jsx"
 
 const THEMES = {
   verbal: {
@@ -20,6 +20,12 @@ const THEMES = {
     tabIcon: "text-teal-600",
     heroIcon: "text-teal-300",
     badge: "bg-teal-50 text-teal-800",
+  },
+  "quant-releases": {
+    Icon: LayersIcon,
+    tabIcon: "text-sky-600",
+    heroIcon: "text-sky-300",
+    badge: "bg-sky-50 text-sky-800",
   },
   quant: {
     Icon: SigmaIcon,

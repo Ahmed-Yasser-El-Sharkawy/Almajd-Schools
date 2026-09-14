@@ -54,3 +54,9 @@ export const BlocksIcon = (p) => (
 export const GridIcon = (p) => (
   <svg viewBox="0 0 24 24" {...base} {...p}><rect x="3.5" y="3.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="3.5" width="7" height="7" rx="1.5" /><rect x="3.5" y="13.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="13.5" width="7" height="7" rx="1.5" /></svg>
 )
+export const LayersIcon = (p) => (
+  <svg viewBox="0 0 24 24" {...base} {...p}><path d="m12 3.5 8.5 4.5-8.5 4.5L3.5 8z" /><path d="m3.5 12 8.5 4.5 8.5-4.5" /><path d="m3.5 16 8.5 4.5 8.5-4.5" /></svg>
+)
+export const QuestionsIcon = (p) => (
+  <svg viewBox="0 0 24 24" {...base} {...p}><circle cx="12" cy="12" r="9" /><path d="M9.6 9.3a2.5 2.5 0 0 1 4.85.85c0 1.7-2.45 2.2-2.45 3.6" /><path d="M12 17h.01" /></svg>
+)

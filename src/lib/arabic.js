@@ -61,3 +61,22 @@ export function buildSearchKey(record) {
   const ordinal = ORDINALS[record.number] ? normalizeArabic(ORDINALS[record.number]) : ""
   return [base, stripped, ordinal].filter(Boolean).join(" ")
 }
+
+/**
+ * Attach a number to an Arabic counted noun with the right agreement:
+ * 1 → "سؤال واحد", 2 → "سؤالان", 3–10 → "3 أسئلة", 11+ → "48 سؤالًا".
+ * Hundreds reset the rule ("100 سؤال"), which is why the last two digits decide.
+ * @param {number} n
+ * @param {{one: string, two: string, few: string, many: string, hundred?: string}} forms
+ */
+export function countNoun(n, forms) {
+  if (n === 1) return forms.one
+  if (n === 2) return forms.two
+  const tail = n % 100
+  if (tail >= 3 && tail <= 10) return `${n} ${forms.few}`
+  if (tail === 0 || tail === 1 || tail === 2) return `${n} ${forms.hundred ?? forms.many}`
+  return `${n} ${forms.many}`
+}
+
+export const QUESTIONS = { one: "سؤال واحد", two: "سؤالان", few: "أسئلة", many: "سؤالًا", hundred: "سؤال" }
+export const RELEASES = { one: "إصدار واحد", two: "إصداران", few: "إصدارات", many: "إصدارًا", hundred: "إصدار" }

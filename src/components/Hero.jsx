@@ -39,23 +39,28 @@ export default function Hero({ query, onQueryChange, total, counts, active, onPi
 
           <section
             aria-label="نظرة عامة على المجموعات"
-            className="mt-1 w-full max-w-3xl rounded-2xl border border-navy-700/70 bg-navy-800/40 p-2.5 sm:p-3"
+            className="mt-1 w-full max-w-3xl rounded-2xl border border-navy-700/70 bg-navy-800/40 p-2.5 sm:p-3 lg:max-w-4xl"
           >
-            <div className="flex flex-col gap-2.5 sm:flex-row sm:items-stretch">
-              <p className="flex items-center justify-between gap-3 rounded-xl bg-navy-950/50 px-4 py-3 text-start sm:w-40 sm:flex-col sm:items-start sm:justify-center sm:gap-0.5">
+            {/* Total on its own row until `lg`; beside five tiles any earlier it
+                squeezes the tiles below a readable width. */}
+            <div className="flex flex-col gap-2.5 lg:flex-row lg:items-stretch">
+              <p className="flex items-center justify-between gap-3 rounded-xl bg-navy-950/50 px-4 py-3 text-start lg:w-40 lg:flex-col lg:items-start lg:justify-center lg:gap-0.5">
                 <span className="text-[11px] font-bold text-navy-300 sm:text-xs">إجمالي الاختبارات</span>
-                <span className="text-2xl font-extrabold leading-none text-gold-400 tabular-nums sm:text-4xl">
+                <span className="text-2xl font-extrabold leading-none text-gold-400 tabular-nums lg:text-4xl">
                   {total}
                 </span>
               </p>
 
-              <ul className="grid flex-1 grid-cols-2 gap-2 sm:grid-cols-4">
-                {COLLECTIONS.map((c) => {
+              <ul className="grid flex-1 grid-cols-2 gap-2 sm:grid-cols-5">
+                {COLLECTIONS.map((c, i) => {
                   const theme = getTheme(c.key)
                   const { Icon } = theme
                   const selected = c.key === active
+                  // With an odd count the last phone tile would sit alone beside
+                  // an empty cell; let it span the row instead.
+                  const orphan = COLLECTIONS.length % 2 === 1 && i === COLLECTIONS.length - 1
                   return (
-                    <li key={c.key}>
+                    <li key={c.key} className={orphan ? "col-span-2 sm:col-span-1" : undefined}>
                       <button
                         type="button"
                         onClick={() => onPickCollection(c.key)}
