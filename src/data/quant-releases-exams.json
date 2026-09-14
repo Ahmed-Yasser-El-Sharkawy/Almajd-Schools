@@ -1,0 +1,385 @@
+{
+  "collection": "quant-releases",
+  "requiresPassword": true,
+  "totalQuestions": 1984,
+  "items": [
+    {
+      "id": "qr-1",
+      "collection": "quant-releases",
+      "number": 1,
+      "title": "الإصدار الأول",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSccl750drb-fPbLsmR3g6v4cL-BMuf5eGdhCWaUON5eYYox0w/viewform",
+      "shortUrl": "https://forms.gle/k8A4wyooiax3dM4M9"
+    },
+    {
+      "id": "qr-2",
+      "collection": "quant-releases",
+      "number": 2,
+      "title": "الإصدار الثاني",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf1fTfurxTUWZwaLnbjri-kX4eCp_APzzm9Y7QMPADK1ikPyA/viewform",
+      "shortUrl": "https://forms.gle/dXnAzDJdxKXqr4eXA"
+    },
+    {
+      "id": "qr-3",
+      "collection": "quant-releases",
+      "number": 3,
+      "title": "الإصدار الثالث",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc_j9xYtWV4W-yQv5zuUfTN9oMYMJOkiIl1GFDcjPdpgDuJmw/viewform",
+      "shortUrl": "https://forms.gle/ULNRp7SLGU5u2gfh7"
+    },
+    {
+      "id": "qr-4",
+      "collection": "quant-releases",
+      "number": 4,
+      "title": "الإصدار الرابع",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdj0EZNd4dz9IyOaxnYyd-sYwDBdsvELAZJepptKT24TBTV9Q/viewform",
+      "shortUrl": "https://forms.gle/rAqZozAVwU3rVnVH8"
+    },
+    {
+      "id": "qr-5",
+      "collection": "quant-releases",
+      "number": 5,
+      "title": "الإصدار الخامس",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScAvzTP7Ilba-kj9dwAjSGlxHwyqUhGQ6uIXCWYGFb4GqecaA/viewform",
+      "shortUrl": "https://forms.gle/BYigi2DyTtWakbTBA"
+    },
+    {
+      "id": "qr-6",
+      "collection": "quant-releases",
+      "number": 6,
+      "title": "الإصدار السادس",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfpSxaIxDLCSNtlVzVKMitRXuETdovkilD4jEroD13L41YS-Q/viewform",
+      "shortUrl": "https://forms.gle/M12ThEEewP56XkyMA"
+    },
+    {
+      "id": "qr-7",
+      "collection": "quant-releases",
+      "number": 7,
+      "title": "الإصدار السابع",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfXmOQUHYaVBuqb3RbnLPGhg2-dQMjOyIp6rRE7mzWSiSUcjA/viewform",
+      "shortUrl": "https://forms.gle/R7iKQPaPiYUrEcph9"
+    },
+    {
+      "id": "qr-8",
+      "collection": "quant-releases",
+      "number": 8,
+      "title": "الإصدار الثامن",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdGpK9EoxM4-BuWj_mXH151ge3_rvWttxCWYI4ZhxLd9HSAiA/viewform",
+      "shortUrl": "https://forms.gle/zyvSzKW736jENzFP6"
+    },
+    {
+      "id": "qr-9",
+      "collection": "quant-releases",
+      "number": 9,
+      "title": "الإصدار التاسع",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfZi2ZzAyOvgf8nTjlqmv9pvhhkN6iLHlHN2LR_-pI26LvSWQ/viewform",
+      "shortUrl": "https://forms.gle/fgf9QxcEEeiDXSrz7"
+    },
+    {
+      "id": "qr-10",
+      "collection": "quant-releases",
+      "number": 10,
+      "title": "الإصدار العاشر",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScJA3PSb9MoH6rTDrxVNC5VpKAopYv4NXSRPnhl1gY4HTX6Fw/viewform",
+      "shortUrl": "https://forms.gle/GCrRNjzrqKrpoSYL9"
+    },
+    {
+      "id": "qr-11",
+      "collection": "quant-releases",
+      "number": 11,
+      "title": "الإصدار الحادي عشر",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdfcs4ePTwMiWvvyTv3mp3VB1rRLiWwZMALu5fhuUmVx0XEBw/viewform",
+      "shortUrl": "https://forms.gle/wV1cuVRJP2wtQiB56"
+    },
+    {
+      "id": "qr-12",
+      "collection": "quant-releases",
+      "number": 12,
+      "title": "الإصدار الثاني عشر",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScwpziumjdfDKkitu6H2M1Bcn6Xw7eEcM1Dk6uZGDf5zNojqg/viewform",
+      "shortUrl": "https://forms.gle/GZ7QQnLq5u2XmATT9"
+    },
+    {
+      "id": "qr-13",
+      "collection": "quant-releases",
+      "number": 13,
+      "title": "الإصدار الثالث عشر",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeZmwO38GdHEJdi1nupQoHUe0oRwwVe4Jouex7azCMG4kbtMg/viewform",
+      "shortUrl": "https://forms.gle/jpFKSwQDXAooP98Z7"
+    },
+    {
+      "id": "qr-14",
+      "collection": "quant-releases",
+      "number": 14,
+      "title": "الإصدار الرابع عشر",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeL1P6AZ_QFcCQT4yEoYTEzWL_aKSrQ1axuCRmEtQwnq9uFAA/viewform",
+      "shortUrl": "https://forms.gle/avJ9pCAS2YSM6HYi6"
+    },
+    {
+      "id": "qr-15",
+      "collection": "quant-releases",
+      "number": 15,
+      "title": "الإصدار الخامس عشر",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfOCBYD3pWkxI8QcZGlQgC1KR5dLVy6i5HmXhMwz-8BPk77EA/viewform",
+      "shortUrl": "https://forms.gle/HiHi8awtsbXGc8WdA"
+    },
+    {
+      "id": "qr-16",
+      "collection": "quant-releases",
+      "number": 16,
+      "title": "الإصدار السادس عشر",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc4puDsg4QaVf5v0Sk_g4sOetNIIxQmfuOgL3GnYCIFP0L1hw/viewform",
+      "shortUrl": "https://forms.gle/HRRVNbfCDtnn4unX7"
+    },
+    {
+      "id": "qr-17",
+      "collection": "quant-releases",
+      "number": 17,
+      "title": "الإصدار السابع عشر",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeUdKWIgWpZv3T_684P1MlZXLXFL5Ac2LjHhbhUnZBLBN9yeg/viewform",
+      "shortUrl": "https://forms.gle/D4NScgbQaYmNu6GT7"
+    },
+    {
+      "id": "qr-18",
+      "collection": "quant-releases",
+      "number": 18,
+      "title": "الإصدار الثامن عشر",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSemx3wV-Gx12wTcNOd6IOu3yu2b_mkd-4U2F0vDXkU4kU6OJA/viewform",
+      "shortUrl": "https://forms.gle/uuKqQVzxXgERv4kb7"
+    },
+    {
+      "id": "qr-19",
+      "collection": "quant-releases",
+      "number": 19,
+      "title": "الإصدار التاسع عشر",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfBeJ1IYKEeUgsvmmlH-9caRRdGmVXVxm1uXJRICtoODQxD2Q/viewform",
+      "shortUrl": "https://forms.gle/gQJVsWE21fimEhgA9"
+    },
+    {
+      "id": "qr-20",
+      "collection": "quant-releases",
+      "number": 20,
+      "title": "الإصدار العشرون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdOYzw6xq-p9KuuLA7xdElQjjd_oWfyUtQWTzRqTe_kSpVaKQ/viewform",
+      "shortUrl": "https://forms.gle/k43Z3KiCgcv7W61h9"
+    },
+    {
+      "id": "qr-21",
+      "collection": "quant-releases",
+      "number": 21,
+      "title": "الإصدار الحادي والعشرون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdrmn7iugd8AmFmyYyJwEKBVP-Pfa1hNP9l7pXf11FuUv34Sg/viewform",
+      "shortUrl": "https://forms.gle/eVZDMBTSxSuZSd2w6"
+    },
+    {
+      "id": "qr-22",
+      "collection": "quant-releases",
+      "number": 22,
+      "title": "الإصدار الثاني والعشرون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdMIVoz5DcaTKoep5DiskNJwr_b1FS92MD5AA6OGSHuU2xlFg/viewform",
+      "shortUrl": "https://forms.gle/cVskWZUHwXhGMpmm9"
+    },
+    {
+      "id": "qr-23",
+      "collection": "quant-releases",
+      "number": 23,
+      "title": "الإصدار الثالث والعشرون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeaqvg7OS4rdchX-uQ-6IITOCZRM4GJht-MLP3ZbyLno4YWzg/viewform",
+      "shortUrl": "https://forms.gle/zMgDKi8yoJjvRkim6"
+    },
+    {
+      "id": "qr-24",
+      "collection": "quant-releases",
+      "number": 24,
+      "title": "الإصدار الرابع والعشرون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSd1OuohxPAxEgLmIdArlTWONaTJeuTb5s__AdD1KcMs_z1UXw/viewform",
+      "shortUrl": "https://forms.gle/ZNGSGv4KgHf2hB2Z8"
+    },
+    {
+      "id": "qr-25",
+      "collection": "quant-releases",
+      "number": 25,
+      "title": "الإصدار الخامس والعشرون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScYjICJh_si8AyW0EPPpofHcn3keKVwXMJ7p4lnv11kcvy0Aw/viewform",
+      "shortUrl": "https://forms.gle/NpnhGDnJNPiHzyfC6"
+    },
+    {
+      "id": "qr-26",
+      "collection": "quant-releases",
+      "number": 26,
+      "title": "الإصدار السادس والعشرون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeOaIt2hH4DCFljfC5Y3Ryo1SgD8PeKvCyoV10MiERyFG3OYQ/viewform",
+      "shortUrl": "https://forms.gle/qkTr7ykh47yzbGV96"
+    },
+    {
+      "id": "qr-27",
+      "collection": "quant-releases",
+      "number": 27,
+      "title": "الإصدار السابع والعشرون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfBeXIm8H4aYyTtw06BCtazbA1hAb5thJ1TnuCqcdFNVFqYxA/viewform",
+      "shortUrl": "https://forms.gle/wMD6viVWhaUn5yvP8"
+    },
+    {
+      "id": "qr-28",
+      "collection": "quant-releases",
+      "number": 28,
+      "title": "الإصدار الثامن والعشرون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfRhthAicKP0mlyMtR0HraXI5TPPlcT8Knx2771icUIJI-zGg/viewform",
+      "shortUrl": "https://forms.gle/9QeJnaBKoo2mJcox6"
+    },
+    {
+      "id": "qr-29",
+      "collection": "quant-releases",
+      "number": 29,
+      "title": "الإصدار التاسع والعشرون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeSn9Nx4kC4z5PyPd0zE2IyMQ6w0zKA6wE2yFKwwvnufgY6Kw/viewform",
+      "shortUrl": "https://forms.gle/SDm2aP9TpAd1sEmc6"
+    },
+    {
+      "id": "qr-30",
+      "collection": "quant-releases",
+      "number": 30,
+      "title": "الإصدار الثلاثون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeKvHj42DhZFL-8vvZUgf82WtQHxq95wUyiUdLpwt-_qqSHMQ/viewform",
+      "shortUrl": "https://forms.gle/2V2CAwmQqT42kfJB9"
+    },
+    {
+      "id": "qr-31",
+      "collection": "quant-releases",
+      "number": 31,
+      "title": "الإصدار الحادي والثلاثون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc29kjZXA3u-crzn7knGEeIwTr7gCceIqAhwLKcc2AltKcnQg/viewform",
+      "shortUrl": "https://forms.gle/Rd4HnFtDMesMHBct8"
+    },
+    {
+      "id": "qr-32",
+      "collection": "quant-releases",
+      "number": 32,
+      "title": "الإصدار الثاني والثلاثون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf_zu9_psDxQfd_jYwKrEVyfAdWqk0WKzGVXqlxueh5v-4fmw/viewform",
+      "shortUrl": "https://forms.gle/aUQx3YbVp7DCx11SA"
+    },
+    {
+      "id": "qr-33",
+      "collection": "quant-releases",
+      "number": 33,
+      "title": "الإصدار الثالث والثلاثون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSf5Jw8piJ0rwGujI0TAzen-ZlpsOTm0ffBbmJuT5Z90ozUrUQ/viewform",
+      "shortUrl": "https://forms.gle/epCWieL5w8vRUT2L6"
+    },
+    {
+      "id": "qr-34",
+      "collection": "quant-releases",
+      "number": 34,
+      "title": "الإصدار الرابع والثلاثون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdMdTDsprWDTyhROpV7NrSZy2-8N-zohmTPMlpKhmrjVW86kg/viewform",
+      "shortUrl": "https://forms.gle/h8qgZTnKTiUdxM5T6"
+    },
+    {
+      "id": "qr-35",
+      "collection": "quant-releases",
+      "number": 35,
+      "title": "الإصدار الخامس والثلاثون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSczPwRfxpPtGt3T7M1CD52-5zfGFxupqkYwgnJlqI_uZNrQhQ/viewform",
+      "shortUrl": "https://forms.gle/rSePdixX9obPyGRK7"
+    },
+    {
+      "id": "qr-36",
+      "collection": "quant-releases",
+      "number": 36,
+      "title": "الإصدار السادس والثلاثون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdlR7I-28JWehyvPOR9SI0bcm2EBPf5VlM5hrtOVwpnoRPSqw/viewform",
+      "shortUrl": "https://forms.gle/GevZEHZYpMxJBm9u8"
+    },
+    {
+      "id": "qr-37",
+      "collection": "quant-releases",
+      "number": 37,
+      "title": "الإصدار السابع والثلاثون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScXWzvM213v0a7W4eopQsRrPeRXalNUA_fot8eFT8kK1EYV0A/viewform",
+      "shortUrl": "https://forms.gle/eeFnZMU66X9oxEo49"
+    },
+    {
+      "id": "qr-38",
+      "collection": "quant-releases",
+      "number": 38,
+      "title": "الإصدار الثامن والثلاثون",
+      "questions": 47,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdwH89TuqrklRra5iNkNj5Xe8i1cWA1XOQVXD8zvE9sNl56GA/viewform",
+      "shortUrl": "https://forms.gle/UBtte6XtKua57yda8"
+    },
+    {
+      "id": "qr-39",
+      "collection": "quant-releases",
+      "number": 39,
+      "title": "الإصدار التاسع والثلاثون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfMgDusaz75nJGI7mw2u7Wxn253sIW5j4g8lw6imUBG-flKdg/viewform",
+      "shortUrl": "https://forms.gle/Sweb9J4dNjb6jV4x6"
+    },
+    {
+      "id": "qr-40",
+      "collection": "quant-releases",
+      "number": 40,
+      "title": "الإصدار الأربعون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe1ljbi2JUB2DF_YgKMq6CUkGLpHJtTkpiLda6s-2znMgzfnA/viewform",
+      "shortUrl": "https://forms.gle/xzhndG8s6adfzSog8"
+    },
+    {
+      "id": "qr-41",
+      "collection": "quant-releases",
+      "number": 41,
+      "title": "الإصدار الحادي والأربعون",
+      "questions": 48,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfDTPf5_8jSxIWllNWldqiXGOljsx16LItW86_Y2hLN9Octeg/viewform",
+      "shortUrl": "https://forms.gle/KTBGmWxp8NdC8h8d8"
+    },
+    {
+      "id": "qr-42",
+      "collection": "quant-releases",
+      "number": 42,
+      "title": "الإصدار الثاني والأربعون",
+      "questions": 17,
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfbJ4SQepgo4psoO5InE674HABdSurF9r-6JbG3jFyagLJp8g/viewform",
+      "shortUrl": "https://forms.gle/SnYD4ZXSARJKt89P6"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import { useState } from "react"
-import { StarIcon, CopyIcon, CheckIcon, ArrowIcon, TagIcon, LockIcon } from "./icons.jsx"
+import { StarIcon, CopyIcon, CheckIcon, ArrowIcon, TagIcon, LockIcon, QuestionsIcon } from "./icons.jsx"
 import { getTheme } from "../lib/collectionTheme.jsx"
+import { countNoun, QUESTIONS } from "../lib/arabic.js"
 
 export default function ExamCard({ exam, badge, locked, isFavorite, isOpened, onToggleFavorite, onOpen }) {
   const [copied, setCopied] = useState(false)
@@ -62,6 +63,12 @@ export default function ExamCard({ exam, badge, locked, isFavorite, isOpened, on
           <p className="mt-1.5 flex items-start gap-1.5 text-sm leading-snug text-navy-500">
             <TagIcon className="mt-0.5 h-4 w-4 shrink-0 text-navy-300" />
             <span>{exam.topic}</span>
+          </p>
+        )}
+        {exam.questions != null && (
+          <p className="mt-1.5 flex items-center gap-1.5 text-sm leading-snug text-navy-500">
+            <QuestionsIcon className="h-4 w-4 shrink-0 text-navy-300" />
+            <span className="tabular-nums">{countNoun(exam.questions, QUESTIONS)}</span>
           </p>
         )}
       </div>

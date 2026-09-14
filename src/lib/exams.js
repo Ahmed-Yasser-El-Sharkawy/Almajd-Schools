@@ -4,15 +4,17 @@ import verbalRaw from "../data/verbal-exams.json"
 import generalRaw from "../data/general-exams.json"
 import quantFoundationRaw from "../data/quant-foundation-exams.json"
 import quantRaw from "../data/quant-exams.json"
-import { buildSearchKey } from "./arabic.js"
+import quantReleasesRaw from "../data/quant-releases-exams.json"
+import { buildSearchKey, countNoun, QUESTIONS, RELEASES } from "./arabic.js"
 
 /**
  * @typedef {Object} Exam
  * @property {string} id           stable key, e.g. "v-42"
- * @property {"verbal"|"quant-foundation"|"quant"|"general"} collection
+ * @property {"verbal"|"quant-foundation"|"quant-releases"|"quant"|"general"} collection
  * @property {number} number       1-based order inside its collection
  * @property {string} title        display title
  * @property {string} [topic]      the skill a foundation model drills
+ * @property {number} [questions]  question count, when it varies per form
  * @property {string} url          canonical form URL (never rewritten)
  * @property {string|null} shortUrl
  * @property {string} searchKey    pre-folded text used by the search
@@ -31,14 +33,15 @@ const verbal = prepare(verbalRaw)
 const general = prepare(generalRaw)
 const quantFoundation = prepare(quantFoundationRaw)
 const quant = prepare(quantRaw)
+const quantReleases = prepare(quantReleasesRaw)
 
 export const COLLECTIONS = [
   {
     key: "verbal",
-    label: "تجميعات اللفظي",
+    label: "أقسام اللفظي",
     short: "اللفظي",
     tagline: "استيعاب المقروء والتناظر اللفظي",
-    description: "تجميعات القدرات اللفظية، كل تجميعة تحتوي على 13 سؤالًا.",
+    description: "أقسام القدرات اللفظية، كل قسم يحتوي على 13 سؤالًا.",
     items: verbal,
     questionsPerForm: verbalRaw.questionsPerForm ?? null,
     requiresPassword: false,
@@ -55,9 +58,25 @@ export const COLLECTIONS = [
     requiresPassword: Boolean(quantFoundationRaw.requiresPassword),
   },
   {
+    key: "quant-releases",
+    label: "إصدارات الكمي",
+    short: "إصدارات كمي",
+    tagline: "بنك أسئلة الإصدارات",
+    // Figures come from the data so the sentence cannot drift from the cards.
+    description: `إصدارات القدرات الكمي: ${countNoun(quantReleases.length, RELEASES)} تضم ${countNoun(
+      quantReleasesRaw.totalQuestions,
+      QUESTIONS,
+    )}، كل سؤال صورة يليها اختيار من أ / ب / ج / د.`,
+    items: quantReleases,
+    questionsPerForm: null,
+    requiresPassword: Boolean(quantReleasesRaw.requiresPassword),
+  },
+  {
     key: "quant",
     label: "نماذج الكمي",
-    short: "الكمي",
+    // Three quant collections now share the grid's badges; "الكمي" alone no
+    // longer says which one a card belongs to.
+    short: "نماذج كمي",
     tagline: "نماذج متكاملة تحاكي الاختبار",
     description:
       "نماذج القدرات الكمي الشاملة، تجمع مهارات التأسيس كلها في اختبار متكامل يحاكي شكل اختبار القدرات.",
@@ -82,7 +101,7 @@ export const COLLECTION_KEYS = COLLECTIONS.map((c) => c.key)
 export const getCollection = (key) =>
   COLLECTIONS.find((c) => c.key === key) ?? COLLECTIONS[0]
 
-export const ALL_EXAMS = [...verbal, ...quantFoundation, ...quant, ...general]
+export const ALL_EXAMS = [...verbal, ...quantFoundation, ...quantReleases, ...quant, ...general]
 
 /**
  * Count usable records per collection. The tabs and the hero must quote the

@@ -13,8 +13,9 @@ const LONG_URL = /^https:\/\/docs\.google\.com\/forms\/d\/e\/[A-Za-z0-9_-]+\/vie
 const isValidUrl = (u) => SHORT_URL.test(u) || LONG_URL.test(u)
 
 const DATASETS = [
-  { name: "تجميعات اللفظي", file: "src/data/verbal-exams.json", expected: 301 },
+  { name: "أقسام اللفظي", file: "src/data/verbal-exams.json", expected: 301 },
   { name: "تأسيس الكمي", file: "src/data/quant-foundation-exams.json", expected: 20, gated: true, topics: true },
+  { name: "إصدارات الكمي", file: "src/data/quant-releases-exams.json", expected: 42, gated: true, questions: true },
   { name: "نماذج الكمي", file: "src/data/quant-exams.json", expected: 20, gated: true },
   { name: "الاختبارات العامة", file: "src/data/general-exams.json", expected: 100 },
 ]
@@ -40,6 +41,9 @@ for (const ds of DATASETS) {
     if (item.shortUrl && !SHORT_URL.test(item.shortUrl)) problems.push(`رابط مختصر غير صالح في ${item.id}`)
     if (!Number.isInteger(item.number) || item.number < 1) problems.push(`رقم غير صالح في ${item.id}`)
     if (ds.topics && !String(item.topic ?? "").trim()) problems.push(`موضوع مفقود في ${item.id}`)
+    if (ds.questions && !(Number.isInteger(item.questions) && item.questions > 0)) {
+      problems.push(`عدد أسئلة غير صالح في ${item.id}`)
+    }
 
     for (const u of [item.url, item.shortUrl].filter(Boolean)) {
       if (urls.has(u)) problems.push(`رابط مكرر داخل المجموعة: ${u}`)
@@ -57,6 +61,15 @@ for (const ds of DATASETS) {
   // bundled into the public JS and readable by anyone.
   const leaked = JSON.stringify(data).match(/"(password|كلمة المرور|code|pin)"\s*:/i)
   if (leaked) problems.push(`كلمة المرور مسرَّبة في ملف البيانات (${leaked[1]}) — يجب حذفها`)
+
+  // A per-release count that no longer sums to the declared total means a
+  // release was dropped, duplicated or edited by hand.
+  if (ds.questions) {
+    const sum = items.reduce((n, x) => n + (x.questions ?? 0), 0)
+    if (sum !== data.totalQuestions) {
+      problems.push(`مجموع الأسئلة ${sum} لا يطابق الإجمالي المعلن ${data.totalQuestions}`)
+    }
+  }
 
   const numbers = items.map((x) => x.number).sort((a, b) => a - b)
   const contiguous = numbers.every((n, i) => n === i + 1)

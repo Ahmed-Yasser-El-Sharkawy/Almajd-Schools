@@ -3,9 +3,11 @@ import { getTheme } from "../lib/collectionTheme.jsx"
 import { LockIcon } from "./icons.jsx"
 
 /**
- * Four collections do not fit one phone-width row, so the strip is a 2x2 grid
- * on small screens and a single row from `sm` up. Nothing scrolls sideways and
- * every tab keeps a 44px touch target.
+ * Five collections never fit one phone-width row. The strip wraps instead of
+ * scrolling: two tabs per row on phones, three on tablets, all five from `lg`.
+ * It is flex rather than grid on purpose - `grow` lets a leftover tab stretch
+ * across its row, where a grid would leave an empty cell beside it. Every tab
+ * keeps a 44px touch target.
  *
  * Counts deliberately live only in the hero dashboard: repeating all four of
  * them here put the same numbers on screen twice, a few pixels apart.
@@ -15,7 +17,7 @@ export default function CollectionTabs({ active, onChange }) {
     <div
       role="tablist"
       aria-label="مجموعات الاختبارات"
-      className="grid grid-cols-2 gap-1.5 rounded-2xl border border-navy-100 bg-white p-1.5 shadow-card sm:grid-cols-4"
+      className="flex flex-wrap gap-1.5 rounded-2xl border border-navy-100 bg-white p-1.5 shadow-card"
     >
       {COLLECTIONS.map((c) => {
         const selected = c.key === active
@@ -40,7 +42,7 @@ export default function CollectionTabs({ active, onChange }) {
               onChange(next.key)
               document.getElementById(`tab-${next.key}`)?.focus()
             }}
-            className={`group flex min-h-11 items-center justify-center gap-1.5 rounded-xl px-2 py-2.5 text-center transition-all duration-200 focus-ring motion-reduce:transition-none ${
+            className={`group flex min-h-11 grow basis-[calc(50%_-_0.1875rem)] items-center justify-center gap-1.5 rounded-xl px-2 py-2.5 text-center sm:basis-[calc(33.333%_-_0.25rem)] lg:basis-0 transition-all duration-200 focus-ring motion-reduce:transition-none ${
               selected ? "bg-navy-700 text-white shadow-card" : "text-navy-700 hover:bg-navy-50"
             }`}
           >

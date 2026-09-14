@@ -83,3 +83,38 @@ const quant = buildQuant({
   outFile: 'src/data/quant-exams.json',
 })
 console.log(`quant-foundation: ${quantFoundation}  quant: ${quant}`)
+
+// --- إصدارات القدرات الكمي --------------------------------------------
+// This export uses Arabic keys and carries a per-release question count, so it
+// gets its own adapter instead of being bent into buildQuant. The same rule
+// holds: the password is dropped, only `requiresPassword` is written.
+{
+  const SOURCE = 'روابط تجميعات القدرات الكمي — مدارس المجد 1-42.json'
+  const src = JSON.parse(readFileSync(resolve(root, '..', SOURCE), 'utf8'))
+  const items = src['الفورمات'].map((f) => ({
+    id: `qr-${f['الإصدار']}`,
+    collection: 'quant-releases',
+    number: f['الإصدار'],
+    // "الإصدار الأول — تجميعات القدرات الكمي | مدارس المجد الأهلية": everything
+    // after the dash repeats the tab and the site name on every card.
+    title: stripTatweel(f['الاسم'].split(' — ')[0]),
+    questions: f['عدد الأسئلة'],
+    url: f['الرابط الكامل'],
+    shortUrl: f['الرابط المختصر'] ?? null,
+  }))
+  writeFileSync(
+    resolve(root, 'src/data/quant-releases-exams.json'),
+    JSON.stringify(
+      {
+        collection: 'quant-releases',
+        requiresPassword: Boolean(src['كلمة المرور']),
+        // Declared by the source; validate-data checks the items still add up to it.
+        totalQuestions: src['إجمالي الأسئلة'],
+        items,
+      },
+      null,
+      2,
+    ) + '\n',
+  )
+  console.log(`quant-releases: ${items.length}`)
+}
