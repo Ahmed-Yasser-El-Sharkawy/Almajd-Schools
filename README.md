@@ -8,11 +8,11 @@
 
 | المجموعة | العدد | المصدر | محمي بكلمة مرور |
 | --- | ---: | --- | :---: |
-| أقسام اللفظي | 301 | `src/data/verbal-exams.json` | — |
+| أقسام اللفظي الحديثة | 301 | `src/data/verbal-exams.json` | — |
 | تأسيس الكمي | 20 | `src/data/quant-foundation-exams.json` | نعم |
 | إصدارات الكمي | 42 | `src/data/quant-releases-exams.json` | نعم |
 | نماذج الكمي | 20 | `src/data/quant-exams.json` | نعم |
-| الاختبارات العامة | 100 | `src/data/general-exams.json` | — |
+| اختبارات لفظي محاكاة | 100 | `src/data/general-exams.json` | — |
 | **الإجمالي** | **483** | | |
 
 مجموعات الكمي الثلاث تأتي من ملفات JSON المصدر خارج المستودع، وتُولَّد عبر

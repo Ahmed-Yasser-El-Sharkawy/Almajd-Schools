@@ -38,10 +38,12 @@ const quantReleases = prepare(quantReleasesRaw)
 export const COLLECTIONS = [
   {
     key: "verbal",
-    label: "أقسام اللفظي",
-    short: "اللفظي",
+    label: "أقسام اللفظي الحديثة",
+    // Two collections are verbal now, so "اللفظي" alone no longer identifies a
+    // card. Every short follows the same {type} {subject} shape.
+    short: "أقسام لفظي",
     tagline: "استيعاب المقروء والتناظر اللفظي",
-    description: "أقسام القدرات اللفظية، كل قسم يحتوي على 13 سؤالًا.",
+    description: "أقسام القدرات اللفظية الحديثة، كل قسم يحتوي على 13 سؤالًا.",
     items: verbal,
     questionsPerForm: verbalRaw.questionsPerForm ?? null,
     requiresPassword: false,
@@ -85,11 +87,13 @@ export const COLLECTIONS = [
     requiresPassword: Boolean(quantRaw.requiresPassword),
   },
   {
+    // The key stays "general": it is what ?tab=general in already-shared links
+    // and the sitemap point at. Only the wording changed.
     key: "general",
-    label: "الاختبارات العامة",
-    short: "العامة",
-    tagline: "الاختبارات المرقّمة السابقة",
-    description: "الاختبارات المرقّمة السابقة، من الاختبار الأول حتى المائة.",
+    label: "اختبارات لفظي محاكاة",
+    short: "محاكاة لفظي",
+    tagline: "محاكاة لشكل اختبار اللفظي",
+    description: "اختبارات لفظي تحاكي شكل اختبار القدرات، مرقّمة من الاختبار الأول حتى المائة.",
     items: general,
     questionsPerForm: null,
     requiresPassword: false,
