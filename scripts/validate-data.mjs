@@ -15,7 +15,7 @@ const isValidUrl = (u) => SHORT_URL.test(u) || LONG_URL.test(u)
 const DATASETS = [
   { name: "أقسام اللفظي الحديثة", file: "src/data/verbal-exams.json", expected: 301 },
   { name: "تأسيس الكمي", file: "src/data/quant-foundation-exams.json", expected: 20, gated: true, topics: true },
-  { name: "إصدارات الكمي", file: "src/data/quant-releases-exams.json", expected: 40, gated: true, questions: true },
+  { name: "إصدارات الكمي", file: "src/data/quant-releases-exams.json", expected: 48, gated: true, questions: true },
   { name: "نماذج الكمي", file: "src/data/quant-exams.json", expected: 20, gated: true },
   { name: "اختبارات لفظي محاكاة", file: "src/data/general-exams.json", expected: 100 },
 ]
