@@ -89,16 +89,27 @@ console.log(`quant-foundation: ${quantFoundation}  quant: ${quant}`)
 // gets its own adapter instead of being bent into buildQuant. The same rule
 // holds: the password is dropped, only `requiresPassword` is written.
 {
-  const SOURCE = 'روابط تجميعات القدرات الكمي — مدارس المجد 1-42.json'
-  const src = JSON.parse(readFileSync(resolve(root, '..', SOURCE), 'utf8'))
-  // The source still lists 41 and 42, but only releases 1-40 are published on
-  // the site. Raise this to bring later releases back.
-  const LAST_PUBLISHED = 40
-  const published = src['الفورمات'].filter((f) => f['الإصدار'] <= LAST_PUBLISHED)
-  const hiddenQuestions = src['الفورمات']
-    .filter((f) => f['الإصدار'] > LAST_PUBLISHED)
-    .reduce((n, f) => n + f['عدد الأسئلة'], 0)
-  const items = published.map((f) => ({
+  // Releases come from two exports. The first lists 1-42, but its 41 and 42
+  // were redone in the second export (41-48), so only its 1-40 are kept.
+  const SOURCES = [
+    { file: 'روابط تجميعات القدرات الكمي — مدارس المجد 1-42.json', upTo: 40 },
+    { file: 'روابط مدارس المجد 41-48.json' },
+  ]
+  const forms = []
+  let totalQuestions = 0
+  let requiresPassword = true
+  for (const { file, upTo = Infinity } of SOURCES) {
+    const src = JSON.parse(readFileSync(resolve(root, '..', file), 'utf8'))
+    const kept = src['الفورمات'].filter((f) => f['الإصدار'] <= upTo)
+    const dropped = src['الفورمات'].filter((f) => f['الإصدار'] > upTo)
+    forms.push(...kept)
+    // Declared by the source, minus the releases left out.
+    totalQuestions += src['إجمالي الأسئلة'] - dropped.reduce((n, f) => n + f['عدد الأسئلة'], 0)
+    requiresPassword &&= Boolean(src['كلمة المرور'])
+  }
+  // Only these fields are copied: the newer export also carries edit links and
+  // the teacher's phone number, which must not reach the public bundle.
+  const items = forms.map((f) => ({
     id: `qr-${f['الإصدار']}`,
     collection: 'quant-releases',
     number: f['الإصدار'],
@@ -114,10 +125,9 @@ console.log(`quant-foundation: ${quantFoundation}  quant: ${quant}`)
     JSON.stringify(
       {
         collection: 'quant-releases',
-        requiresPassword: Boolean(src['كلمة المرور']),
-        // Declared by the source, minus the unpublished releases; validate-data
-        // checks the items still add up to it.
-        totalQuestions: src['إجمالي الأسئلة'] - hiddenQuestions,
+        requiresPassword,
+        // validate-data checks the items still add up to this.
+        totalQuestions,
         items,
       },
       null,
