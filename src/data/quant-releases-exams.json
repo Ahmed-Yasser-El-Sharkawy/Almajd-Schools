@@ -1,7 +1,7 @@
 {
   "collection": "quant-releases",
   "requiresPassword": true,
-  "totalQuestions": 1984,
+  "totalQuestions": 1919,
   "items": [
     {
       "id": "qr-1",
@@ -362,24 +362,6 @@
       "questions": 48,
       "url": "https://docs.google.com/forms/d/e/1FAIpQLSe1ljbi2JUB2DF_YgKMq6CUkGLpHJtTkpiLda6s-2znMgzfnA/viewform",
       "shortUrl": "https://forms.gle/xzhndG8s6adfzSog8"
-    },
-    {
-      "id": "qr-41",
-      "collection": "quant-releases",
-      "number": 41,
-      "title": "الإصدار الحادي والأربعون",
-      "questions": 48,
-      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfDTPf5_8jSxIWllNWldqiXGOljsx16LItW86_Y2hLN9Octeg/viewform",
-      "shortUrl": "https://forms.gle/KTBGmWxp8NdC8h8d8"
-    },
-    {
-      "id": "qr-42",
-      "collection": "quant-releases",
-      "number": 42,
-      "title": "الإصدار الثاني والأربعون",
-      "questions": 17,
-      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfbJ4SQepgo4psoO5InE674HABdSurF9r-6JbG3jFyagLJp8g/viewform",
-      "shortUrl": "https://forms.gle/SnYD4ZXSARJKt89P6"
     }
   ]
 }
