@@ -91,7 +91,14 @@ console.log(`quant-foundation: ${quantFoundation}  quant: ${quant}`)
 {
   const SOURCE = 'روابط تجميعات القدرات الكمي — مدارس المجد 1-42.json'
   const src = JSON.parse(readFileSync(resolve(root, '..', SOURCE), 'utf8'))
-  const items = src['الفورمات'].map((f) => ({
+  // The source still lists 41 and 42, but only releases 1-40 are published on
+  // the site. Raise this to bring later releases back.
+  const LAST_PUBLISHED = 40
+  const published = src['الفورمات'].filter((f) => f['الإصدار'] <= LAST_PUBLISHED)
+  const hiddenQuestions = src['الفورمات']
+    .filter((f) => f['الإصدار'] > LAST_PUBLISHED)
+    .reduce((n, f) => n + f['عدد الأسئلة'], 0)
+  const items = published.map((f) => ({
     id: `qr-${f['الإصدار']}`,
     collection: 'quant-releases',
     number: f['الإصدار'],
@@ -108,8 +115,9 @@ console.log(`quant-foundation: ${quantFoundation}  quant: ${quant}`)
       {
         collection: 'quant-releases',
         requiresPassword: Boolean(src['كلمة المرور']),
-        // Declared by the source; validate-data checks the items still add up to it.
-        totalQuestions: src['إجمالي الأسئلة'],
+        // Declared by the source, minus the unpublished releases; validate-data
+        // checks the items still add up to it.
+        totalQuestions: src['إجمالي الأسئلة'] - hiddenQuestions,
         items,
       },
       null,
