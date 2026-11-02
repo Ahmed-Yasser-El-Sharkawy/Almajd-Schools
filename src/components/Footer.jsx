@@ -52,7 +52,7 @@ export default function Footer() {
         <nav aria-labelledby="footer-links-title">
           <h2 id="footer-links-title" className="font-display text-2xl font-extrabold text-white">روابط سريعة</h2>
           <div aria-hidden="true" className="mt-2 h-0.5 w-20 rounded-full bg-gradient-to-l from-majd-gold to-transparent" />
-          <ul className="mt-3 grid gap-x-6 text-[0.95rem] sm:grid-cols-2">
+          <ul className="mt-3 grid grid-cols-2 gap-x-4 text-[0.95rem] sm:gap-x-6">
             {QUICK_LINKS.map((l) => (
               <li key={l.href}>
                 <a href={l.href} className="inline-flex min-h-11 items-center gap-2.5 rounded text-navy-100 transition-colors hover:text-majd-gold-light focus-ring focus-visible:ring-offset-majd-navy">
