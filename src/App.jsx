@@ -9,6 +9,8 @@ import RecentStrip from "./components/RecentStrip.jsx"
 import AccessNotice from "./components/AccessNotice.jsx"
 import ShareButton from "./components/ShareButton.jsx"
 import Footer from "./components/Footer.jsx"
+import { Diamond, SectionHeading } from "./components/Ornaments.jsx"
+import { Rosette } from "./components/HeroArt.jsx"
 import { ALL_EXAMS, buildRanges, countByCollection, getCollection, isUsable, selectExams } from "./lib/exams.js"
 import { tokenize } from "./lib/arabic.js"
 import { loadFavorites, saveFavorites, loadOpened, pushOpened, clearOpened } from "./lib/storage.js"
@@ -85,8 +87,8 @@ export default function App() {
   }, [patch])
 
   return (
-    <div className="min-h-screen bg-navy-50/40">
-      <a href="#exams" className="sr-only focus:not-sr-only focus:absolute focus:end-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-navy-800 focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-white">
+    <div className="min-h-screen bg-majd-canvas">
+      <a href="#exams" className="sr-only focus:not-sr-only focus:absolute focus:end-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-majd-ink focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-white">
         تخطَّ إلى قائمة الاختبارات
       </a>
 
@@ -100,92 +102,106 @@ export default function App() {
         resultCount={results.length}
       />
 
-      <main id="exams" className="mx-auto max-w-6xl px-4 py-8 sm:py-10">
-        <RecentStrip
-          exams={recent}
-          onOpen={markOpened}
-          onClear={() => setOpened(clearOpened())}
-        />
+      {/* overflow-x-clip, not hidden: it trims the margin rosettes without
+          turning this wrapper into a scroll container. */}
+      <div className="relative overflow-x-clip">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden xl:block">
+          <Rosette className="absolute -left-28 top-16 w-72 text-majd-gold/15" />
+          <Rosette className="absolute -right-32 top-[45%] w-80 text-majd-gold/15" />
+          <div className="majd-dots absolute left-10 top-[30%] h-24 w-28 text-majd-gold/25" />
+          <div className="majd-dots absolute bottom-40 right-10 h-24 w-28 text-majd-gold/25" />
+        </div>
 
-        <CollectionTabs active={state.tab} onChange={(tab) => patch({ tab, range: "" })} />
-        <p className="mt-3 text-sm leading-relaxed text-navy-500">{collection.description}</p>
+        <main id="exams" className="relative mx-auto max-w-6xl px-4 py-8 sm:py-10">
+          <SectionHeading className="mb-6 sm:mb-8">تصفّح الاختبارات</SectionHeading>
 
-        {collection.requiresPassword && <AccessNotice />}
-
-        <div className="mt-6 grid gap-6 lg:grid-cols-[280px_minmax(0,1fr)]">
-          <Filters
-            ranges={ranges}
-            state={state}
-            onChange={patch}
-            activeCount={activeFilterCount}
-            onReset={resetAll}
-            sheetOpen={sheetOpen}
-            onSheetToggle={setSheetOpen}
+          <RecentStrip
+            exams={recent}
+            onOpen={markOpened}
+            onClear={() => setOpened(clearOpened())}
           />
 
-          <div>
-            <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-              <h2 aria-live="polite" className="text-base font-extrabold text-navy-900">
-                {results.length === 0
-                  ? "لا توجد نتائج"
-                  : `${results.length} من ${pool.length} اختبارًا`}
-              </h2>
-              <ShareButton disabled={!hasAnyFilter} />
-            </div>
+          <CollectionTabs active={state.tab} onChange={(tab) => patch({ tab, range: "" })} />
+          <p className="mt-3 text-sm leading-relaxed text-navy-600">{collection.description}</p>
 
-            <div
-              id="exam-results"
-              role="tabpanel"
-              aria-labelledby={`tab-${collection.key}`}
-              tabIndex={-1}
-              className="outline-none"
-            >
-              {results.length === 0 ? (
-                <EmptyState hasFilters={hasAnyFilter} onReset={resetAll} />
-              ) : (
-                <>
-                  <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                    {results.slice(0, visible).map((exam) => (
-                      <li key={exam.id} className="h-full animate-fade-up motion-reduce:animate-none">
-                        <ExamCard
-                          exam={exam}
-                          badge={collection.short}
-                          locked={collection.requiresPassword}
-                          isFavorite={favorites.has(exam.id)}
-                          isOpened={openedSet.has(exam.id)}
-                          onToggleFavorite={toggleFavorite}
-                          onOpen={markOpened}
-                        />
-                      </li>
-                    ))}
-                  </ul>
+          {collection.requiresPassword && <AccessNotice />}
 
-                  {visible < results.length && (
-                    <div className="mt-8 flex flex-col items-center gap-2">
-                      <button
-                        type="button"
-                        onClick={() => setVisible((v) => v + PAGE_SIZE)}
-                        className="rounded-xl border border-navy-200 bg-white px-6 py-3 text-sm font-bold text-navy-800 transition-colors hover:bg-navy-50 focus-ring"
-                      >
-                        عرض المزيد
-                      </button>
-                      <p className="text-xs text-navy-500">
-                        يُعرض {visible} من {results.length}
-                      </p>
-                    </div>
-                  )}
-                </>
+          <div className="mt-6 grid gap-6 lg:grid-cols-[280px_minmax(0,1fr)]">
+            <Filters
+              ranges={ranges}
+              state={state}
+              onChange={patch}
+              activeCount={activeFilterCount}
+              onReset={resetAll}
+              sheetOpen={sheetOpen}
+              onSheetToggle={setSheetOpen}
+            />
+
+            <div>
+              <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                <h2 aria-live="polite" className="flex items-center gap-2 font-display text-xl font-extrabold text-majd-ink">
+                  <Diamond className="size-2" />
+                  {results.length === 0
+                    ? "لا توجد نتائج"
+                    : `${results.length} من ${pool.length} اختبارًا`}
+                </h2>
+                <ShareButton disabled={!hasAnyFilter} />
+              </div>
+
+              <div
+                id="exam-results"
+                role="tabpanel"
+                aria-labelledby={`tab-${collection.key}`}
+                tabIndex={-1}
+                className="outline-none"
+              >
+                {results.length === 0 ? (
+                  <EmptyState hasFilters={hasAnyFilter} onReset={resetAll} />
+                ) : (
+                  <>
+                    <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                      {results.slice(0, visible).map((exam) => (
+                        <li key={exam.id} className="h-full animate-fade-up motion-reduce:animate-none">
+                          <ExamCard
+                            exam={exam}
+                            badge={collection.short}
+                            locked={collection.requiresPassword}
+                            isFavorite={favorites.has(exam.id)}
+                            isOpened={openedSet.has(exam.id)}
+                            onToggleFavorite={toggleFavorite}
+                            onOpen={markOpened}
+                          />
+                        </li>
+                      ))}
+                    </ul>
+
+                    {visible < results.length && (
+                      <div className="mt-8 flex flex-col items-center gap-2">
+                        <button
+                          type="button"
+                          onClick={() => setVisible((v) => v + PAGE_SIZE)}
+                          className="rounded-full border border-majd-gold/60 bg-white px-8 py-3 font-display text-base font-bold text-majd-ink shadow-[0_8px_20px_-14px_rgb(10_35_82/0.45)] transition-colors hover:border-majd-gold hover:bg-majd-cream/50 focus-ring"
+                        >
+                          عرض المزيد
+                        </button>
+                        <p className="text-xs text-navy-600">
+                          يُعرض {visible} من {results.length}
+                        </p>
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+
+              {UNUSABLE_COUNT > 0 && (
+                <p role="status" className="mt-6 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+                  {UNUSABLE_COUNT} سجلًا يحتوي على رابط غير صالح ولم يُعرض. يُرجى مراجعة ملف البيانات.
+                </p>
               )}
             </div>
-
-            {UNUSABLE_COUNT > 0 && (
-              <p role="status" className="mt-6 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-                {UNUSABLE_COUNT} سجلًا يحتوي على رابط غير صالح ولم يُعرض. يُرجى مراجعة ملف البيانات.
-              </p>
-            )}
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
 
       <Footer />
     </div>

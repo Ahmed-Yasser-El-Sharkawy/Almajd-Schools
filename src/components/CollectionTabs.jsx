@@ -17,7 +17,7 @@ export default function CollectionTabs({ active, onChange }) {
     <div
       role="tablist"
       aria-label="مجموعات الاختبارات"
-      className="flex flex-wrap gap-1.5 rounded-2xl border border-navy-100 bg-white p-1.5 shadow-card"
+      className="majd-tile flex flex-wrap gap-1.5 p-1.5"
     >
       {COLLECTIONS.map((c) => {
         const selected = c.key === active
@@ -43,15 +43,19 @@ export default function CollectionTabs({ active, onChange }) {
               document.getElementById(`tab-${next.key}`)?.focus()
             }}
             className={`group flex min-h-11 grow basis-[calc(50%_-_0.1875rem)] items-center justify-center gap-1.5 rounded-xl px-2 py-2.5 text-center sm:basis-[calc(33.333%_-_0.25rem)] lg:basis-0 transition-all duration-200 focus-ring motion-reduce:transition-none ${
-              selected ? "bg-navy-700 text-white shadow-card" : "text-navy-700 hover:bg-navy-50"
+              selected
+                ? // Transparent outline: invisible normally, drawn in Windows
+                  // high-contrast mode where the navy fill is dropped.
+                  "bg-majd-ink text-white shadow-[inset_0_0_0_1px_rgb(235_203_126/0.55),0_8px_16px_-10px_rgb(10_35_82/0.7)] outline outline-2 -outline-offset-4 outline-transparent"
+                : "text-majd-ink hover:bg-majd-cream/50"
             }`}
           >
-            <Icon className={`h-4 w-4 shrink-0 ${selected ? "text-white/80" : theme.tabIcon}`} />
-            <span className="text-[13px] font-bold leading-tight sm:text-sm">{c.label}</span>
+            <Icon className={`h-4 w-4 shrink-0 ${selected ? "text-majd-gold-light" : theme.tabIcon}`} />
+            <span className="font-display text-[0.95rem] font-bold leading-tight sm:text-base">{c.label}</span>
             {c.requiresPassword && (
               <LockIcon
                 aria-hidden="true"
-                className={`h-3.5 w-3.5 shrink-0 ${selected ? "text-white/70" : "text-navy-300"}`}
+                className={`h-3.5 w-3.5 shrink-0 ${selected ? "text-majd-gold-light/80" : "text-majd-gold-dark/70"}`}
               />
             )}
           </button>

@@ -10,7 +10,7 @@
   }
 
   body {
-    @apply bg-navy-50/40 text-navy-800 antialiased;
+    @apply bg-majd-canvas text-majd-ink antialiased;
     font-family: "IBM Plex Sans Arabic", system-ui, "Segoe UI", Tahoma, sans-serif;
     /* Arabic sits low in the em box; a slightly looser default reads better. */
     line-height: 1.7;
@@ -140,6 +140,17 @@
       inset 0 0 0 1px rgb(222 178 86 / 0.28),
       inset 0 1px 0 rgb(255 255 255 / 0.85),
       0 6px 18px -10px rgb(181 136 59 / 0.55);
+  }
+
+  /* Body panels (tabs, filters, exam cards, notices): white on the warm
+     canvas, edged with a gold hairline instead of the old grey-blue one. */
+  .majd-tile {
+    border-radius: 1.1rem;
+    border: 1px solid rgb(211 165 71 / 0.3);
+    background: #fff;
+    box-shadow:
+      0 1px 2px rgb(10 35 82 / 0.04),
+      0 8px 22px -14px rgb(10 35 82 / 0.22);
   }
 
   /* Small dot lattices from the artwork; colour comes from `color`. */
