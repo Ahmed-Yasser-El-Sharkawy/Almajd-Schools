@@ -21,9 +21,9 @@ export default function ShareButton({ disabled }) {
       type="button"
       onClick={share}
       disabled={disabled}
-      className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-navy-200 bg-white px-4 text-sm font-bold text-navy-700 transition-colors hover:bg-navy-50 focus-ring disabled:cursor-not-allowed disabled:opacity-45"
+      className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-majd-gold/45 bg-white px-4 text-sm font-bold text-majd-ink transition-colors enabled:hover:border-majd-gold enabled:hover:bg-majd-cream/40 focus-ring disabled:cursor-not-allowed disabled:opacity-45"
     >
-      {done ? <CheckIcon className="h-4 w-4 text-emerald-600" /> : <ShareIcon className="h-4 w-4" />}
+      {done ? <CheckIcon className="h-4 w-4 text-emerald-600" /> : <ShareIcon className="h-4 w-4 text-majd-gold-dark" />}
       {done ? "تم النسخ" : "مشاركة النتيجة"}
     </button>
   )

@@ -44,6 +44,7 @@ export default {
           "gold-dark": "#B5883B",
           cream: "#FEF5D3", // tagline pill
           paper: "#FFFCF5", // card face
+          canvas: "#FAF7EF", // page background behind the body's white tiles
         },
       },
       fontFamily: {
