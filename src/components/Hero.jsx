@@ -1,97 +1,245 @@
-import logo from "../assets/almajd-center-logo.jpg"
+// Transparent, high-resolution logos for the light banner. The schools logo
+// is cut from the client's cover artwork ("المجد غلاف.png"), which carries it
+// at ~2.4x the size of almajd-schools-logo.png; the centre logo is the
+// project JPG with its screenshot edges trimmed.
+import schoolsLogo from "../assets/almajd-schools-logo-hd.webp"
+import centerLogo from "../assets/almajd-center-logo-hd.webp"
 import SearchBar from "./SearchBar.jsx"
 import { COLLECTIONS } from "../lib/exams.js"
-import { getTheme } from "../lib/collectionTheme.jsx"
-import { LockIcon } from "./icons.jsx"
+import { Seam, BottomRibbons, Rosette, DiamondMark, GradCap, BooksStack, PenCup } from "./HeroArt.jsx"
+import { QuantArt, VerbalArt } from "./SubjectArt.jsx"
+
+// Card order follows the artwork: quantitative on the right, which is first
+// in RTL. Collections are grouped by their `subject`, so a collection added
+// to exams.js appears in its card without touching this file.
+const SUBJECTS = [
+  { key: "quant", title: "القدرات الكمية", Art: QuantArt },
+  { key: "verbal", title: "القدرات اللفظية", Art: VerbalArt },
+].map((s) => ({ ...s, collections: COLLECTIONS.filter((c) => c.subject === s.key) }))
 
 /**
- * The stat rail doubles as navigation: every collection tile jumps straight to
- * its tab. A tile that only reports a number would waste the most prominent
- * row on the page, and a student landing here wants to get into a collection,
- * not read a figure.
+ * The "بنك المجد لنماذج القدرات" banner. The cream half carries the identity
+ * (both logos, title, tagline); the navy half is the working part: search,
+ * then one card per Qudrat section. A card opens its section; the chips
+ * inside it jump straight to one collection and carry its count, which is
+ * the job the old stat tiles did.
  */
-export default function Hero({ query, onQueryChange, total, counts, active, onPickCollection, resultCount }) {
+export default function Hero({ query, onQueryChange, counts, active, onPickCollection, resultCount }) {
   return (
-    <section id="top" className="relative overflow-hidden border-b border-navy-100 bg-navy-900">
-      {/* Decorative wash; purely presentational so it is hidden from the a11y tree. */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-navy-700/50 blur-3xl" />
-        <div className="absolute -bottom-32 right-0 h-72 w-72 rounded-full bg-gold-500/10 blur-3xl" />
-      </div>
+    <section id="top" aria-labelledby="hero-title" className="relative isolate overflow-hidden bg-white">
+      <div className="relative">
+        <CreamBackdrop />
 
-      <div className="relative mx-auto max-w-6xl px-4 pb-8 pt-7 sm:pb-14 sm:pt-14">
-        <div className="flex flex-col items-center gap-5 text-center sm:gap-6">
-          <span className="rounded-2xl bg-white p-2.5 shadow-panel sm:p-3">
-            <img src={logo} alt="شعار مركز المجد للقدرات والتحصيلي" width="696" height="457" className="h-12 w-auto sm:h-20" />
-          </span>
-
-          <div className="max-w-2xl">
-            <h1 className="text-2xl font-extrabold leading-tight text-white sm:text-4xl">
-              كل اختباراتك في <span className="text-gold-400">مكان واحد</span>
-            </h1>
-            <p className="mt-3 text-sm leading-relaxed text-navy-200 sm:text-base">
-              لفظي وكمي وتأسيس في منصة واحدة. ابحث بالاسم أو بالرقم واضغط لفتح
-              الاختبار مباشرة، بلا تسجيل دخول.
-            </p>
+        <div className="relative z-10 pb-16 pt-4 sm:pb-20 lg:pb-[2.6vw] lg:pt-5">
+          {/* The logos sit near the page edges as in the artwork, wider than
+              the text column below them. */}
+          <div className="mx-auto flex max-w-[110rem] items-end justify-between gap-4 px-4 sm:px-[4vw]">
+            <img
+              src={schoolsLogo}
+              alt="شعار مدارس المجد الأهلية"
+              width="670"
+              height="412"
+              className="h-[4.4rem] w-auto sm:h-[clamp(5rem,15vw,15rem)]"
+            />
+            <img
+              src={centerLogo}
+              alt="شعار مركز المجد للقدرات والتحصيلي"
+              width="591"
+              height="355"
+              className="h-[4.75rem] w-auto sm:h-[clamp(5.5rem,16.75vw,17rem)]"
+            />
           </div>
 
-          <SearchBar value={query} onChange={onQueryChange} resultCount={resultCount} />
+          <div className="mx-auto mt-5 max-w-7xl px-4 text-center sm:mt-2 sm:px-6 lg:-mt-[1vw]">
+            <h1
+              id="hero-title"
+              className="majd-title font-display text-[clamp(2.9rem,14.5vw,4.25rem)] font-black leading-[1.12] sm:text-[clamp(3.25rem,8.4vw,8.75rem)] sm:leading-[1.2]"
+            >
+              <span className="block sm:inline">بنك المجد</span>{" "}
+              <span className="block sm:inline">لنماذج القدرات</span>
+            </h1>
 
-          <section
-            aria-label="نظرة عامة على المجموعات"
-            className="mt-1 w-full max-w-3xl rounded-2xl border border-navy-700/70 bg-navy-800/40 p-2.5 sm:p-3 lg:max-w-4xl"
-          >
-            {/* Total on its own row until `lg`; beside five tiles any earlier it
-                squeezes the tiles below a readable width. */}
-            <div className="flex flex-col gap-2.5 lg:flex-row lg:items-stretch">
-              <p className="flex items-center justify-between gap-3 rounded-xl bg-navy-950/50 px-4 py-3 text-start lg:w-40 lg:flex-col lg:items-start lg:justify-center lg:gap-0.5">
-                <span className="text-[11px] font-bold text-navy-300 sm:text-xs">إجمالي الاختبارات</span>
-                <span className="text-2xl font-extrabold leading-none text-gold-400 tabular-nums lg:text-4xl">
-                  {total}
-                </span>
-              </p>
+            <TitleRule />
 
-              <ul className="grid flex-1 grid-cols-2 gap-2 sm:grid-cols-5">
-                {COLLECTIONS.map((c, i) => {
-                  const theme = getTheme(c.key)
-                  const { Icon } = theme
-                  const selected = c.key === active
-                  // With an odd count the last phone tile would sit alone beside
-                  // an empty cell; let it span the row instead.
-                  const orphan = COLLECTIONS.length % 2 === 1 && i === COLLECTIONS.length - 1
-                  return (
-                    <li key={c.key} className={orphan ? "col-span-2 sm:col-span-1" : undefined}>
-                      <button
-                        type="button"
-                        onClick={() => onPickCollection(c.key)}
-                        aria-current={selected ? "true" : undefined}
-                        className={`flex h-full w-full flex-col items-center justify-center gap-1 rounded-xl border px-2 py-2.5 transition-colors duration-200 focus-ring motion-reduce:transition-none ${
-                          selected
-                            ? "border-gold-500/70 bg-navy-700"
-                            : "border-navy-700 bg-navy-900/40 hover:border-navy-500 hover:bg-navy-800"
-                        }`}
-                      >
-                        <span className="flex items-center gap-1">
-                          <Icon aria-hidden="true" className={`h-3.5 w-3.5 ${theme.heroIcon}`} />
-                          {c.requiresPassword && (
-                            <LockIcon aria-hidden="true" className="h-3 w-3 text-navy-400" />
-                          )}
-                        </span>
-                        <span className="text-lg font-extrabold leading-none text-white tabular-nums sm:text-xl">
-                          {counts.get(c.key) ?? 0}
-                        </span>
-                        <span className="text-[11px] font-semibold leading-tight text-navy-200">
-                          {c.label}
-                        </span>
-                      </button>
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
-          </section>
+            <p className="mt-1 font-display text-[clamp(1.5rem,6.8vw,2.1rem)] font-extrabold leading-snug text-majd-ink [word-spacing:0.08em] sm:mt-[0.5vw] sm:text-[clamp(2rem,4vw,4.25rem)]">
+              مركز المجد للقدرات والتحصيلي
+            </p>
+
+            <p className="majd-pill mx-auto mt-3 w-fit max-w-full text-balance rounded-[1.75rem] px-5 py-1.5 font-display text-[clamp(1rem,4.6vw,1.2rem)] font-bold leading-relaxed text-majd-ink [word-spacing:0.06em] sm:mt-[1vw] sm:rounded-full sm:px-[3.6vw] sm:py-[0.5vw] sm:text-[clamp(1.15rem,2.4vw,2.6rem)]">
+              نماذج اختبارات القدرات الكمية واللفظية في مكان واحد
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative bg-gradient-to-b from-majd-navy to-majd-deep">
+        <Seam className="pointer-events-none absolute inset-x-0 bottom-[calc(100%-1px)] h-14 w-full sm:h-20 lg:h-[13.75vw]" />
+        <NavyBackdrop />
+
+        <div className="relative z-10 mx-auto max-w-6xl px-4 pb-9 pt-5 sm:px-6 lg:pb-[2.6vw] lg:pt-6 xl:max-w-[min(78vw,84rem)]">
+          <div className="flex justify-center">
+            <SearchBar value={query} onChange={onQueryChange} resultCount={resultCount} />
+          </div>
+
+          <ul className="mt-5 grid gap-4 md:grid-cols-2 lg:mt-6 lg:gap-[2vw]">
+            {SUBJECTS.map((s) => (
+              <li key={s.key} className="majd-subject">
+                <SubjectCard subject={s} counts={counts} active={active} onPick={onPickCollection} />
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-8 flex items-center justify-center gap-3 font-display text-[1.3rem] font-semibold text-majd-paper [word-spacing:0.08em] sm:gap-4 sm:text-[1.45rem] lg:mt-[2.4vw] lg:text-[clamp(1.45rem,2.1vw,2.3rem)]">
+            <span aria-hidden="true" className="hidden h-0.5 w-20 rounded-full bg-gradient-to-r from-majd-gold-light to-transparent sm:block lg:w-[9vw]" />
+            <Diamond />
+            <span>تدرّب بثقة … وانطلق نحو التميز</span>
+            <Diamond />
+            <span aria-hidden="true" className="hidden h-0.5 w-20 rounded-full bg-gradient-to-l from-majd-gold-light to-transparent sm:block lg:w-[9vw]" />
+          </p>
         </div>
       </div>
     </section>
+  )
+}
+
+function SubjectCard({ subject, counts, active, onPick }) {
+  const { key, title, Art, collections } = subject
+  const titleId = `subject-${key}-title`
+  if (!collections.length) return null
+
+  return (
+    <div className="majd-card majd-subject-card relative h-full rounded-[1.4rem] py-4 transition duration-200 hover:-translate-y-1 motion-reduce:transform-none motion-reduce:transition-none lg:py-[1.6vw]">
+      <div className="majd-area-label flex min-w-0 flex-col items-center text-center">
+        <h2 id={titleId} className="majd-subject-title whitespace-nowrap font-display font-extrabold leading-tight text-majd-ink">
+          {/* Stretched over the whole card, so the card itself is the
+              target; the chips sit above the overlay and stay clickable. */}
+          <button
+            type="button"
+            onClick={() => onPick(collections[0].key)}
+            className="rounded-md after:absolute after:-inset-[3px] after:rounded-[1.4rem] after:content-[''] focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:after:ring-4 focus-visible:after:ring-majd-gold-light"
+          >
+            {title}
+          </button>
+        </h2>
+
+        <CardRule />
+      </div>
+
+      <span aria-hidden="true" className="majd-area-rule h-[72%] w-px bg-gradient-to-b from-transparent via-majd-gold to-transparent" />
+
+      <Art className="majd-area-art majd-subject-art" />
+
+      <ul aria-labelledby={titleId} className="majd-area-chips relative z-10 flex flex-wrap justify-center gap-1.5 sm:gap-2">
+        {collections.map((c) => (
+          <li key={c.key}>
+            <Chip collection={c} count={counts.get(c.key) ?? 0} selected={c.key === active} onPick={onPick} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+function Chip({ collection, count, selected, onPick }) {
+  return (
+    <button
+      type="button"
+      onClick={() => onPick(collection.key)}
+      aria-current={selected ? "true" : undefined}
+      className={`majd-chip inline-flex min-h-11 items-center gap-[0.4em] rounded-full border px-[0.75em] font-bold transition-colors duration-200 focus-ring motion-reduce:transition-none ${
+        selected
+          ? // The transparent outline is invisible normally but is drawn in
+            // Windows high-contrast mode, where the navy fill is dropped.
+            "border-majd-ink bg-majd-ink text-white outline outline-2 outline-offset-2 outline-transparent"
+          : "border-majd-gold/60 bg-white/80 text-majd-ink hover:border-majd-gold hover:bg-white"
+      }`}
+    >
+      <span>{collection.chip}</span>
+      <span
+        className={`rounded-full px-[0.45em] text-[0.85em] leading-[1.6] tabular-nums ${
+          selected ? "bg-white/15 text-majd-gold-light" : "bg-majd-ink/[0.07] text-majd-ink"
+        }`}
+      >
+        {count}
+      </span>
+    </button>
+  )
+}
+
+// ---- Ornaments ----------------------------------------------------------
+// Physical gradient directions are deliberate: each outer line fades away
+// from the centre, whichever side of the RTL row it lands on.
+
+function TitleRule() {
+  return (
+    <div aria-hidden="true" className="mx-auto mt-1 flex items-center justify-center gap-[0.6em] text-[clamp(0.6rem,2.4vw,0.95rem)] sm:mt-[0.4vw]">
+      <span className="h-0.5 w-[clamp(3.5rem,13vw,15rem)] rounded-full bg-gradient-to-r from-majd-gold-dark to-transparent" />
+      <span className="h-0.5 w-[clamp(1.5rem,4vw,4.5rem)] rounded-full bg-majd-gold" />
+      <Diamond className="size-[1em]" />
+      <span className="h-0.5 w-[clamp(1.5rem,4vw,4.5rem)] rounded-full bg-majd-gold" />
+      <span className="h-0.5 w-[clamp(3.5rem,13vw,15rem)] rounded-full bg-gradient-to-l from-majd-gold-dark to-transparent" />
+    </div>
+  )
+}
+
+function CardRule() {
+  return (
+    <div aria-hidden="true" className="mt-1.5 flex items-center gap-2">
+      <span className="h-px w-12 bg-gradient-to-r from-majd-gold-dark to-transparent sm:w-16 lg:w-[5vw]" />
+      <Diamond className="size-2" />
+      <span className="h-px w-12 bg-gradient-to-l from-majd-gold-dark to-transparent sm:w-16 lg:w-[5vw]" />
+    </div>
+  )
+}
+
+function Diamond({ className = "size-2.5" }) {
+  return (
+    <span
+      aria-hidden="true"
+      className={`${className} shrink-0 rotate-45 bg-gradient-to-br from-[#F8E5A6] via-majd-gold to-majd-gold-dark shadow-[0_0_0_1px_rgb(181_136_59/0.35)]`}
+    />
+  )
+}
+
+// ---- Backdrops ------------------------------------------------------------
+
+function CreamBackdrop() {
+  return (
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_75%_60%_at_50%_85%,#FDF2D3_0%,rgb(253_242_211/0.45)_45%,transparent_75%)]" />
+      {/* faint arcs sweeping in from the top corners */}
+      <svg viewBox="0 0 100 100" className="absolute -left-[26vw] -top-[44vw] w-[62vw] text-majd-gold/20">
+        <circle cx="50" cy="50" r="49.6" fill="none" stroke="currentColor" strokeWidth="1.2" vectorEffect="non-scaling-stroke" />
+      </svg>
+      <svg viewBox="0 0 100 100" className="absolute -right-[34vw] -top-[50vw] w-[70vw] text-majd-gold/20">
+        <circle cx="50" cy="50" r="49.6" fill="none" stroke="currentColor" strokeWidth="1.2" vectorEffect="non-scaling-stroke" />
+      </svg>
+
+      <Rosette className="absolute -left-14 top-[42%] w-36 text-majd-gold/25 sm:hidden" />
+      <Rosette className="absolute bottom-[4.5vw] left-[7.5vw] hidden w-[9vw] text-majd-gold/40 lg:block" />
+      <Rosette className="absolute -right-[4vw] top-[15vw] hidden w-[15vw] text-majd-gold/30 sm:block" />
+
+      <div className="majd-dots absolute left-[1.4vw] top-[20vw] hidden h-[4.6rem] w-[9.4rem] text-majd-gold/45 lg:block" />
+      <div className="majd-dots absolute bottom-[4vw] right-[17vw] hidden h-[2.9rem] w-[5.6rem] text-majd-gold/45 lg:block" />
+
+      <GradCap className="absolute bottom-[0.6vw] right-[4vw] hidden w-[14.5vw] lg:block" />
+    </div>
+  )
+}
+
+function NavyBackdrop() {
+  return (
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_70%_at_12%_0%,rgb(41_84_158/0.35),transparent_70%),radial-gradient(ellipse_45%_60%_at_92%_100%,rgb(41_84_158/0.25),transparent_70%)]" />
+
+      <Rosette className="absolute -left-[3vw] -top-[5.5vw] hidden w-[12vw] text-majd-line/70 md:block" />
+      <Rosette className="absolute right-[6.5vw] top-[0.5vw] hidden w-[8vw] text-majd-line/70 lg:block" />
+      <DiamondMark className="absolute -top-[3.2vw] right-[1.2vw] hidden w-[4.6vw] text-majd-gold/80 lg:block" />
+      <div className="majd-dots absolute left-[13vw] top-[9vw] hidden h-[2.9rem] w-[4.6rem] text-majd-gold/35 xl:block" />
+
+      <BottomRibbons className="absolute inset-x-0 bottom-0 h-12 w-full sm:h-16 lg:h-[9vw]" />
+      <BooksStack className="absolute -left-[1.5vw] bottom-[0.6vw] hidden w-[11.5vw] min-[1360px]:block" />
+      <PenCup className="absolute -right-[1vw] -bottom-[0.8vw] hidden w-[11vw] min-[1360px]:block" />
+    </div>
   )
 }

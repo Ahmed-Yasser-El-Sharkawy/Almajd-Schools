@@ -35,9 +35,14 @@ const quantFoundation = prepare(quantFoundationRaw)
 const quant = prepare(quantRaw)
 const quantReleases = prepare(quantReleasesRaw)
 
+// `subject` is the Qudrat section a collection trains for; the hero groups
+// its two cards by it. `chip` is the name inside that card, where the
+// subject is already printed above it, so "تأسيس الكمي" shortens to "التأسيس".
 export const COLLECTIONS = [
   {
     key: "verbal",
+    subject: "verbal",
+    chip: "الأقسام الحديثة",
     label: "أقسام اللفظي الحديثة",
     // Two collections are verbal now, so "اللفظي" alone no longer identifies a
     // card. Every short follows the same {type} {subject} shape.
@@ -50,6 +55,8 @@ export const COLLECTIONS = [
   },
   {
     key: "quant-foundation",
+    subject: "quant",
+    chip: "التأسيس",
     label: "تأسيس الكمي",
     short: "تأسيس كمي",
     tagline: "20 نموذجًا، كل نموذج لمهارة واحدة",
@@ -61,6 +68,8 @@ export const COLLECTIONS = [
   },
   {
     key: "quant-releases",
+    subject: "quant",
+    chip: "الإصدارات",
     label: "إصدارات الكمي",
     short: "إصدارات كمي",
     tagline: "بنك أسئلة الإصدارات",
@@ -75,6 +84,8 @@ export const COLLECTIONS = [
   },
   {
     key: "quant",
+    subject: "quant",
+    chip: "النماذج",
     label: "نماذج الكمي",
     // Three quant collections now share the grid's badges; "الكمي" alone no
     // longer says which one a card belongs to.
@@ -90,6 +101,8 @@ export const COLLECTIONS = [
     // The key stays "general": it is what ?tab=general in already-shared links
     // and the sitemap point at. Only the wording changed.
     key: "general",
+    subject: "verbal",
+    chip: "اختبارات المحاكاة",
     label: "اختبارات لفظي محاكاة",
     short: "محاكاة لفظي",
     tagline: "محاكاة لشكل اختبار اللفظي",
