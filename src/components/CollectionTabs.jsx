@@ -3,8 +3,8 @@ import { getTheme } from "../lib/collectionTheme.jsx"
 import { LockIcon } from "./icons.jsx"
 
 /**
- * Five collections never fit one phone-width row. The strip wraps instead of
- * scrolling: two tabs per row on phones, three on tablets, all five from `lg`.
+ * Four collections never fit one phone-width row. The strip wraps instead of
+ * scrolling: two tabs per row on phones and tablets, all four from `lg`.
  * It is flex rather than grid on purpose - `grow` lets a leftover tab stretch
  * across its row, where a grid would leave an empty cell beside it. Every tab
  * keeps a 44px touch target.
@@ -42,7 +42,7 @@ export default function CollectionTabs({ active, onChange }) {
               onChange(next.key)
               document.getElementById(`tab-${next.key}`)?.focus()
             }}
-            className={`group flex min-h-11 grow basis-[calc(50%_-_0.1875rem)] items-center justify-center gap-1.5 rounded-xl px-2 py-2.5 text-center sm:basis-[calc(33.333%_-_0.25rem)] lg:basis-0 transition-all duration-200 focus-ring motion-reduce:transition-none ${
+            className={`group flex min-h-11 grow basis-[calc(50%_-_0.1875rem)] items-center justify-center gap-1.5 rounded-xl px-2 py-2.5 text-center lg:basis-0 transition-all duration-200 focus-ring motion-reduce:transition-none ${
               selected
                 ? // Transparent outline: invisible normally, drawn in Windows
                   // high-contrast mode where the navy fill is dropped.

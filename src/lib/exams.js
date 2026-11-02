@@ -3,14 +3,13 @@
 import verbalRaw from "../data/verbal-exams.json"
 import generalRaw from "../data/general-exams.json"
 import quantFoundationRaw from "../data/quant-foundation-exams.json"
-import quantRaw from "../data/quant-exams.json"
 import quantReleasesRaw from "../data/quant-releases-exams.json"
-import { buildSearchKey, countNoun, QUESTIONS, RELEASES } from "./arabic.js"
+import { buildSearchKey, countNoun, QUESTIONS, MODELS } from "./arabic.js"
 
 /**
  * @typedef {Object} Exam
  * @property {string} id           stable key, e.g. "v-42"
- * @property {"verbal"|"quant-foundation"|"quant-releases"|"quant"|"general"} collection
+ * @property {"verbal"|"quant-foundation"|"quant-releases"|"general"} collection
  * @property {number} number       1-based order inside its collection
  * @property {string} title        display title
  * @property {string} [topic]      the skill a foundation model drills
@@ -32,7 +31,6 @@ function prepare(raw) {
 const verbal = prepare(verbalRaw)
 const general = prepare(generalRaw)
 const quantFoundation = prepare(quantFoundationRaw)
-const quant = prepare(quantRaw)
 const quantReleases = prepare(quantReleasesRaw)
 
 // `subject` is the Qudrat section a collection trains for; the hero groups
@@ -69,33 +67,18 @@ export const COLLECTIONS = [
   {
     key: "quant-releases",
     subject: "quant",
-    chip: "الإصدارات",
-    label: "إصدارات الكمي",
-    short: "إصدارات كمي",
-    tagline: "بنك أسئلة الإصدارات",
+    chip: "النماذج الأكثر تكرارًا كمي",
+    label: "النماذج الأكثر تكرارًا كمي",
+    short: "النماذج الأكثر تكرارًا كمي",
+    tagline: "بنك أسئلة النماذج الأكثر تكرارًا",
     // Figures come from the data so the sentence cannot drift from the cards.
-    description: `إصدارات القدرات الكمي: ${countNoun(quantReleases.length, RELEASES)} تضم ${countNoun(
+    description: `النماذج الأكثر تكرارًا في القدرات الكمي: ${countNoun(quantReleases.length, MODELS)} تضم ${countNoun(
       quantReleasesRaw.totalQuestions,
       QUESTIONS,
     )}، كل سؤال صورة يليها اختيار من أ / ب / ج / د.`,
     items: quantReleases,
     questionsPerForm: null,
     requiresPassword: Boolean(quantReleasesRaw.requiresPassword),
-  },
-  {
-    key: "quant",
-    subject: "quant",
-    chip: "النماذج",
-    label: "نماذج الكمي",
-    // Three quant collections now share the grid's badges; "الكمي" alone no
-    // longer says which one a card belongs to.
-    short: "نماذج كمي",
-    tagline: "نماذج متكاملة تحاكي الاختبار",
-    description:
-      "نماذج القدرات الكمي الشاملة، تجمع مهارات التأسيس كلها في اختبار متكامل يحاكي شكل اختبار القدرات.",
-    items: quant,
-    questionsPerForm: null,
-    requiresPassword: Boolean(quantRaw.requiresPassword),
   },
   {
     // The key stays "general": it is what ?tab=general in already-shared links
@@ -118,7 +101,7 @@ export const COLLECTION_KEYS = COLLECTIONS.map((c) => c.key)
 export const getCollection = (key) =>
   COLLECTIONS.find((c) => c.key === key) ?? COLLECTIONS[0]
 
-export const ALL_EXAMS = [...verbal, ...quantFoundation, ...quantReleases, ...quant, ...general]
+export const ALL_EXAMS = [...verbal, ...quantFoundation, ...quantReleases, ...general]
 
 /**
  * Count usable records per collection. The tabs and the hero must quote the

@@ -45,9 +45,6 @@ export const TagIcon = (p) => (
 export const TextIcon = (p) => (
   <svg viewBox="0 0 24 24" {...base} {...p}><path d="M4 5.5h16M4 12h16M4 18.5h9" /></svg>
 )
-export const SigmaIcon = (p) => (
-  <svg viewBox="0 0 24 24" {...base} {...p}><path d="M17.5 5H7l6 7-6 7h10.5" /></svg>
-)
 export const BlocksIcon = (p) => (
   <svg viewBox="0 0 24 24" {...base} {...p}><rect x="3.5" y="13.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="13.5" width="7" height="7" rx="1.5" /><rect x="8.5" y="3.5" width="7" height="7" rx="1.5" /></svg>
 )
