@@ -30,9 +30,28 @@ export default {
           800: "#77531D",
           900: "#66461E",
         },
+        // The "بنك المجد لنماذج القدرات" banner identity, sampled from the
+        // approved artwork. Kept apart from navy/gold above so the rest of the
+        // site keeps its palette; only the hero paints with these.
+        majd: {
+          ink: "#0A2352", // headline navy
+          navy: "#0C2D5A", // the navy field
+          deep: "#082247", // bottom of the navy field
+          line: "#3A5A94", // geometric line-art on navy
+          gold: "#D3A547",
+          "gold-light": "#EBCB7E",
+          "gold-pale": "#F6E7BC",
+          "gold-dark": "#B5883B",
+          cream: "#FEF5D3", // tagline pill
+          paper: "#FFFCF5", // card face
+        },
       },
       fontFamily: {
         sans: ['"IBM Plex Sans Arabic"', "system-ui", "Segoe UI", "Tahoma", "sans-serif"],
+        // Display face for the banner headings: Beiruti's compact, heavy
+        // letterforms are the closest free match to the artwork's lettering
+        // (compared side by side against it). Body text stays IBM Plex.
+        display: ['"Beiruti"', '"IBM Plex Sans Arabic"', "system-ui", "Segoe UI", "Tahoma", "sans-serif"],
       },
       boxShadow: {
         card: "0 1px 2px 0 rgb(19 33 64 / 0.04), 0 1px 3px 0 rgb(19 33 64 / 0.06)",

@@ -94,7 +94,6 @@ export default function App() {
       <Hero
         query={state.q}
         onQueryChange={(q) => patch({ q })}
-        total={USABLE.length}
         counts={COUNTS}
         active={state.tab}
         onPickCollection={pickCollection}
