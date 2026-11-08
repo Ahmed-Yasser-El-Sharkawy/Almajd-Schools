@@ -9,7 +9,7 @@ const QUICK_LINKS = [
   { href: "?tab=verbal", label: "أقسام اللفظي الحديثة" },
   { href: "?tab=quant-sections", label: "أقسام الكمي الحديثة" },
   { href: "?tab=quant-foundation", label: "تأسيس القدرات الكمي" },
-  { href: "?tab=quant-releases", label: "النماذج الأكثر تكرارًا كمي" },
+  { href: "?tab=quant-releases", label: "بنوك أسئلة الكمي" },
   { href: "?tab=general", label: "اختبارات لفظي محاكاة" },
 ]
 
@@ -40,7 +40,7 @@ export default function Footer() {
 
           <p className="mt-6 max-w-lg text-[0.95rem] leading-relaxed text-navy-200">
             منصة الوصول السريع إلى تجميعات واختبارات مركز المجد: أقسام اللفظي الحديثة
-            واختبارات المحاكاة، وأقسام الكمي الحديثة وتأسيسه والنماذج الأكثر تكرارًا فيه. جميع الاختبارات على
+            واختبارات المحاكاة، وأقسام الكمي الحديثة وتأسيسه وبنوك أسئلته. جميع الاختبارات على
             هيئة نماذج Google، تُفتح مباشرة من المتصفح بلا تسجيل دخول.
           </p>
           <p className="mt-4 flex items-start gap-2 text-sm leading-relaxed text-majd-gold-light">

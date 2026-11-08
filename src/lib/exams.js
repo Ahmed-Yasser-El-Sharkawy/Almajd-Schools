@@ -84,12 +84,12 @@ export const COLLECTIONS = [
   {
     key: "quant-releases",
     subject: "quant",
-    chip: "النماذج الأكثر تكرارًا كمي",
-    label: "النماذج الأكثر تكرارًا كمي",
-    short: "النماذج الأكثر تكرارًا كمي",
-    tagline: "بنك أسئلة النماذج الأكثر تكرارًا",
+    chip: "بنوك أسئلة الكمي",
+    label: "بنوك أسئلة الكمي",
+    short: "بنوك أسئلة كمي",
+    tagline: "النماذج الأكثر تكرارًا في الاختبار",
     // Figures come from the data so the sentence cannot drift from the cards.
-    description: `النماذج الأكثر تكرارًا في القدرات الكمي: ${countNoun(quantReleases.length, MODELS)} تضم ${countNoun(
+    description: `بنوك أسئلة القدرات الكمي، النماذج الأكثر تكرارًا في الاختبار: ${countNoun(quantReleases.length, MODELS)} تضم ${countNoun(
       quantReleasesRaw.totalQuestions,
       QUESTIONS,
     )}، كل سؤال صورة يليها اختيار من أ / ب / ج / د.`,

@@ -16,7 +16,7 @@ const DATASETS = [
   { name: "أقسام اللفظي الحديثة", file: "src/data/verbal-exams.json", expected: 301 },
   { name: "أقسام الكمي الحديثة", file: "src/data/quant-sections-exams.json", expected: 118, gated: true, questions: true },
   { name: "تأسيس الكمي", file: "src/data/quant-foundation-exams.json", expected: 20, gated: true, topics: true },
-  { name: "النماذج الأكثر تكرارًا كمي", file: "src/data/quant-releases-exams.json", expected: 48, gated: true, questions: true },
+  { name: "بنوك أسئلة الكمي", file: "src/data/quant-releases-exams.json", expected: 48, gated: true, questions: true },
   { name: "اختبارات لفظي محاكاة", file: "src/data/general-exams.json", expected: 100 },
 ]
 

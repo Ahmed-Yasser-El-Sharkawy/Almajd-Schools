@@ -11,7 +11,7 @@
 | أقسام اللفظي الحديثة | 301 | `src/data/verbal-exams.json` | — |
 | أقسام الكمي الحديثة | 118 | `src/data/quant-sections-exams.json` | نعم |
 | تأسيس الكمي | 20 | `src/data/quant-foundation-exams.json` | نعم |
-| النماذج الأكثر تكرارًا كمي | 48 | `src/data/quant-releases-exams.json` | نعم |
+| بنوك أسئلة الكمي | 48 | `src/data/quant-releases-exams.json` | نعم |
 | اختبارات لفظي محاكاة | 100 | `src/data/general-exams.json` | — |
 | **الإجمالي** | **587** | | |
 
