@@ -47,7 +47,7 @@ writeFileSync(
 console.log(`verbal: ${verbal.length}  general: ${general.length}`)
 
 // --- القدرات الكمي -----------------------------------------------------
-// Two sibling datasets sourced from the Drive export JSONs. These forms are
+// Sourced from the Drive export JSON. These forms are
 // password-gated, but the password is NEVER written out: anything in the JSON
 // ships inside the public JS bundle and is one devtools panel away from being
 // read. Only the fact that a password is required travels to the UI; the code
@@ -76,13 +76,7 @@ const quantFoundation = buildQuant({
   prefix: 'qf',
   outFile: 'src/data/quant-foundation-exams.json',
 })
-const quant = buildQuant({
-  source: 'روابط نماذج القدرات الكمي — مدارس المجد 1-20.json',
-  collection: 'quant',
-  prefix: 'q',
-  outFile: 'src/data/quant-exams.json',
-})
-console.log(`quant-foundation: ${quantFoundation}  quant: ${quant}`)
+console.log(`quant-foundation: ${quantFoundation}`)
 
 // --- إصدارات القدرات الكمي --------------------------------------------
 // This export uses Arabic keys and carries a per-release question count, so it
