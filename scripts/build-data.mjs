@@ -76,7 +76,13 @@ const quantFoundation = buildQuant({
   prefix: 'qf',
   outFile: 'src/data/quant-foundation-exams.json',
 })
-console.log(`quant-foundation: ${quantFoundation}`)
+const quant = buildQuant({
+  source: 'روابط نماذج القدرات الكمي — مدارس المجد 1-20.json',
+  collection: 'quant',
+  prefix: 'q',
+  outFile: 'src/data/quant-exams.json',
+})
+console.log(`quant-foundation: ${quantFoundation}  quant: ${quant}`)
 
 // --- إصدارات القدرات الكمي --------------------------------------------
 // This export uses Arabic keys and carries a per-release question count, so it
