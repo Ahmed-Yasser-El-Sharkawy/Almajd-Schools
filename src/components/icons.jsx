@@ -45,6 +45,9 @@ export const TagIcon = (p) => (
 export const TextIcon = (p) => (
   <svg viewBox="0 0 24 24" {...base} {...p}><path d="M4 5.5h16M4 12h16M4 18.5h9" /></svg>
 )
+export const ChartIcon = (p) => (
+  <svg viewBox="0 0 24 24" {...base} {...p}><path d="M4 20h16" /><path d="M7 16v-5M12 16V6M17 16v-8" /></svg>
+)
 export const SigmaIcon = (p) => (
   <svg viewBox="0 0 24 24" {...base} {...p}><path d="M17.5 5H7l6 7-6 7h10.5" /></svg>
 )

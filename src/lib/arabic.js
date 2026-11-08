@@ -80,3 +80,4 @@ export function countNoun(n, forms) {
 
 export const QUESTIONS = { one: "سؤال واحد", two: "سؤالان", few: "أسئلة", many: "سؤالًا", hundred: "سؤال" }
 export const MODELS = { one: "نموذج واحد", two: "نموذجان", few: "نماذج", many: "نموذجًا", hundred: "نموذج" }
+export const SECTIONS = { one: "قسم واحد", two: "قسمان", few: "أقسام", many: "قسمًا", hundred: "قسم" }

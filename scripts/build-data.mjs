@@ -136,3 +136,39 @@ console.log(`quant-foundation: ${quantFoundation}  quant: ${quant}`)
   )
   console.log(`quant-releases: ${items.length}`)
 }
+
+// --- أقسام القدرات الكمي الحديثة --------------------------------------
+// The source JSON is produced from the teacher's sheet by sheet-to-json.py,
+// which already drops the edit links; this adapter only reshapes it. The
+// counts vary per section (9-11), so each item carries `questions` and the
+// file keeps the declared total for validate-data to check against.
+{
+  const src = JSON.parse(
+    readFileSync(resolve(root, '..', 'روابط أقسام القدرات الكمي — مدارس المجد الأهلية.json'), 'utf8'),
+  )
+  const items = src.forms.map((f) => ({
+    id: `qs-${f.section}`,
+    collection: 'quant-sections',
+    number: f.section,
+    // Like the verbal sections, the card title is the topic itself.
+    title: stripTatweel(f.topic),
+    questions: f.questions,
+    url: f.url,
+    shortUrl: f.short ?? null,
+  }))
+  writeFileSync(
+    resolve(root, 'src/data/quant-sections-exams.json'),
+    JSON.stringify(
+      {
+        collection: 'quant-sections',
+        requiresPassword: Boolean(src.requiresPassword),
+        totalQuestions: src.totalQuestions,
+        generated: src.generated,
+        items,
+      },
+      null,
+      2,
+    ) + '\n',
+  )
+  console.log(`quant-sections: ${items.length}`)
+}

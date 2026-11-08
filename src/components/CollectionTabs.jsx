@@ -3,8 +3,8 @@ import { getTheme } from "../lib/collectionTheme.jsx"
 import { LockIcon } from "./icons.jsx"
 
 /**
- * Five collections never fit one phone-width row. The strip wraps instead of
- * scrolling: two tabs per row on phones, three on tablets, all five from `lg`.
+ * Six collections never fit one phone-width row. The strip wraps instead of
+ * scrolling: two tabs per row on phones, three on tablets, all six from `lg`.
  * It is flex rather than grid on purpose - `grow` lets a leftover tab stretch
  * across its row, where a grid would leave an empty cell beside it. Every tab
  * keeps a 44px touch target.
