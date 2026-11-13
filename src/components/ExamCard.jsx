@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { StarIcon, CopyIcon, CheckIcon, ArrowIcon, TagIcon, LockIcon, QuestionsIcon } from "./icons.jsx"
+import { StarIcon, CopyIcon, CheckIcon, ArrowIcon, TagIcon, LockIcon, QuestionsIcon, RepeatIcon } from "./icons.jsx"
 import { getTheme } from "../lib/collectionTheme.jsx"
 import { countNoun, QUESTIONS } from "../lib/arabic.js"
 
-export default function ExamCard({ exam, badge, locked, isFavorite, isOpened, onToggleFavorite, onOpen }) {
+export default function ExamCard({ exam, badge, priorityLabel, locked, isFavorite, isOpened, onToggleFavorite, onOpen }) {
   const [copied, setCopied] = useState(false)
   const shareUrl = exam.shortUrl ?? exam.url
   const headingId = `exam-${exam.id}-title`
@@ -36,6 +36,14 @@ export default function ExamCard({ exam, badge, locked, isFavorite, isOpened, on
             )}
             {badge}
           </span>
+          {/* Gold is the one accent on the card, and the mark is worded, so it
+              reads without relying on colour. */}
+          {exam.priority && priorityLabel && (
+            <span className="inline-flex items-center gap-1 rounded-lg bg-majd-gold-pale px-2 py-1 text-xs font-bold text-gold-900 ring-1 ring-inset ring-majd-gold/70">
+              <RepeatIcon className="h-3.5 w-3.5" />
+              {priorityLabel}
+            </span>
+          )}
           {isOpened && (
             <span className="inline-flex items-center gap-1 rounded-lg bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-800">
               <CheckIcon className="h-3.5 w-3.5" />

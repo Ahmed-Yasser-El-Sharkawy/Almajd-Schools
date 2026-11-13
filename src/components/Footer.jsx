@@ -3,14 +3,19 @@ import centerLogo from "../assets/almajd-center-logo-hd.webp"
 import { Seam, Rosette, DiamondMark } from "./HeroArt.jsx"
 import { Diamond } from "./Ornaments.jsx"
 
+// Collection links are real paths, each backed by its own prerendered page,
+// so a crawler can follow them; #exams lands the student on the list itself.
+const page = (key) => `${import.meta.env.BASE_URL}${key}/#exams`
+
 const QUICK_LINKS = [
   { href: "#top", label: "الرئيسية" },
   { href: "#exams", label: "جميع الاختبارات" },
-  { href: "?tab=verbal", label: "أقسام اللفظي الحديثة" },
-  { href: "?tab=quant-sections", label: "أقسام الكمي الحديثة" },
-  { href: "?tab=quant-foundation", label: "تأسيس القدرات الكمي" },
-  { href: "?tab=quant-releases", label: "بنوك أسئلة الكمي" },
-  { href: "?tab=general", label: "اختبارات لفظي محاكاة" },
+  { href: page("verbal"), label: "أقسام اللفظي الحديثة" },
+  { href: page("quant-sections"), label: "أقسام الكمي الحديثة" },
+  { href: page("quant-foundation"), label: "تأسيس القدرات الكمي" },
+  { href: page("quant-releases"), label: "بنوك أسئلة الكمي" },
+  { href: page("general"), label: "اختبارات لفظي محاكاة" },
+  { href: "#faq", label: "أسئلة شائعة" },
 ]
 
 /**

@@ -8,6 +8,9 @@ export const SearchIcon = (p) => (
 export const CloseIcon = (p) => (
   <svg viewBox="0 0 24 24" {...base} {...p}><path d="M6 6l12 12M18 6L6 18" /></svg>
 )
+export const ChevronDownIcon = (p) => (
+  <svg viewBox="0 0 24 24" {...base} {...p}><path d="m6 9 6 6 6-6" /></svg>
+)
 export const StarIcon = ({ filled, ...p }) => (
   <svg viewBox="0 0 24 24" {...base} fill={filled ? "currentColor" : "none"} {...p}>
     <path d="m12 3.6 2.6 5.3 5.8.85-4.2 4.1 1 5.75L12 16.9l-5.2 2.7 1-5.75-4.2-4.1 5.8-.85z" />
@@ -59,6 +62,10 @@ export const GridIcon = (p) => (
 )
 export const LayersIcon = (p) => (
   <svg viewBox="0 0 24 24" {...base} {...p}><path d="m12 3.5 8.5 4.5-8.5 4.5L3.5 8z" /><path d="m3.5 12 8.5 4.5 8.5-4.5" /><path d="m3.5 16 8.5 4.5 8.5-4.5" /></svg>
+)
+// Two arrows chasing each other: marks a section on the "الأكثر تكرارًا" shortlist.
+export const RepeatIcon = (p) => (
+  <svg viewBox="0 0 24 24" {...base} {...p}><path d="m17 2.5 3.5 3.5L17 9.5" /><path d="M3.5 11.5V10a4 4 0 0 1 4-4h13" /><path d="m7 21.5-3.5-3.5L7 14.5" /><path d="M20.5 12.5V14a4 4 0 0 1-4 4h-13" /></svg>
 )
 export const QuestionsIcon = (p) => (
   <svg viewBox="0 0 24 24" {...base} {...p}><circle cx="12" cy="12" r="9" /><path d="M9.6 9.3a2.5 2.5 0 0 1 4.85.85c0 1.7-2.45 2.2-2.45 3.6" /><path d="M12 17h.01" /></svg>

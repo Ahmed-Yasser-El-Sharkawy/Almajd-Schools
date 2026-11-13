@@ -97,8 +97,51 @@ for (const ds of DATASETS) {
   }
 }
 
+// ---- قوائم «الأكثر تكرارًا» -------------------------------------------
+// A shortlist is edited by hand, so it is checked like any other data file.
+// A number with no published form behind it is NOT an error: the trainer's
+// list can run ahead of the forms export, and the site simply shows what a
+// student can open. It is reported so a typo is still visible.
+const SHORTLISTS = [
+  { name: "الأكثر تكرارًا — أقسام اللفظي", file: "src/data/verbal-priority.json", of: "src/data/verbal-exams.json" },
+]
+const shortlistNotes = []
+
+for (const sl of SHORTLISTS) {
+  const list = load(sl.file)
+  const published = new Set(load(sl.of).items.map((x) => x.number))
+  const sections = Array.isArray(list.sections) ? list.sections : []
+  const problems = []
+
+  if (sections.length === 0) problems.push("المصفوفة sections مفقودة أو فارغة")
+  const bad = sections.filter((n) => !Number.isInteger(n) || n < 1)
+  if (bad.length) problems.push(`أرقام غير صالحة: ${bad.join("، ")}`)
+  const repeated = sections.filter((n, i) => sections.indexOf(n) !== i)
+  if (repeated.length) problems.push(`أرقام مكررة: ${[...new Set(repeated)].join("، ")}`)
+  if (!String(list.label ?? "").trim()) problems.push("الحقل label مفقود")
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(list.updated ?? "")) {
+    problems.push("الحقل updated يجب أن يكون تاريخًا بصيغة YYYY-MM-DD")
+  }
+
+  const matched = sections.filter((n) => published.has(n))
+  const pending = sections.filter((n) => Number.isInteger(n) && !published.has(n))
+  if (sections.length && matched.length === 0) problems.push("لا يطابق أي رقم في القائمة نموذجًا منشورًا")
+
+  shortlistNotes.push(
+    `${sl.name}: ${matched.length} منشورة من ${sections.length} في القائمة (تحديث ${list.updated ?? "—"}).` +
+      (pending.length ? `\n   ! بلا نموذج منشور بعد: ${pending.join("، ")}` : ""),
+  )
+
+  if (problems.length) {
+    failures += problems.length
+    console.error(`\n✗ ${sl.name}`)
+    for (const p of problems) console.error(`   - ${p}`)
+  }
+}
+
 console.log("\nتقرير التحقق من البيانات\n")
 console.table(report)
+for (const note of shortlistNotes) console.log(note)
 const total = report.reduce((s, r) => s + r["السجلات"], 0)
 console.log(`الإجمالي: ${total} سجلًا، ${allUrls.size} رابطًا فريدًا.`)
 

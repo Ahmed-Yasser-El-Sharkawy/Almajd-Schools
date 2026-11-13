@@ -5,6 +5,7 @@ import { Diamond } from "./Ornaments.jsx"
 
 const LINKS = [
   { href: "#exams", label: "الاختبارات" },
+  { href: "#faq", label: "أسئلة شائعة" },
   { href: "#about", label: "عن المركز" },
 ]
 

@@ -5,6 +5,7 @@ import generalRaw from "../data/general-exams.json"
 import quantFoundationRaw from "../data/quant-foundation-exams.json"
 import quantReleasesRaw from "../data/quant-releases-exams.json"
 import quantSectionsRaw from "../data/quant-sections-exams.json"
+import verbalPriorityRaw from "../data/verbal-priority.json"
 import { buildSearchKey, countNoun, QUESTIONS, MODELS, SECTIONS } from "./arabic.js"
 
 /**
@@ -15,6 +16,7 @@ import { buildSearchKey, countNoun, QUESTIONS, MODELS, SECTIONS } from "./arabic
  * @property {string} title        display title
  * @property {string} [topic]      the skill a foundation model drills
  * @property {number} [questions]  question count, when it varies per form
+ * @property {boolean} [priority]  on the "الأكثر تكرارًا" shortlist of its collection
  * @property {string} url          canonical form URL (never rewritten)
  * @property {string|null} shortUrl
  * @property {string} searchKey    pre-folded text used by the search
@@ -25,11 +27,29 @@ const VALID_URL = /^https:\/\/(forms\.gle\/[A-Za-z0-9]+|docs\.google\.com\/forms
 /** A record is usable only if it has a title and a well-formed Google Forms URL. */
 export const isUsable = (exam) => Boolean(exam.title) && VALID_URL.test(exam.url)
 
-function prepare(raw) {
-  return raw.items.map((item) => ({ ...item, searchKey: buildSearchKey(item) }))
+// The shortlist of sections that recur most in the real exam is the trainer's
+// editorial judgement, revised on its own schedule, so it lives in its own
+// hand-edited file (verbal-priority.json) rather than in verbal-exams.json,
+// which build-data regenerates wholesale. A number on the list with no
+// published form behind it is simply never matched; validate-data reports it.
+function prepare(raw, shortlist) {
+  const listed = new Set(shortlist?.sections ?? [])
+  return raw.items.map((item) => ({
+    ...item,
+    ...(listed.has(item.number) ? { priority: true } : {}),
+    searchKey: buildSearchKey(item),
+  }))
 }
 
-const verbal = prepare(verbalRaw)
+/** What a collection says about its shortlist, or null when it has none. */
+function shortlistMeta(items, shortlist) {
+  const count = items.filter((x) => x.priority).length
+  if (!count) return null
+  return { label: shortlist.label || "الأكثر تكرارًا", updated: shortlist.updated ?? null, count }
+}
+
+const verbal = prepare(verbalRaw, verbalPriorityRaw)
+const verbalPriority = shortlistMeta(verbal, verbalPriorityRaw)
 const general = prepare(generalRaw)
 const quantFoundation = prepare(quantFoundationRaw)
 const quantReleases = prepare(quantReleasesRaw)
@@ -48,8 +68,13 @@ export const COLLECTIONS = [
     // card. Every short follows the same {type} {subject} shape.
     short: "أقسام لفظي",
     tagline: "استيعاب المقروء والتناظر اللفظي",
-    description: "أقسام القدرات اللفظية الحديثة، كل قسم يحتوي على 13 سؤالًا.",
+    // The shortlist figure is counted from the data, so the sentence, the
+    // switch above the grid and the badges on the cards always agree.
+    description: `أقسام القدرات اللفظية الحديثة، كل قسم يحتوي على 13 سؤالًا${
+      verbalPriority ? `، منها ${countNoun(verbalPriority.count, SECTIONS)} هي ${verbalPriority.label} في الاختبار` : ""
+    }.`,
     items: verbal,
+    priority: verbalPriority,
     questionsPerForm: verbalRaw.questionsPerForm ?? null,
     requiresPassword: false,
   },
@@ -159,9 +184,10 @@ const collator = new Intl.Collator("ar", { numeric: true, sensitivity: "base" })
  * Apply query + filters to one collection.
  * @returns {Exam[]}
  */
-export function selectExams(items, { tokens, range, fav, status, favorites, opened, sort }) {
+export function selectExams(items, { tokens, range, fav, priority, status, favorites, opened, sort }) {
   let out = items
 
+  if (priority) out = out.filter((x) => x.priority)
   if (fav) out = out.filter((x) => favorites.has(x.id))
   if (status === "opened") out = out.filter((x) => opened.has(x.id))
   else if (status === "unopened") out = out.filter((x) => !opened.has(x.id))

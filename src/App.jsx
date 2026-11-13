@@ -7,14 +7,17 @@ import ExamCard from "./components/ExamCard.jsx"
 import EmptyState from "./components/EmptyState.jsx"
 import RecentStrip from "./components/RecentStrip.jsx"
 import AccessNotice from "./components/AccessNotice.jsx"
+import PriorityToggle from "./components/PriorityToggle.jsx"
 import ShareButton from "./components/ShareButton.jsx"
+import Faq from "./components/Faq.jsx"
 import Footer from "./components/Footer.jsx"
 import { Diamond, SectionHeading } from "./components/Ornaments.jsx"
 import { Rosette } from "./components/HeroArt.jsx"
 import { ALL_EXAMS, buildRanges, countByCollection, getCollection, isUsable, selectExams } from "./lib/exams.js"
 import { tokenize } from "./lib/arabic.js"
 import { loadFavorites, saveFavorites, loadOpened, pushOpened, clearOpened } from "./lib/storage.js"
-import { readState, writeState, DEFAULT_STATE } from "./lib/urlState.js"
+import { readState, writeState, isHome, DEFAULT_STATE } from "./lib/urlState.js"
+import { pageMeta } from "./lib/seo.js"
 
 const PAGE_SIZE = 48
 
@@ -36,7 +39,16 @@ export default function App() {
   const patch = useCallback((changes) => setState((s) => ({ ...s, ...changes })), [])
 
   useEffect(() => { writeState(state) }, [state])
-  useEffect(() => { setVisible(PAGE_SIZE) }, [state.tab, state.q, state.range, state.fav, state.status, state.sort])
+
+  // Each collection page is prerendered with its own title and canonical URL.
+  // Switching collection in place has to carry both along, or a bookmark or a
+  // shared link made afterwards would be named after the page left behind.
+  useEffect(() => {
+    const meta = pageMeta(isHome(state.tab) ? null : state.tab)
+    document.title = meta.title
+    document.querySelector('link[rel="canonical"]')?.setAttribute("href", meta.url)
+  }, [state.tab])
+  useEffect(() => { setVisible(PAGE_SIZE) }, [state.tab, state.q, state.range, state.fav, state.priority, state.status, state.sort])
 
   const collection = getCollection(state.tab)
   const openedSet = useMemo(() => new Set(opened), [opened])
@@ -48,9 +60,15 @@ export default function App() {
   )
   const ranges = useMemo(() => buildRanges(pool), [pool])
 
+  // The shortlist switch quotes the sections a student can actually open, so
+  // it is counted from the same pool the grid renders. A collection without a
+  // shortlist never shows the switch and never applies the filter.
+  const priorityCount = useMemo(() => pool.filter((x) => x.priority).length, [pool])
+  const priorityOn = state.priority && priorityCount > 0
+
   const results = useMemo(
-    () => selectExams(pool, { ...state, tokens, favorites, opened: openedSet }),
-    [pool, state, tokens, favorites, openedSet],
+    () => selectExams(pool, { ...state, priority: priorityOn, tokens, favorites, opened: openedSet }),
+    [pool, state, priorityOn, tokens, favorites, openedSet],
   )
 
   const recent = useMemo(
@@ -60,7 +78,7 @@ export default function App() {
 
   const activeFilterCount =
     (state.range ? 1 : 0) + (state.fav ? 1 : 0) + (state.status !== "all" ? 1 : 0) + (state.sort !== DEFAULT_STATE.sort ? 1 : 0)
-  const hasAnyFilter = activeFilterCount > 0 || Boolean(state.q.trim())
+  const hasAnyFilter = activeFilterCount > 0 || priorityOn || Boolean(state.q.trim())
 
   const toggleFavorite = useCallback((id) => {
     setFavorites((prev) => {
@@ -80,11 +98,13 @@ export default function App() {
 
   // Switching collection always drops the number range: it belongs to the
   // collection it was chosen in, and a 251-300 range would silently empty a
-  // 20-item collection whose range filter is hidden.
+  // 20-item collection whose range filter is hidden. The shortlist switch
+  // goes with it for the same reason.
+  const switchCollection = useCallback((tab) => patch({ tab, range: "", priority: false }), [patch])
   const pickCollection = useCallback((tab) => {
-    patch({ tab, range: "" })
+    switchCollection(tab)
     document.getElementById("exams")?.scrollIntoView({ block: "start" })
-  }, [patch])
+  }, [switchCollection])
 
   return (
     <div className="min-h-screen bg-majd-canvas">
@@ -121,8 +141,17 @@ export default function App() {
             onClear={() => setOpened(clearOpened())}
           />
 
-          <CollectionTabs active={state.tab} onChange={(tab) => patch({ tab, range: "" })} />
+          <CollectionTabs active={state.tab} onChange={switchCollection} />
           <p className="mt-3 text-sm leading-relaxed text-navy-600">{collection.description}</p>
+
+          {priorityCount > 0 && (
+            <PriorityToggle
+              shortlist={collection.priority}
+              count={priorityCount}
+              checked={priorityOn}
+              onChange={(priority) => patch({ priority })}
+            />
+          )}
 
           {collection.requiresPassword && <AccessNotice />}
 
@@ -165,6 +194,7 @@ export default function App() {
                           <ExamCard
                             exam={exam}
                             badge={collection.short}
+                            priorityLabel={collection.priority?.label}
                             locked={collection.requiresPassword}
                             isFavorite={favorites.has(exam.id)}
                             isOpened={openedSet.has(exam.id)}
@@ -201,6 +231,8 @@ export default function App() {
             </div>
           </div>
         </main>
+
+        <Faq />
       </div>
 
       <Footer />

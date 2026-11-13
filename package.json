@@ -6,7 +6,7 @@
   "homepage": "https://Ahmed-Yasser-El-Sharkawy.github.io/Almajd-Schools/",
   "scripts": {
     "dev": "vite",
-    "build": "npm run validate-data && vite build",
+    "build": "npm run validate-data && vite build && node scripts/prerender.mjs",
     "preview": "vite preview",
     "validate-data": "node scripts/validate-data.mjs",
     "build-data": "node scripts/build-data.mjs",
