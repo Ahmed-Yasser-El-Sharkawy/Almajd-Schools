@@ -18,7 +18,6 @@ import { buildSearchKey, countNoun, formatDuration, QUESTIONS, MODELS, SECTIONS,
  * @property {string} [topic]      the skill a foundation model drills
  * @property {number} [questions]  question count, when it varies per form
  * @property {number} [minutes]    time allowed, for a full mock exam
- * @property {{verbal: string, quant: string}[]} [sections]  what each section of a mock exam holds
  * @property {boolean} [priority]  on the "الأكثر تكرارًا" shortlist of its collection
  * @property {string} url          canonical form URL (never rewritten)
  * @property {string|null} shortUrl
@@ -65,8 +64,8 @@ const comprehensiveLayout = {
 }
 
 // `subject` is the Qudrat section a collection trains for; the hero groups
-// its two cards by it. A full mock exam covers both, so its `subject` is a
-// list and it appears in both cards. `chip` is the name inside that card, where the
+// its two cards by it. A full mock exam is neither: its `subject` is "mock",
+// and the hero gives it a banner of its own under the two cards. `chip` is the name inside that card, where the
 // subject is already printed above it, so "تأسيس الكمي" shortens to "التأسيس".
 export const COLLECTIONS = [
   {
@@ -150,7 +149,7 @@ export const COLLECTIONS = [
     // The whole test in one sitting: five sections, each a verbal section
     // followed by a quantitative one, under the real test's time limit.
     key: "comprehensive",
-    subject: ["quant", "verbal"],
+    subject: "mock",
     chip: "الاختبارات الشاملة",
     label: "الاختبارات الشاملة",
     short: "شامل لفظي وكمي",

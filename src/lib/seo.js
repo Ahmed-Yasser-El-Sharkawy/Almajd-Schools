@@ -125,7 +125,7 @@ export const FAQ = [
     : []),
   {
     q: "ما هي الاختبارات الشاملة؟",
-    a: `${countNoun(size("comprehensive"), EXAMS)} يحاكي كلٌّ منها اختبار القدرات العامة كاملًا في جلسة واحدة: ${countNoun(MOCK.questions, QUESTIONS)} في ${countNoun(MOCK.sections, PAGES.verbal.noun)}، في كل قسم ${countNoun(MOCK.verbal, QUESTIONS)} لفظيًا ثم ${countNoun(MOCK.quant, QUESTIONS)} كميًا، وزمن الاختبار ${formatDuration(MOCK.minutes)}. أسئلتها من أقسام اللفظي والكمي الحديثة، وبطاقة كل اختبار تعرض محتوى أقسامه الخمسة.`,
+    a: `${countNoun(size("comprehensive"), EXAMS)} يحاكي كلٌّ منها اختبار القدرات العامة كاملًا في جلسة واحدة: ${countNoun(MOCK.questions, QUESTIONS)} في ${countNoun(MOCK.sections, PAGES.verbal.noun)}، في كل قسم ${countNoun(MOCK.verbal, QUESTIONS)} لفظيًا ثم ${countNoun(MOCK.quant, QUESTIONS)} كميًا، وزمن الاختبار ${formatDuration(MOCK.minutes)}.`,
   },
   {
     q: "ما الفرق بين القسم اللفظي والقسم الكمي في اختبار القدرات؟",

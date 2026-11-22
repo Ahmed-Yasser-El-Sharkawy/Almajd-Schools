@@ -134,6 +134,57 @@
     font-size: clamp(0.8125rem, 2.6cqi, 1.0625rem);
   }
 
+  /* The comprehensive exams' banner under the two subject cards. Like them it
+     sizes from its own width (cqi). Narrow (phones, small tablets): stacked
+     and centred - drawing, name, figures, button. Wide: one row - drawing |
+     gold rule | name above figures | button. Browsers without container
+     queries keep the stacked layout, which works at every width. */
+  .majd-mock {
+    container-type: inline-size;
+  }
+  .majd-mock-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "art" "label" "stats" "cta";
+    justify-items: center;
+    text-align: center;
+    row-gap: 0.9rem;
+    padding: 1.25rem 1rem 1.4rem;
+  }
+  .majd-mock-card > .majd-area-art { grid-area: art; }
+  .majd-mock-card > .majd-area-rule { grid-area: rule; display: none; }
+  .majd-mock-card > .majd-area-label { grid-area: label; }
+  .majd-mock-card > .majd-area-stats { grid-area: stats; justify-content: center; }
+  .majd-mock-card > .majd-area-cta { grid-area: cta; width: 100%; max-width: 22rem; }
+  .majd-mock-title {
+    font-size: 2rem;
+    font-size: clamp(1.75rem, 9cqi, 2.6rem);
+  }
+  .majd-mock-art {
+    width: 8.5rem;
+    width: clamp(7.5rem, 36cqi, 10rem);
+  }
+  @container (min-width: 50rem) {
+    .majd-mock-card {
+      grid-template-columns: auto auto minmax(0, 1fr) auto;
+      grid-template-areas:
+        "art rule label cta"
+        "art rule stats cta";
+      justify-items: start;
+      align-items: center;
+      text-align: start;
+      column-gap: clamp(1.25rem, 2.6cqi, 2.5rem);
+      row-gap: 0.8rem;
+      padding: clamp(1.1rem, 2cqi, 1.75rem) clamp(1.25rem, 3cqi, 2.75rem);
+    }
+    .majd-mock-card > .majd-area-rule { display: block; align-self: stretch; margin-block: 0.5rem; }
+    .majd-mock-card > .majd-area-label { align-self: end; }
+    .majd-mock-card > .majd-area-stats { align-self: start; justify-content: flex-start; }
+    .majd-mock-card > .majd-area-cta { width: auto; }
+    .majd-mock-title { font-size: clamp(2rem, 3.8cqi, 3.25rem); }
+    .majd-mock-art { width: clamp(8.5rem, 14cqi, 12.5rem); }
+  }
+
   .majd-pill {
     background: linear-gradient(180deg, #fff9e4 0%, #fdf1cb 100%);
     box-shadow:

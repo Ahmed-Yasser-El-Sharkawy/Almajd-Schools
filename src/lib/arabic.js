@@ -52,9 +52,7 @@ const ORDINALS = [
  * topic too, which is what a student actually searches for ("الكسور").
  */
 export function buildSearchKey(record) {
-  // A comprehensive exam is also found by any section inside it.
-  const parts = (record.sections ?? []).flatMap((s) => [s.verbal, s.quant]).join(" ")
-  const base = normalizeArabic(`${record.title} ${record.topic ?? ""} ${parts} ${record.number}`)
+  const base = normalizeArabic(`${record.title} ${record.topic ?? ""} ${record.number}`)
   const stripped = base
     .split(" ")
     .map((w) => (w.length > 3 && w.startsWith("ال") ? w.slice(2) : ""))

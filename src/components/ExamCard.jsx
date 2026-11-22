@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { StarIcon, CopyIcon, CheckIcon, ArrowIcon, TagIcon, LockIcon, QuestionsIcon, RepeatIcon, ClockIcon, LayersIcon, ChevronDownIcon } from "./icons.jsx"
+import { StarIcon, CopyIcon, CheckIcon, ArrowIcon, TagIcon, LockIcon, QuestionsIcon, RepeatIcon, ClockIcon } from "./icons.jsx"
 import { getTheme } from "../lib/collectionTheme.jsx"
 import { countNoun, formatDuration, QUESTIONS } from "../lib/arabic.js"
 
@@ -85,7 +85,6 @@ export default function ExamCard({ exam, badge, priorityLabel, locked, isFavorit
             <span>الزمن: {formatDuration(exam.minutes)}</span>
           </p>
         )}
-        {exam.sections?.length > 0 && <SectionList exam={exam} />}
       </div>
 
       <div className="mt-4 flex items-center gap-2">
@@ -110,39 +109,5 @@ export default function ExamCard({ exam, badge, priorityLabel, locked, isFavorit
       </div>
       <span aria-live="polite" className="sr-only">{copied ? "تم نسخ الرابط" : ""}</span>
     </article>
-  )
-}
-
-/**
- * What a comprehensive exam is made of: one row per section of the form, its
- * verbal part then its quantitative part. Folded by default so the cards in
- * the grid keep one height until a student asks.
- */
-function SectionList({ exam }) {
-  return (
-    <details className="group/parts mt-3 rounded-xl border border-majd-gold/30 bg-majd-cream/30">
-      <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-2 rounded-xl px-3 py-2 text-sm font-bold text-majd-ink focus-ring [&::-webkit-details-marker]:hidden">
-        <span className="inline-flex items-center gap-1.5">
-          <LayersIcon className="h-4 w-4 shrink-0 text-majd-gold-dark" />
-          محتوى الأقسام
-          <span className="sr-only"> في {exam.title}</span>
-        </span>
-        <ChevronDownIcon className="h-4 w-4 shrink-0 text-majd-gold-dark transition-transform duration-200 group-open/parts:rotate-180 motion-reduce:transition-none" />
-      </summary>
-      <ol className="space-y-2 border-t border-majd-gold/20 px-3 py-2.5 text-xs leading-relaxed text-navy-600">
-        {exam.sections.map((s, i) => (
-          <li key={i} className="flex items-start gap-2">
-            <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-majd-ink text-[0.7rem] font-bold text-majd-gold-light tabular-nums">
-              {i + 1}
-            </span>
-            <span>
-              <span className="font-bold text-majd-ink">لفظي:</span> {s.verbal}
-              <span aria-hidden="true" className="mx-1.5 text-majd-gold">◆</span>
-              <span className="font-bold text-majd-ink">كمي:</span> {s.quant}
-            </span>
-          </li>
-        ))}
-      </ol>
-    </details>
   )
 }

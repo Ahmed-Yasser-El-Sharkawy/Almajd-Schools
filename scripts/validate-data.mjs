@@ -67,9 +67,9 @@ for (const ds of DATASETS) {
   const editLink = JSON.stringify(data).match(/https:\/\/docs\.google\.com\/forms\/d\/(?!e\/)[^"\s]+/)
   if (editLink) problems.push(`رابط تعديل في ملف البيانات — يجب حذفه: ${editLink[0]}`)
 
-  // A comprehensive exam must follow the layout its file declares: so many
-  // sections, each named for its verbal and quantitative part, adding up to
-  // the stated question count, under a stated time limit.
+  // A comprehensive exam must follow the layout its file declares: the stated
+  // question count and time limit. What its sections contain is for the
+  // teacher only, so it must never be in the public data.
   if (ds.composite) {
     const L = data.layout ?? {}
     const perExam = L.sections * (L.verbal + L.quant)
@@ -79,11 +79,7 @@ for (const ds of DATASETS) {
     for (const item of items) {
       if (item.questions !== perExam) problems.push(`${item.id}: ${item.questions} سؤالًا بدل ${perExam}`)
       if (item.minutes !== L.minutes) problems.push(`${item.id}: الزمن ${item.minutes} بدل ${L.minutes}`)
-      const parts = Array.isArray(item.sections) ? item.sections : []
-      if (parts.length !== L.sections) problems.push(`${item.id}: ${parts.length} أقسام بدل ${L.sections}`)
-      parts.forEach((s, i) => {
-        if (!String(s?.verbal ?? "").trim() || !String(s?.quant ?? "").trim()) problems.push(`${item.id}: القسم ${i + 1} ناقص`)
-      })
+      if ("sections" in item) problems.push(`${item.id}: محتوى الأقسام منشور في ملف البيانات — يجب حذفه`)
     }
   }
 

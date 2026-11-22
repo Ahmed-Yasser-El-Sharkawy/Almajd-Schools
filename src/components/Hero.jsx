@@ -7,17 +7,22 @@ import centerLogo from "../assets/almajd-center-logo-hd.webp"
 import SearchBar from "./SearchBar.jsx"
 import { COLLECTIONS } from "../lib/exams.js"
 import { Seam, BottomRibbons, Rosette, DiamondMark, GradCap, BooksStack, PenCup } from "./HeroArt.jsx"
-import { QuantArt, VerbalArt } from "./SubjectArt.jsx"
+import { MockArt, QuantArt, VerbalArt } from "./SubjectArt.jsx"
+import { ArrowIcon, ClockIcon, ExamIcon, LayersIcon, QuestionsIcon } from "./icons.jsx"
+import { countNoun, formatDuration, EXAMS, QUESTIONS, SECTIONS } from "../lib/arabic.js"
 import { CardRule, Diamond, TitleRule } from "./Ornaments.jsx"
 
 // Card order follows the artwork: quantitative on the right, which is first
 // in RTL. Collections are grouped by their `subject`, so a collection added
-// to exams.js appears in its card without touching this file. A collection
-// whose `subject` lists both (the comprehensive exams) appears in both cards.
+// to exams.js appears in its card without touching this file.
 const SUBJECTS = [
   { key: "quant", title: "القدرات الكمية", Art: QuantArt },
   { key: "verbal", title: "القدرات اللفظية", Art: VerbalArt },
-].map((s) => ({ ...s, collections: COLLECTIONS.filter((c) => [].concat(c.subject).includes(s.key)) }))
+].map((s) => ({ ...s, collections: COLLECTIONS.filter((c) => c.subject === s.key) }))
+
+// Full mock exams are neither verbal nor quantitative but the whole test, so
+// they get a banner of their own under the two cards instead of a chip in each.
+const MOCKS = COLLECTIONS.filter((c) => c.subject === "mock")
 
 /**
  * The "بنك المجد لنماذج القدرات" banner. The cream half carries the identity
@@ -91,6 +96,12 @@ export default function Hero({ query, onQueryChange, counts, active, onPickColle
             ))}
           </ul>
 
+          {MOCKS.map((c) => (
+            <div key={c.key} className="majd-mock mt-4 lg:mt-[2vw]">
+              <MockCard collection={c} count={counts.get(c.key) ?? 0} selected={c.key === active} onPick={onPickCollection} />
+            </div>
+          ))}
+
           <p className="mt-8 flex items-center justify-center gap-3 font-display text-[1.3rem] font-semibold text-majd-paper [word-spacing:0.08em] sm:gap-4 sm:text-[1.45rem] lg:mt-[2.4vw] lg:text-[clamp(1.45rem,2.1vw,2.3rem)]">
             <span aria-hidden="true" className="hidden h-0.5 w-20 rounded-full bg-gradient-to-r from-majd-gold-light to-transparent sm:block lg:w-[9vw]" />
             <Diamond />
@@ -139,6 +150,71 @@ function SubjectCard({ subject, counts, active, onPick }) {
         ))}
       </ul>
     </div>
+  )
+}
+
+/**
+ * The comprehensive exams' banner. It shares the subject cards' cream face and
+ * gold edge, and like them the whole card is the target. Every figure on it
+ * is read from the collection, so it always matches the tab and the cards.
+ * Layout lives in index.css (.majd-mock-card): one row when the banner is
+ * wide, stacked and centred on a phone.
+ */
+function MockCard({ collection, count, selected, onPick }) {
+  const L = collection.layout
+  const titleId = `mock-${collection.key}-title`
+  const facts = [
+    { Icon: ExamIcon, text: countNoun(count, EXAMS) },
+    { Icon: QuestionsIcon, text: `${countNoun(L.questions, QUESTIONS)} لكل اختبار` },
+    { Icon: LayersIcon, text: `${countNoun(L.sections, SECTIONS)}: ${L.verbal} لفظي + ${L.quant} كمي` },
+    { Icon: ClockIcon, text: formatDuration(L.minutes) },
+  ]
+
+  return (
+    <section
+      aria-labelledby={titleId}
+      className="majd-card majd-mock-card relative rounded-[1.4rem] transition duration-200 hover:-translate-y-1 motion-reduce:transform-none motion-reduce:transition-none"
+    >
+      <MockArt className="majd-area-art majd-mock-art" />
+
+      <span aria-hidden="true" className="majd-area-rule w-px bg-gradient-to-b from-transparent via-majd-gold to-transparent" />
+
+      <div className="majd-area-label">
+        <p className="inline-flex items-center gap-1.5 rounded-full bg-majd-gold-pale px-3 py-1 text-xs font-bold text-gold-900 ring-1 ring-inset ring-majd-gold/60 sm:text-sm">
+          <Diamond className="size-1.5" />
+          محاكاة كاملة لاختبار القدرات
+        </p>
+        <h2 id={titleId} className="majd-mock-title mt-2 font-display font-extrabold leading-tight text-majd-ink">
+          {collection.label}
+        </h2>
+        <p className="mt-1 text-sm leading-relaxed text-navy-600 sm:text-base">
+          اللفظي والكمي معًا في اختبار واحد، بتوزيع الاختبار الحقيقي وزمنه.
+        </p>
+      </div>
+
+      <ul aria-label="تفاصيل الاختبارات الشاملة" className="majd-area-stats flex flex-wrap gap-2">
+        {facts.map(({ Icon, text }) => (
+          <li
+            key={text}
+            className="inline-flex items-center gap-1.5 rounded-full border border-majd-gold/50 bg-white/85 px-3 py-1.5 text-[0.8125rem] font-bold text-majd-ink sm:text-sm"
+          >
+            <Icon className="h-4 w-4 shrink-0 text-majd-gold-dark" />
+            <span className="tabular-nums">{text}</span>
+          </li>
+        ))}
+      </ul>
+
+      {/* Stretched over the whole card, like the subject cards' titles. */}
+      <button
+        type="button"
+        onClick={() => onPick(collection.key)}
+        aria-current={selected ? "true" : undefined}
+        className="majd-area-cta inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-majd-ink px-6 py-3 font-display text-base font-bold text-white shadow-[inset_0_0_0_1px_rgb(235_203_126/0.55),0_10px_22px_-12px_rgb(10_35_82/0.8)] transition-colors hover:bg-majd-navy aria-[current=true]:ring-2 aria-[current=true]:ring-majd-gold-light after:absolute after:-inset-[3px] after:rounded-[1.4rem] after:content-[''] focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:after:ring-4 focus-visible:after:ring-majd-gold-light sm:text-lg"
+      >
+        ابدأ الاختبارات الشاملة
+        <ArrowIcon className="h-5 w-5 text-majd-gold-light" />
+      </button>
+    </section>
   )
 }
 

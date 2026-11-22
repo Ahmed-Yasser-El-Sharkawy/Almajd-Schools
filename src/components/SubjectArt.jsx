@@ -112,3 +112,39 @@ export function VerbalArt({ className }) {
     </svg>
   )
 }
+
+// The comprehensive exams: an answer sheet with a stopwatch in front of it,
+// the whole test against the clock. Same line weight, paper and glow as the
+// two subject drawings; the one marked answer and the minute hand are gold.
+const ROWS = [52, 74, 96, 118]
+
+export function MockArt({ className }) {
+  const id = useSvgId()
+  return (
+    <svg viewBox="0 0 212 152" className={className} {...hidden}>
+      <Glow id={`${id}g`} cx={152} cy={74} r={48} />
+      <g fill="none" stroke={INK} strokeLinecap="round" strokeLinejoin="round">
+        {/* answer sheet */}
+        <rect x="22" y="12" width="98" height="130" rx="10" fill={PAPER} strokeWidth="5" />
+        <rect x="36" y="26" width="54" height="11" rx="3" fill={INK} stroke="none" />
+        {ROWS.map((y, i) => (
+          <g key={y}>
+            <circle cx="43" cy={y} r="6.5" fill={i === 1 ? "#C99A3F" : PAPER} strokeWidth="3.5" />
+            <path d={`M58 ${y}H${i % 2 ? 92 : 104}`} strokeWidth="4" />
+          </g>
+        ))}
+        {/* stopwatch */}
+        <path d="M147 44H165" strokeWidth="7" />
+        <path d="M156 45V55" strokeWidth="5" />
+        <path d="M182 62 189 55" strokeWidth="5" />
+        <circle cx="156" cy="96" r="38" fill={PAPER} strokeWidth="5" />
+        <path d="M156 64V70M188 96H182M156 128V122M124 96H130" strokeWidth="3.5" />
+        <path d="M156 96V74" strokeWidth="4.5" />
+        <path d="M156 96 172 105" stroke="#C99A3F" strokeWidth="4.5" />
+        <circle cx="156" cy="96" r="4.5" fill={INK} stroke="none" />
+        {/* ground line */}
+        <path d="M14 146H206" strokeWidth="4" />
+      </g>
+    </svg>
+  )
+}

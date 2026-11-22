@@ -250,9 +250,6 @@ function collectionPage(c) {
       x.topic,
       Number.isInteger(x.questions) ? countNoun(x.questions, QUESTIONS) : null,
       Number.isInteger(x.minutes) ? `الزمن ${formatDuration(x.minutes)}` : null,
-      x.sections?.length
-        ? `الأقسام: ${x.sections.map((s, i) => `${i + 1}) ${s.verbal} (لفظي) و${s.quant} (كمي)`).join('، ')}`
-        : null,
       x.priority ? c.priority?.label : null,
     ].filter(Boolean)
     return `<li><a href="${esc(x.url)}" rel="noopener">${esc(x.title)}</a>${extra.length ? ` — ${esc(extra.join(' · '))}` : ''}</li>`

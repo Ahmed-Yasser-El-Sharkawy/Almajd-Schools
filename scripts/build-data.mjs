@@ -169,10 +169,11 @@ console.log(`quant-foundation: ${quantFoundation}`)
 
 // --- الاختبارات الشاملة (لفظي وكمي) ----------------------------------
 // Exported by the exam builder (Apps Script) with the student links only: the
-// export never carries the edit links or the password. The adapter still
-// copies an explicit list of fields, so nothing else can reach the bundle.
-// Each exam lists what its five sections are made of; the card folds that
-// away, and the search indexes it, so "الزلازل" finds the exam that has it.
+// export never carries the edit links or the password. The adapter copies an
+// explicit list of fields, so nothing else can reach the public bundle. The
+// export also lists what each section is made of; that is the teacher's, sent
+// to them directly, and is deliberately NOT copied here: a student must not
+// be able to read which sections an exam draws on before sitting it.
 {
   const src = JSON.parse(
     readFileSync(resolve(root, '..', 'روابط الاختبارات الشاملة (لفظي وكمي) — مدارس المجد الأهلية.json'), 'utf8'),
@@ -186,7 +187,6 @@ console.log(`quant-foundation: ${quantFoundation}`)
     title: stripTatweel(e.title.split(/\s*[(|]/)[0]),
     questions: e.questions,
     minutes: src.minutes,
-    sections: e.sections.map((s) => ({ verbal: stripTatweel(s.verbal), quant: stripTatweel(s.quant) })),
     url: e.url,
     shortUrl: e.short ?? null,
   }))
