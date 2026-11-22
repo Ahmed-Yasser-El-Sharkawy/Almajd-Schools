@@ -15,6 +15,7 @@ const QUICK_LINKS = [
   { href: page("quant-foundation"), label: "تأسيس القدرات الكمي" },
   { href: page("quant-releases"), label: "بنوك أسئلة الكمي" },
   { href: page("general"), label: "اختبارات لفظي محاكاة" },
+  { href: page("comprehensive"), label: "الاختبارات الشاملة" },
   { href: "#faq", label: "أسئلة شائعة" },
 ]
 

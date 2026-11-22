@@ -166,3 +166,50 @@ console.log(`quant-foundation: ${quantFoundation}`)
   )
   console.log(`quant-sections: ${items.length}`)
 }
+
+// --- الاختبارات الشاملة (لفظي وكمي) ----------------------------------
+// Exported by the exam builder (Apps Script) with the student links only: the
+// export never carries the edit links or the password. The adapter still
+// copies an explicit list of fields, so nothing else can reach the bundle.
+// Each exam lists what its five sections are made of; the card folds that
+// away, and the search indexes it, so "الزلازل" finds the exam that has it.
+{
+  const src = JSON.parse(
+    readFileSync(resolve(root, '..', 'روابط الاختبارات الشاملة (لفظي وكمي) — مدارس المجد الأهلية.json'), 'utf8'),
+  )
+  const items = src.exams.map((e) => ({
+    id: `c-${e.exam}`,
+    collection: 'comprehensive',
+    number: e.exam,
+    // "الاختبار الأول ( لفظي وكمي ) | مدارس المجد الأهلية": the tab already
+    // says "لفظي وكمي" and the site name, so the card keeps "الاختبار الأول".
+    title: stripTatweel(e.title.split(/\s*[(|]/)[0]),
+    questions: e.questions,
+    minutes: src.minutes,
+    sections: e.sections.map((s) => ({ verbal: stripTatweel(s.verbal), quant: stripTatweel(s.quant) })),
+    url: e.url,
+    shortUrl: e.short ?? null,
+  }))
+  writeFileSync(
+    resolve(root, 'src/data/comprehensive-exams.json'),
+    JSON.stringify(
+      {
+        collection: 'comprehensive',
+        requiresPassword: Boolean(src.requiresPassword),
+        // validate-data checks every exam against this layout and total.
+        layout: {
+          sections: src.sectionsPerExam,
+          verbal: src.verbalPerSection,
+          quant: src.quantPerSection,
+          minutes: src.minutes,
+        },
+        totalQuestions: src.totalQuestions,
+        generated: src.generated,
+        items,
+      },
+      null,
+      2,
+    ) + '\n',
+  )
+  console.log(`comprehensive: ${items.length}`)
+}

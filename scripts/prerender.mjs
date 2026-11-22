@@ -32,11 +32,11 @@ const vite = await createServer({
   server: { middlewareMode: true, hmr: false, ws: false },
   optimizeDeps: { noDiscovery: true, include: [] },
 })
-let COLLECTIONS, seo, countNoun, QUESTIONS, base
+let COLLECTIONS, seo, countNoun, formatDuration, QUESTIONS, base
 try {
   ;({ COLLECTIONS } = await vite.ssrLoadModule('/src/lib/exams.js'))
   seo = await vite.ssrLoadModule('/src/lib/seo.js')
-  ;({ countNoun, QUESTIONS } = await vite.ssrLoadModule('/src/lib/arabic.js'))
+  ;({ countNoun, formatDuration, QUESTIONS } = await vite.ssrLoadModule('/src/lib/arabic.js'))
   base = vite.config.base
 } finally {
   await vite.close()
@@ -249,6 +249,10 @@ function collectionPage(c) {
     const extra = [
       x.topic,
       Number.isInteger(x.questions) ? countNoun(x.questions, QUESTIONS) : null,
+      Number.isInteger(x.minutes) ? `الزمن ${formatDuration(x.minutes)}` : null,
+      x.sections?.length
+        ? `الأقسام: ${x.sections.map((s, i) => `${i + 1}) ${s.verbal} (لفظي) و${s.quant} (كمي)`).join('، ')}`
+        : null,
       x.priority ? c.priority?.label : null,
     ].filter(Boolean)
     return `<li><a href="${esc(x.url)}" rel="noopener">${esc(x.title)}</a>${extra.length ? ` — ${esc(extra.join(' · '))}` : ''}</li>`

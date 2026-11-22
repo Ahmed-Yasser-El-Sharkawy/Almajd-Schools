@@ -12,11 +12,12 @@ import { CardRule, Diamond, TitleRule } from "./Ornaments.jsx"
 
 // Card order follows the artwork: quantitative on the right, which is first
 // in RTL. Collections are grouped by their `subject`, so a collection added
-// to exams.js appears in its card without touching this file.
+// to exams.js appears in its card without touching this file. A collection
+// whose `subject` lists both (the comprehensive exams) appears in both cards.
 const SUBJECTS = [
   { key: "quant", title: "القدرات الكمية", Art: QuantArt },
   { key: "verbal", title: "القدرات اللفظية", Art: VerbalArt },
-].map((s) => ({ ...s, collections: COLLECTIONS.filter((c) => c.subject === s.key) }))
+].map((s) => ({ ...s, collections: COLLECTIONS.filter((c) => [].concat(c.subject).includes(s.key)) }))
 
 /**
  * The "بنك المجد لنماذج القدرات" banner. The cream half carries the identity

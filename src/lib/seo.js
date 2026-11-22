@@ -3,13 +3,11 @@
 // scripts/prerender.mjs writes the same text into the static HTML, so the two
 // can never disagree. Figures are computed from the data, never typed in.
 import { COLLECTIONS } from "./exams.js"
-import { countNoun, QUESTIONS } from "./arabic.js"
+import { countNoun, formatDuration, EXAMS, QUESTIONS } from "./arabic.js"
 
 export const SITE_URL = "https://Ahmed-Yasser-El-Sharkawy.github.io/Almajd-Schools/"
 export const SITE_NAME = "بنك المجد لنماذج القدرات"
 export const ORG_NAME = "مركز المجد للقدرات والتحصيلي — مدارس المجد الأهلية"
-
-const EXAMS = { one: "اختبار واحد", two: "اختباران", few: "اختبارات", many: "اختبارًا", hundred: "اختبار" }
 
 const byKey = Object.fromEntries(COLLECTIONS.map((c) => [c.key, c]))
 const size = (key) => byKey[key].items.length
@@ -58,6 +56,12 @@ const PAGES = {
     subject: "قدرات لفظي",
     about: "اختبارات قدرات لفظي تجريبية تحاكي اختبار القدرات العامة (قياس).",
   },
+  comprehensive: {
+    heading: "الاختبارات الشاملة (لفظي وكمي)",
+    noun: EXAMS,
+    subject: "",
+    about: "اختبارات قدرات عامة تجريبية كاملة (قياس) تجمع القسمين اللفظي والكمي في اختبار واحد بتوزيع الاختبار الحقيقي وزمنه.",
+  },
 }
 
 export const collectionUrl = (key) => `${SITE_URL}${key}/`
@@ -73,7 +77,7 @@ export function pageMeta(key) {
       url: SITE_URL,
       title: `${SITE_NAME} | تجميعات قدرات لفظي وكمي`,
       heading: SITE_NAME,
-      description: `${SITE_NAME} من مركز المجد بمدارس المجد الأهلية: ${countNoun(TOTAL, EXAMS)} إلكترونيًا للتدرب على اختبار القدرات العامة (قياس) — أقسام اللفظي والكمي الحديثة، تأسيس الكمي، بنوك الأسئلة واختبارات المحاكاة.`,
+      description: `${SITE_NAME} من مركز المجد بمدارس المجد الأهلية: ${countNoun(TOTAL, EXAMS)} إلكترونيًا للتدرب على اختبار القدرات العامة (قياس) — أقسام اللفظي والكمي الحديثة، تأسيس الكمي، بنوك الأسئلة، اختبارات المحاكاة والاختبارات الشاملة.`,
     }
   }
   const c = byKey[key]
@@ -93,7 +97,11 @@ const inventory = () =>
     `${countNoun(size("quant-sections"), PAGES["quant-sections"].noun)} من أقسام الكمي الحديثة`,
     `${countNoun(size("quant-foundation"), PAGES["quant-foundation"].noun)} لتأسيس الكمي`,
     `${countNoun(size("quant-releases"), PAGES["quant-releases"].noun)} في بنوك أسئلة الكمي`,
+    `${countNoun(size("comprehensive"), EXAMS)} شاملة تجمع اللفظي والكمي`,
   ].join("، و")
+
+// The shape of a comprehensive exam, as the data declares it.
+const MOCK = byKey.comprehensive.layout
 
 // Shown on the page and published as FAQPage structured data. Every answer
 // states only what the site itself can back up.
@@ -116,12 +124,16 @@ export const FAQ = [
       ]
     : []),
   {
+    q: "ما هي الاختبارات الشاملة؟",
+    a: `${countNoun(size("comprehensive"), EXAMS)} يحاكي كلٌّ منها اختبار القدرات العامة كاملًا في جلسة واحدة: ${countNoun(MOCK.questions, QUESTIONS)} في ${countNoun(MOCK.sections, PAGES.verbal.noun)}، في كل قسم ${countNoun(MOCK.verbal, QUESTIONS)} لفظيًا ثم ${countNoun(MOCK.quant, QUESTIONS)} كميًا، وزمن الاختبار ${formatDuration(MOCK.minutes)}. أسئلتها من أقسام اللفظي والكمي الحديثة، وبطاقة كل اختبار تعرض محتوى أقسامه الخمسة.`,
+  },
+  {
     q: "ما الفرق بين القسم اللفظي والقسم الكمي في اختبار القدرات؟",
     a: "اختبار القدرات العامة يقدّمه المركز الوطني للقياس (قياس) في المملكة العربية السعودية. القسم اللفظي يقيس استيعاب المقروء وإكمال الجمل والتناظر اللفظي والخطأ السياقي، والقسم الكمي يقيس مهارات الحساب والهندسة والجبر والإحصاء.",
   },
   {
     q: "كم عدد الأسئلة في كل اختبار؟",
-    a: `كل قسم من أقسام اللفظي الحديثة فيه ${countNoun(byKey.verbal.questionsPerForm, QUESTIONS)}، وأقسام الكمي الحديثة ${questionSpan("quant-sections")}، ونماذج بنوك أسئلة الكمي ${questionSpan("quant-releases")}.`,
+    a: `كل قسم من أقسام اللفظي الحديثة فيه ${countNoun(byKey.verbal.questionsPerForm, QUESTIONS)}، وأقسام الكمي الحديثة ${questionSpan("quant-sections")}، ونماذج بنوك أسئلة الكمي ${questionSpan("quant-releases")}، وكل اختبار شامل ${countNoun(MOCK.questions, QUESTIONS)} زمنه ${formatDuration(MOCK.minutes)}.`,
   },
   {
     q: "هل تحتاج الاختبارات إلى تسجيل دخول أو كلمة مرور؟",

@@ -63,6 +63,10 @@ export const GridIcon = (p) => (
 export const LayersIcon = (p) => (
   <svg viewBox="0 0 24 24" {...base} {...p}><path d="m12 3.5 8.5 4.5-8.5 4.5L3.5 8z" /><path d="m3.5 12 8.5 4.5 8.5-4.5" /><path d="m3.5 16 8.5 4.5 8.5-4.5" /></svg>
 )
+// An exam paper with a tick: the comprehensive exams, verbal and quant together.
+export const ExamIcon = (p) => (
+  <svg viewBox="0 0 24 24" {...base} {...p}><rect x="4.5" y="3.5" width="15" height="17" rx="2.5" /><path d="M8 8h8M8 11.5h5" /><path d="m11 16 1.9 1.9 3.6-3.8" /></svg>
+)
 // Two arrows chasing each other: marks a section on the "الأكثر تكرارًا" shortlist.
 export const RepeatIcon = (p) => (
   <svg viewBox="0 0 24 24" {...base} {...p}><path d="m17 2.5 3.5 3.5L17 9.5" /><path d="M3.5 11.5V10a4 4 0 0 1 4-4h13" /><path d="m7 21.5-3.5-3.5L7 14.5" /><path d="M20.5 12.5V14a4 4 0 0 1-4 4h-13" /></svg>

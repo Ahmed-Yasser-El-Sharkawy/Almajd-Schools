@@ -5,17 +5,20 @@ import generalRaw from "../data/general-exams.json"
 import quantFoundationRaw from "../data/quant-foundation-exams.json"
 import quantReleasesRaw from "../data/quant-releases-exams.json"
 import quantSectionsRaw from "../data/quant-sections-exams.json"
+import comprehensiveRaw from "../data/comprehensive-exams.json"
 import verbalPriorityRaw from "../data/verbal-priority.json"
-import { buildSearchKey, countNoun, QUESTIONS, MODELS, SECTIONS } from "./arabic.js"
+import { buildSearchKey, countNoun, formatDuration, QUESTIONS, MODELS, SECTIONS, EXAMS } from "./arabic.js"
 
 /**
  * @typedef {Object} Exam
  * @property {string} id           stable key, e.g. "v-42"
- * @property {"verbal"|"quant-sections"|"quant-foundation"|"quant-releases"|"general"} collection
+ * @property {"verbal"|"quant-sections"|"quant-foundation"|"quant-releases"|"general"|"comprehensive"} collection
  * @property {number} number       1-based order inside its collection
  * @property {string} title        display title
  * @property {string} [topic]      the skill a foundation model drills
  * @property {number} [questions]  question count, when it varies per form
+ * @property {number} [minutes]    time allowed, for a full mock exam
+ * @property {{verbal: string, quant: string}[]} [sections]  what each section of a mock exam holds
  * @property {boolean} [priority]  on the "الأكثر تكرارًا" shortlist of its collection
  * @property {string} url          canonical form URL (never rewritten)
  * @property {string|null} shortUrl
@@ -54,9 +57,16 @@ const general = prepare(generalRaw)
 const quantFoundation = prepare(quantFoundationRaw)
 const quantReleases = prepare(quantReleasesRaw)
 const quantSections = prepare(quantSectionsRaw)
+const comprehensive = prepare(comprehensiveRaw)
+// The shape every comprehensive exam follows, as declared by its data file.
+const comprehensiveLayout = {
+  ...comprehensiveRaw.layout,
+  questions: comprehensiveRaw.layout.sections * (comprehensiveRaw.layout.verbal + comprehensiveRaw.layout.quant),
+}
 
 // `subject` is the Qudrat section a collection trains for; the hero groups
-// its two cards by it. `chip` is the name inside that card, where the
+// its two cards by it. A full mock exam covers both, so its `subject` is a
+// list and it appears in both cards. `chip` is the name inside that card, where the
 // subject is already printed above it, so "تأسيس الكمي" shortens to "التأسيس".
 export const COLLECTIONS = [
   {
@@ -136,6 +146,28 @@ export const COLLECTIONS = [
     questionsPerForm: null,
     requiresPassword: false,
   },
+  {
+    // The whole test in one sitting: five sections, each a verbal section
+    // followed by a quantitative one, under the real test's time limit.
+    key: "comprehensive",
+    subject: ["quant", "verbal"],
+    chip: "الاختبارات الشاملة",
+    label: "الاختبارات الشاملة",
+    short: "شامل لفظي وكمي",
+    tagline: "الاختبار كاملًا: لفظي وكمي معًا",
+    // Every figure is read from the data, so the sentence cannot drift.
+    description: `اختبارات شاملة تحاكي اختبار القدرات العامة كاملًا: ${countNoun(comprehensive.length, EXAMS)}، كل اختبار ${countNoun(
+      comprehensiveLayout.questions,
+      QUESTIONS,
+    )} في ${countNoun(comprehensiveLayout.sections, SECTIONS)}، وفي كل قسم ${countNoun(comprehensiveLayout.verbal, QUESTIONS)} لفظيًا و${countNoun(
+      comprehensiveLayout.quant,
+      QUESTIONS,
+    )} كميًا، وزمن الاختبار ${formatDuration(comprehensiveLayout.minutes)}.`,
+    items: comprehensive,
+    layout: comprehensiveLayout,
+    questionsPerForm: null,
+    requiresPassword: Boolean(comprehensiveRaw.requiresPassword),
+  },
 ]
 
 export const COLLECTION_KEYS = COLLECTIONS.map((c) => c.key)
@@ -143,7 +175,7 @@ export const COLLECTION_KEYS = COLLECTIONS.map((c) => c.key)
 export const getCollection = (key) =>
   COLLECTIONS.find((c) => c.key === key) ?? COLLECTIONS[0]
 
-export const ALL_EXAMS = [...verbal, ...quantSections, ...quantFoundation, ...quantReleases, ...general]
+export const ALL_EXAMS = [...verbal, ...quantSections, ...quantFoundation, ...quantReleases, ...general, ...comprehensive]
 
 /**
  * Count usable records per collection. The tabs and the hero must quote the

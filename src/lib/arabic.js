@@ -52,7 +52,9 @@ const ORDINALS = [
  * topic too, which is what a student actually searches for ("الكسور").
  */
 export function buildSearchKey(record) {
-  const base = normalizeArabic(`${record.title} ${record.topic ?? ""} ${record.number}`)
+  // A comprehensive exam is also found by any section inside it.
+  const parts = (record.sections ?? []).flatMap((s) => [s.verbal, s.quant]).join(" ")
+  const base = normalizeArabic(`${record.title} ${record.topic ?? ""} ${parts} ${record.number}`)
   const stripped = base
     .split(" ")
     .map((w) => (w.length > 3 && w.startsWith("ال") ? w.slice(2) : ""))
@@ -81,3 +83,21 @@ export function countNoun(n, forms) {
 export const QUESTIONS = { one: "سؤال واحد", two: "سؤالان", few: "أسئلة", many: "سؤالًا", hundred: "سؤال" }
 export const MODELS = { one: "نموذج واحد", two: "نموذجان", few: "نماذج", many: "نموذجًا", hundred: "نموذج" }
 export const SECTIONS = { one: "قسم واحد", two: "قسمان", few: "أقسام", many: "قسمًا", hundred: "قسم" }
+export const EXAMS = { one: "اختبار واحد", two: "اختباران", few: "اختبارات", many: "اختبارًا", hundred: "اختبار" }
+export const MINUTES = { one: "دقيقة واحدة", two: "دقيقتان", few: "دقائق", many: "دقيقة", hundred: "دقيقة" }
+
+/**
+ * Read a duration the way a teacher announces it:
+ * 150 → "ساعتان ونصف", 90 → "ساعة ونصف", 60 → "ساعة واحدة", 45 → "45 دقيقة".
+ * @param {number} minutes
+ */
+export function formatDuration(minutes) {
+  const h = Math.floor(minutes / 60)
+  const m = minutes % 60
+  if (!h) return countNoun(m, MINUTES)
+  const hours = h === 1 ? "ساعة" : h === 2 ? "ساعتان" : h <= 10 ? `${h} ساعات` : `${h} ساعة`
+  if (!m) return h === 1 ? "ساعة واحدة" : hours
+  if (m === 30) return `${hours} ونصف`
+  if (m === 15) return `${hours} وربع`
+  return `${hours} و${countNoun(m, MINUTES)}`
+}

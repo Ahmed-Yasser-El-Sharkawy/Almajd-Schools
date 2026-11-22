@@ -18,6 +18,7 @@ const DATASETS = [
   { name: "تأسيس الكمي", file: "src/data/quant-foundation-exams.json", expected: 20, gated: true, topics: true },
   { name: "بنوك أسئلة الكمي", file: "src/data/quant-releases-exams.json", expected: 48, gated: true, questions: true },
   { name: "اختبارات لفظي محاكاة", file: "src/data/general-exams.json", expected: 100 },
+  { name: "الاختبارات الشاملة", file: "src/data/comprehensive-exams.json", expected: 10, gated: true, questions: true, composite: true },
 ]
 
 let failures = 0
@@ -61,6 +62,30 @@ for (const ds of DATASETS) {
   // bundled into the public JS and readable by anyone.
   const leaked = JSON.stringify(data).match(/"(password|كلمة المرور|code|pin)"\s*:/i)
   if (leaked) problems.push(`كلمة المرور مسرَّبة في ملف البيانات (${leaked[1]}) — يجب حذفها`)
+  // The site hands out student links only. An edit link would let anyone who
+  // opens devtools rewrite the form, so one appearing anywhere fails the build.
+  const editLink = JSON.stringify(data).match(/https:\/\/docs\.google\.com\/forms\/d\/(?!e\/)[^"\s]+/)
+  if (editLink) problems.push(`رابط تعديل في ملف البيانات — يجب حذفه: ${editLink[0]}`)
+
+  // A comprehensive exam must follow the layout its file declares: so many
+  // sections, each named for its verbal and quantitative part, adding up to
+  // the stated question count, under a stated time limit.
+  if (ds.composite) {
+    const L = data.layout ?? {}
+    const perExam = L.sections * (L.verbal + L.quant)
+    if (![L.sections, L.verbal, L.quant, L.minutes].every((n) => Number.isInteger(n) && n > 0)) {
+      problems.push("الحقل layout ناقص أو غير صالح (sections, verbal, quant, minutes)")
+    }
+    for (const item of items) {
+      if (item.questions !== perExam) problems.push(`${item.id}: ${item.questions} سؤالًا بدل ${perExam}`)
+      if (item.minutes !== L.minutes) problems.push(`${item.id}: الزمن ${item.minutes} بدل ${L.minutes}`)
+      const parts = Array.isArray(item.sections) ? item.sections : []
+      if (parts.length !== L.sections) problems.push(`${item.id}: ${parts.length} أقسام بدل ${L.sections}`)
+      parts.forEach((s, i) => {
+        if (!String(s?.verbal ?? "").trim() || !String(s?.quant ?? "").trim()) problems.push(`${item.id}: القسم ${i + 1} ناقص`)
+      })
+    }
+  }
 
   // A per-release count that no longer sums to the declared total means a
   // release was dropped, duplicated or edited by hand.

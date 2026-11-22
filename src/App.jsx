@@ -14,7 +14,7 @@ import Footer from "./components/Footer.jsx"
 import { Diamond, SectionHeading } from "./components/Ornaments.jsx"
 import { Rosette } from "./components/HeroArt.jsx"
 import { ALL_EXAMS, buildRanges, countByCollection, getCollection, isUsable, selectExams } from "./lib/exams.js"
-import { tokenize } from "./lib/arabic.js"
+import { countNoun, EXAMS, tokenize } from "./lib/arabic.js"
 import { loadFavorites, saveFavorites, loadOpened, pushOpened, clearOpened } from "./lib/storage.js"
 import { readState, writeState, isHome, DEFAULT_STATE } from "./lib/urlState.js"
 import { pageMeta } from "./lib/seo.js"
@@ -172,7 +172,7 @@ export default function App() {
                   <Diamond className="size-2" />
                   {results.length === 0
                     ? "لا توجد نتائج"
-                    : `${results.length} من ${pool.length} اختبارًا`}
+                    : `${results.length} من ${countNoun(pool.length, EXAMS)}`}
                 </h2>
                 <ShareButton disabled={!hasAnyFilter} />
               </div>
