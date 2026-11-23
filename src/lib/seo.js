@@ -133,7 +133,7 @@ export const FAQ = [
   },
   {
     q: "كم عدد الأسئلة في كل اختبار؟",
-    a: `كل قسم من أقسام اللفظي الحديثة فيه ${countNoun(byKey.verbal.questionsPerForm, QUESTIONS)}، وأقسام الكمي الحديثة ${questionSpan("quant-sections")}، ونماذج بنوك أسئلة الكمي ${questionSpan("quant-releases")}، وكل اختبار شامل ${countNoun(MOCK.questions, QUESTIONS)} زمنه ${formatDuration(MOCK.minutes)}.`,
+    a: `أقسام اللفظي الحديثة ${questionSpan("verbal")} (أغلبها ${countNoun(byKey.verbal.questionsPerForm, QUESTIONS)})، وأقسام الكمي الحديثة ${questionSpan("quant-sections")}، ونماذج بنوك أسئلة الكمي ${questionSpan("quant-releases")}، وكل اختبار شامل ${countNoun(MOCK.questions, QUESTIONS)} زمنه ${formatDuration(MOCK.minutes)}.`,
   },
   {
     q: "هل تحتاج الاختبارات إلى تسجيل دخول أو كلمة مرور؟",

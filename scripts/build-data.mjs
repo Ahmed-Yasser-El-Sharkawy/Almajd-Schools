@@ -19,6 +19,8 @@ const verbal = raw.forms.map((f) => ({
   title: stripTatweel(f.title),
   url: f.url,
   shortUrl: f.short,
+  // A revised or added section can differ from the usual count; every card states its own.
+  questions: f.questions ?? raw.questions_per_form,
 }))
 
 const legacyText = readFileSync(LEGACY_SRC, 'utf8')
@@ -38,7 +40,7 @@ while ((m = re.exec(legacyText)) !== null) {
 
 writeFileSync(
   resolve(root, 'src/data/verbal-exams.json'),
-  JSON.stringify({ collection: 'verbal', questionsPerForm: raw.questions_per_form, generated: raw.generated, items: verbal }, null, 2) + '\n',
+  JSON.stringify({ collection: 'verbal', questionsPerForm: raw.questions_per_form, generated: raw.generated, totalQuestions: verbal.reduce((n, x) => n + x.questions, 0), items: verbal }, null, 2) + '\n',
 )
 writeFileSync(
   resolve(root, 'src/data/general-exams.json'),

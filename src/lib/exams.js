@@ -79,7 +79,10 @@ export const COLLECTIONS = [
     tagline: "استيعاب المقروء والتناظر اللفظي",
     // The shortlist figure is counted from the data, so the sentence, the
     // switch above the grid and the badges on the cards always agree.
-    description: `أقسام القدرات اللفظية الحديثة، كل قسم يحتوي على 13 سؤالًا${
+    description: `أقسام القدرات اللفظية الحديثة: ${countNoun(verbal.length, SECTIONS)} تضم ${countNoun(
+      verbalRaw.totalQuestions,
+      QUESTIONS,
+    )}، أغلبها ${countNoun(verbalRaw.questionsPerForm, QUESTIONS)} في القسم${
       verbalPriority ? `، منها ${countNoun(verbalPriority.count, SECTIONS)} هي ${verbalPriority.label} في الاختبار` : ""
     }.`,
     items: verbal,

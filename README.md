@@ -8,13 +8,13 @@
 
 | المجموعة | العدد | المصدر | محمي بكلمة مرور |
 | --- | ---: | --- | :---: |
-| أقسام اللفظي الحديثة | 301 | `src/data/verbal-exams.json` | — |
+| أقسام اللفظي الحديثة | 316 | `src/data/verbal-exams.json` | — |
 | أقسام الكمي الحديثة | 118 | `src/data/quant-sections-exams.json` | نعم |
 | تأسيس الكمي | 20 | `src/data/quant-foundation-exams.json` | نعم |
 | بنوك أسئلة الكمي | 48 | `src/data/quant-releases-exams.json` | نعم |
 | اختبارات لفظي محاكاة | 100 | `src/data/general-exams.json` | — |
 | الاختبارات الشاملة (لفظي وكمي) | 10 | `src/data/comprehensive-exams.json` | نعم |
-| **الإجمالي** | **597** | | |
+| **الإجمالي** | **612** | | |
 
 أقسام الكمي الحديثة (118 قسمًا، 1275 سؤالًا) مصدرها شيت Excel يُحوَّل أولًا إلى JSON
 بالأمر `python -I scripts/sheet-to-json.py "<الشيت>.xlsx" "<الملف>.json"`؛ المحوّل
